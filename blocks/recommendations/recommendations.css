@@ -1,0 +1,164 @@
+.recommendations .section.tabs-container {
+  padding: unset;
+}
+
+.recommendations-container:not(:has(.carousel-item)){
+  padding:0;
+}
+
+.skeleton-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skeleton-container > .carousel-item {
+  display: block;
+  padding: var(--space-space-5x) var(--space-space-15);
+  margin: 0;
+  width: 50%;
+}
+
+.skeleton-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.skeleton-image {
+  width: 100%;
+  aspect-ratio: auto 3 / 4;
+  background-color: var(--color-neutral-350);
+  border-radius: var(--shape-border-width-4);
+  animation: l1 3s linear infinite alternate;
+}
+
+.skeleton-text {
+  height: 1.25rem;
+  background-color: var(--color-neutral-350);
+  margin: var(--space-space-10) 0;
+  border-radius: var(--shape-border-radius-5);
+  animation: l1 3s linear infinite alternate;
+}
+
+.skeleton-text-title {
+  width: 80%;
+}
+
+.skeleton-text-price {
+  width: 60%;
+}
+
+.section.recommendations-container .default-content-wrapper {
+  text-align: center;
+}
+
+.section.recommendations-container .default-content-wrapper p {
+  font-size: var(--font-size-3);
+}
+
+.recommendations .section .tabs-wrapper .tabs-tab[aria-selected='true'] {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-50);
+  color: var(--color-neutral-50);
+  pointer-events: none;
+}
+
+.recommendations .section .tabs-wrapper .tabs-tab {
+  border: var(--shape-border-width-1) solid;
+  border-radius: var(--shape-border-radius-4);
+  font: var(--font-weight-6) var(--font-size-13) / 1
+    var(--type-base-font-family-semibold);
+  letter-spacing: normal;
+  padding: var(--space-space-12) var(--space-space-16);
+  height: fit-content;
+  background-color: var(--color-neutral-20);
+  color: var(--color-secondary-100);
+  flex: 0 0 auto;
+  margin-right: var(--space-space-10);
+  cursor: pointer;
+  outline: none;
+}
+
+.recommendations .section.recommendations-container .tabs .tabs-panel {
+  overflow: unset;
+}
+
+.recommendations .tabs .tabs-list {
+  justify-content: unset;
+  scrollbar-width: none;
+  margin-left: var(--space-space-16);
+}
+
+.recommendations .section .tabs-wrapper .tabs-tab::after {
+  display: none;
+  text-align: center;
+}
+
+.recommendations .section .tabs-wrapper .tabs-tab:hover {
+  text-align: center;
+}
+
+.section.recommendations-container a {
+  justify-content: unset;
+}
+
+.recommendation-picture .fallback {
+  height: 100%;
+  width: auto;
+  object-fit: none;
+  transform: scale(2);
+  opacity: 0.6;
+}
+
+.modal-carousel .skeleton-container {
+  overflow-x: hidden;
+}
+
+.modal-carousel .skeleton-container > .carousel-item .card .skeleton-image {
+  min-height: 20rem;
+  height: unset;
+}
+
+/* dots should be displayed on mobile devices for recommendation block 47594 */
+@media only screen and (width >= 768px) {
+  .skeleton-container > .carousel-item {
+    width: 25%;
+  }
+
+  .section.recommendations-container
+    .recommendations-wrapper
+    .carousel-dot-buttons {
+    display: none;
+  }
+
+  .section.recommendations-container .default-content-wrapper p{
+    font-size: var(--font-size-6);
+  }
+
+  .section.recommendations-container
+    .recommendations.tab
+    .carousel-dot-buttons {
+    display: flex;
+  }
+
+  .recommendations .tabbed-container {
+    display: block;
+    text-align: center;
+  }
+
+  .recommendations .tabs .tabs-list {
+    justify-content: center;
+  }
+
+  .recommendations
+    .section.recommendations-container
+    .recommendations-wrapper.tab
+    .carousel-dot-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .recommendation-picture .fallback {
+    transform: scale(3);
+  }
+}

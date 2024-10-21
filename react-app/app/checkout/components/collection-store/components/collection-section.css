@@ -1,0 +1,43 @@
+.col-section-main {
+ padding: var(--space-space-20);
+ background-color: var(--color-neutral-white);
+ letter-spacing: normal;
+}
+
+.col-section-card {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-3);
+    padding-bottom: var(--space-space-20);
+}
+
+.col-section-card-storename {
+    font-family: var(--type-base-font-family-semibold);
+    color: var(--color-neutral-black);
+    margin-bottom: var(--spacing-xxsmall-2);
+}
+
+.col-section-card-streetname {
+    color: var(--color-text-dark)
+}
+
+.col-section-card-btn button {
+    margin: 0;
+    background-color: transparent;
+    color: var(--color-secondary-100);
+    font-size: var(--font-size-2-1);
+    border: 1px solid var(--color-secondary-100);
+    height: var(--space-space-36);
+    padding: 0 var(--space-space-10);
+    min-width: var(--space-space-99);
+    letter-spacing: normal;
+}
+
+.col-setion-card1 {
+    border-bottom: 1px solid var(--color-neutral-350);
+}
+
+.col-setion-card2 {
+    margin-top: var(--space-space-20);
+    padding-bottom: 0;
+}

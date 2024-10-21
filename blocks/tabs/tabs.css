@@ -1,0 +1,49 @@
+.tabs .tabs-list {
+    display: flex;
+    gap: var(--spacing-xsmall);
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  .tabs .tabs-list button {
+    flex: 0 0 max-content;
+    margin: 0;
+    background-color: var(--background-color);
+    border-radius: 0;
+    padding: var(--spacing-xsmall) var(--spacing-small);
+    font-size: unset;
+    line-height: unset;
+    text-align: initial;
+    text-overflow: unset;
+    overflow: unset;
+    white-space: unset;
+    transition: color 0.2s;
+    color: var(--color-text-dark);
+    border: unset;
+  }
+  
+  .tabs .tabs-list button[aria-selected="true"] {
+    border-bottom: 2px solid var(--color-secondary-100);
+    cursor: initial;
+    color: var(--color-text-main);
+  }
+  
+  .tabs .tabs-list button[aria-selected="false"]:hover,
+  .tabs .tabs-list button[aria-selected="false"]:focus {
+    background-color: var(--dark-color);
+  }
+  
+  .tabs .tabs-panel {
+    border: 1px solid var(--dark-color);
+    overflow: auto;
+  }
+  
+  .tabs .tabs-panel[aria-hidden="true"] {
+    display: none;
+  }
+
+  @media only screen and (width >= 768px) {
+    .tabs .tabs-panel {
+      overflow: unset;
+    }
+  }

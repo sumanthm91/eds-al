@@ -1,0 +1,89 @@
+.product-teaser-wrapper {
+    padding: 2rem 0;
+}
+
+.product-teaser {
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-teaser .image {
+    display: flex;
+    justify-content: center;
+}
+
+.product-teaser .image .placeholder {
+    width: 25rem;
+    height: 25rem;
+    background-color: var(--color-neutral-200);
+}
+
+.product-teaser .image picture>img {
+    display: block;
+    width: 25rem;
+    height: 25rem;
+    object-fit: contain;
+}
+
+.product-teaser .details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-teaser .actions {
+    display: flex;
+    gap: 2rem;
+    margin-top: auto;
+    justify-content: center;
+}
+
+.product-teaser h1 {
+    min-height: 3.2rem;
+    font: var(--type-headline-1-font);
+    letter-spacing: var(--type-headline-1-letter-spacing);
+    margin: 0 0 1.6rem;
+}
+
+.product-teaser .price {
+    font: var(--type-headline-2-strong-font);
+    letter-spacing: var(--type-headline-2-strong-letter-spacing);
+}
+
+.product-teaser .price .price-regular {
+    font: var(--type-headline-2-default-font);
+    letter-spacing: var(--type-headline-2-default-letter-spacing);
+    color: var(--color-neutral-600);
+    text-decoration: line-through;
+}
+
+.product-teaser .price .price-range {
+    display: flex;
+    gap: 2rem;
+    align-items: baseline;
+}
+
+.product-teaser .price .price-range .price-from {
+    font: var(--type-headline-2-strong-font);
+    letter-spacing: var(--type-headline-2-strong-letter-spacing);
+}
+
+.product-teaser .price .price-final {
+    font: var(--type-headline-2-strong-font);
+    letter-spacing: var(--type-headline-2-strong-letter-spacing);
+}
+
+@media (width >= 600px) {
+    .product-teaser {
+        flex-direction: row;
+    }
+
+    .product-teaser .details {
+        flex: 1;
+    }
+
+    .product-teaser .actions {
+        justify-content: flex-start;
+    }
+}

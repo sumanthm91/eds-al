@@ -1,0 +1,56 @@
+{
+  "project": "Boilerplate",
+  "plugins": [
+      {
+          "id": "cif",
+          "title": "Commerce",
+          "environments": [
+              "edit"
+          ],
+          "url": "/tools/picker/dist/index.html",
+          "isPalette": true,
+          "paletteRect": "top: 54px; left: 5px; bottom: 5px; width: 300px; height: calc(100% - 59px); border-radius: var(--hlx-sk-button-border-radius); overflow: hidden; resize: horizontal;"
+      },
+      {
+          "id": "library",
+          "title": "Sidekick Library",
+          "environments": [
+              "edit"
+          ],
+          "url": "/tools/sidekick/library.html",
+          "includePaths": ["**.docx**"]
+      },
+      {
+        "id": "banner-library",
+        "title": "Banners",
+        "environments": [
+            "edit"
+        ],
+        "url": "/tools/sidekick/banner-library.html",
+        "includePaths": ["**.docx**"],
+        "isPalette": true,
+        "paletteRect": "top: 54px; left: 5px; bottom: 5px; width: calc(100% - 400px); height: calc(100% - 59px); border-radius: var(--hlx-sk-button-border-radius); overflow: hidden; resize: horizontal;"
+      },
+      {
+          "id": "asset-library",
+          "title": "AEM Assets Library",
+          "environments": ["edit"],
+          "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html?extConfigUrl=https%3A%2F%2Fmain--eds-web--alshaya-axp.aem.live%2Ftools%2Fassets-selector%2Fconfig.json&rail=false",
+          "isPalette": true,
+          "includePaths": ["**.docx**"],
+          "passConfig": false,
+          "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:500px; height: calc(100vh - 60px)"
+      },
+      {
+        "id": "promotion",
+        "title": "Promotion",
+        "environments": [
+          "edit"
+        ],
+        "url": "/tools/promotion/dist/index.html",
+        "isPalette": true,
+        "paletteRect": "top: 54px; left: 5px; bottom: 5px; width: 550px; height: calc(100% - 59px); border-radius: var(--hlx-sk-button-border-radius); overflow: hidden; resize: horizontal;",
+        "includePaths": ["**.docx**"]
+      }
+  ]
+}

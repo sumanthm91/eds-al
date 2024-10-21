@@ -1,0 +1,339 @@
+.account-egift-card {
+  margin-top: var(--space-space-16);
+}
+
+.account-egift-card.loader {
+  position: relative;
+  height: 25rem;
+}
+
+.account-egift-card.loader::after {
+  background-image: url("/icons/ic-loader.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--color-neutral-20);
+  content: '';
+  position: absolute;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+}
+
+.egift-unlinked-container {
+  button {
+    margin: 2rem 0 0;
+  }
+}
+
+.egift-linked-container .egift-card-info-bottom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem 0 0;
+  gap: 1.2rem;
+
+  h5 {
+    font: var( --type-body-2-strong-font);
+    color: var(--color-text-dark);
+    margin: 0 0 .8rem;
+  }
+
+  button {
+    margin: 1.6rem 0 0;
+  }
+}
+
+.account-egift-card > div:first-child {
+  margin-bottom: var(--space-space-5x);
+
+  h5 {
+    margin: unset;
+    font: var(--type-body-2-strong-font);
+  }
+
+  p {
+    font: var(--type-body-2-strong-font);
+    color: var(--color-text-dark);
+    margin: 1.6rem 0 0;  }
+}
+
+.account-egift-card.loader > div:first-child {
+  display: none;
+}
+
+.egift-unlinked-container form{
+  display: flex;
+  flex-direction: column;
+}
+
+.egift-card-reload-container .egift-card-reload-button-container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  margin-top: 1.2rem;
+
+  a {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: .8rem;
+  }
+}
+
+.account-egift-card .egift-unlinked-container .otp-verification-container {
+  background: var(--color-neutral-20);
+  padding: 1.6rem;
+  gap: 1.2rem;
+
+  h5 {
+    margin: unset;
+    font: var(--type-body-2-strong-font);
+    align-self: center;
+  }
+
+  a {
+    color: var(--color-text-main);
+    margin-inline-start: .3rem;
+  }
+}
+
+.account-egift-card .egift-unlinked-container .otp-verification-container > div {
+  color: var(--color-text-dark);
+  font-size: var(--font-size-2);
+  text-align: center;
+  margin: .4rem 0;
+}
+
+.egift-unlinked-container .otp-verification-container .otp-fields-container {
+  padding: 0 .8rem;
+}
+
+.egift-unlinked-container .otp-verification-container .otp-fields-container .line {
+  left: 1.4rem;
+  top: 2.2rem;
+}
+
+html[dir='rtl']  .egift-unlinked-container .otp-verification-container .otp-fields-container .line {
+  right: 1.4rem;
+  top: 2.2rem;
+}
+
+.egift-unlinked-container .change-card {
+  font-size: var(--font-size-2);
+  margin-top: 3.6rem;
+}
+
+.egift-linked-container {
+  margin-top: 2rem;
+  padding: 1.2rem;
+  border: var(--shape-border-width-1) solid var(--color-brand-200);
+
+  img {
+    width: 8rem;
+    height: 5.6rem;
+  }
+}
+
+.egift-linked-container .egift-card-info-top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: .8rem;
+}
+
+.account-egift-card .egift-linked-container .egift-card-info-top-container {
+  a {
+    background-image: url('/icons/unlink.svg');
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+  }
+
+  h3 {
+    font: var( --type-body-1-strong-font);
+    margin: unset;
+    border: none;
+  }
+}
+
+.egift-linked-container .egift-card-info-top-container .egift-image-balance {
+  display: flex;
+  flex-direction: row;
+  gap: .8rem;
+  font: var( --type-body-2-strong-font);
+}
+
+.egift-linked-container .egift-card-info-top-container .egift-card-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-egift-card .egift-card-reload-container {
+  margin-top: 2.8rem;
+}
+
+.account-egift-card .egift-card-reload-container .egift-card-reload-amount-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h4 {
+    font: var( --type-body-2-strong-font);
+    border: none;
+    margin: unset;
+  }
+
+  p {
+    font: var( --type-body-2-strong-font);
+    margin: unset;
+  }
+}
+
+.egift-card-reload-container .egift-card-reload-amount-options {
+  display: flex;
+  margin-bottom: 3.2rem;
+  gap: 1.2rem;
+  align-self: stretch;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  input[type="radio"] {
+    appearance: none;
+    max-width: 6.5rem;
+    height: 3.4rem;
+    border: .1rem solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.2rem;
+    margin: unset;
+    cursor: pointer;
+    content: attr(value);
+    font-size: var(--font-size-3);
+  }
+
+  input[type="radio"]::before {
+    content: attr(value);
+  }
+
+  input[type="radio"]:checked {
+    background-color: var(--color-secondary-100);
+    color: var(--color-neutral-white);
+  }
+
+}
+
+div[id="unlinkEgiftModal"] .modal-header {
+  border: none;
+  padding: unset;
+  height: auto;
+
+  button::after {
+    display: none;
+  }
+}
+
+div[id="unlinkEgiftModal"] .modal-content {
+    padding: 1rem 2.4rem 2.4rem;
+
+  .unlink-modal-title {
+    display: flex;
+    white-space: nowrap;
+  }
+
+  .unlink-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (width >= 767px) {
+  .egift-unlinked-container {
+    margin-top: 3rem;
+    width: 35.2rem;
+
+    form {
+      display: block;
+    }
+  }
+
+  .egift-linked-container .egift-card-info-bottom-container {
+    flex-direction: row;
+    padding: 2.4rem 0 0;
+
+    h5 {
+      font-size: var(--font-size-4);
+      margin-bottom: .4rem;
+    }
+
+    button {
+      margin: unset;
+    }
+  }
+
+  .account-egift-card .egift-unlinked-container .otp-verification-container {
+    width: 37.6rem ;
+
+    h5 {
+      font-size: var(--font-size-4);
+    }
+  }
+
+.egift-unlinked-container .otp-verification-container .otp-fields-container .line {
+  left: 1.6rem;
+  top: 2.2rem;
+}
+
+html[dir='rtl']  .egift-unlinked-container .otp-verification-container .otp-fields-container .line {
+  right: 1.6rem;
+  top: 2.2rem;
+}
+
+  .egift-linked-container {
+    margin-top: 4rem;
+    padding: 2.4rem;
+  }
+
+  .egift-linked-container img {
+    width: 12.4rem;
+    height: 8rem;
+  }
+
+  .egift-linked-container .egift-card-info-top-container {
+    margin: unset;
+  }
+
+  .account-egift-card .egift-linked-container .egift-card-info-top-container {
+    h3 {
+      font: var(--type-headline-1-font);
+    }
+  }
+
+  .egift-linked-container .egift-card-info-top-container .egift-image-balance {
+    gap: 1.2rem;
+    font-size: var(--font-size-5);
+  }
+
+  .egift-card-reload-container .egift-card-reload-amount-options {
+    justify-content: flex-start;
+    gap: .8rem;
+    }
+
+  .egift-card-reload-container .egift-card-reload-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-space-16);
+
+    a{
+      margin-top: var(--space-space-16);
+      padding: var(--space-space-8) var(--space-space-24);
+    }
+
+    button{
+      margin-bottom: 0;
+    }
+  }
+}

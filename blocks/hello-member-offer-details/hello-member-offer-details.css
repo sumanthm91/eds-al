@@ -1,0 +1,184 @@
+.large-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: block;
+}
+
+.offer-details-container .detailed-description-title {
+    padding: var(--space-space-8) 0 var(--space-space-16);
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-6);
+    color: var(--color-text-main);
+    line-height: var(--line-height-l);
+    margin: 0;
+    text-align: center;
+}
+
+.offer-details-container .category-name {
+    padding: var(--space-space-24) 0;
+    font-size: var(--font-size-3);
+    text-align: center;
+    margin: 0;
+    color: var(--color-text-dark);
+}
+
+.offer-details-container .expired-detailed {
+    padding: var(--space-space-16) 0;
+    font-size: var(--font-size-3);
+    text-align: center;
+    margin: 0;
+    color: var(--color-text-dark);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-space-24);
+    flex-direction: row;
+}
+
+.offer-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-16);
+}
+
+.conditions-wrapper {
+    padding: 0;
+    align-items: center;
+}
+
+.applied-conditions {
+    color: var(--color-text-main);
+}
+
+.conditions-wrapper .applied-conditions > div h3 {
+    font: var(--type-details-semibold-6-font);
+}
+
+.conditions-wrapper .applied-conditions p,
+.conditions-wrapper .applied-conditions ul {
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.conditions-wrapper .applied-conditions > div:nth-of-type(1) h3 {
+    margin: 0;
+    padding-top: var(--space-space-16);
+}
+
+.conditions-wrapper .applied-conditions div p {
+    margin: 0;
+    padding: var(--space-space-12) 0 0 0;
+}
+
+.user .main-wrapper .offer-details-container p {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.user .main-wrapper .member-qr-content p {
+    padding: var(--space-space-24) 0;
+    margin: 0;
+}
+
+.conditions-wrapper .applied-conditions > div:nth-of-type(1) p:nth-child(4),
+.conditions-wrapper .applied-conditions > div:nth-of-type(1) p:nth-child(6) {
+    font-weight: 600;
+}
+
+
+.member-id-modal .modal-header h4 {
+    font: var(--type-details-semibold-6-font);
+    font-weight: var(--font-weight-6);
+}
+
+.user .main-wrapper .conditions-wrapper .applied-conditions h2, 
+.user .main-wrapper .conditions-wrapper .applied-conditions h3, 
+.user .main-wrapper .conditions-wrapper .applied-conditions h4 {
+    border-bottom: unset;
+}
+
+.expiry-label-last {
+    font: var(--type-details-semibold-6-font);
+}
+
+
+.expiry-date-last {
+    color: var(--color-text-dark);
+}
+
+.hello-member-offer-details.loading-parent > div.loading-block {
+    display: none;
+}
+
+.hello-member-offer-details.loading-parent.loading > div.loading-block {
+    display: flex;
+    width: 100%;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-neutral-200);
+}
+
+.hello-member-offer-details.loading-parent.loading > div.loading-block .loading-spinner {
+    display: block;
+    margin: auto;
+}
+
+.modal dialog .modal-content{
+    padding: 0;
+}
+
+.member-qr-content {
+    text-align: center;
+}
+
+#member-id-modal.modal dialog .modal-content {
+    max-height: fit-content;
+}
+
+.member-id-container canvas,
+.offer-container canvas{
+    width: 12.8rem;
+    height: 12.8rem;
+  }
+
+  .modal dialog{
+    min-width: 100%;
+  }
+
+@media (width >768px) {
+    .offer-details-container .expired-detailed {
+        padding: 0;
+        font-size: var(--font-size-4);
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-space-24);
+        flex-direction: column;
+    }
+
+    .button-container button,
+    .button-container a.button {
+        max-width: 37.6rem;
+        min-width: 24rem;
+        margin: 0;
+    }
+
+    .modal dialog{
+        min-width: unset;
+      }
+    
+}
+
+@media (width >= 1024px) {
+    .button-container {
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,228 @@
+.section.columns-2 {
+    display: flex;
+    padding: 0 var(--space-space-12);
+}
+
+.table.standard.block {
+    overflow-x: auto;
+}
+
+.standard table {
+    table-layout: fixed;
+    width: var(--grid-col-7);
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1rem solid var(--color-neutral-40);
+}
+
+.standard table tr {
+    border: none;
+}
+
+.standard table th {
+    font-weight: var(--font-weight-6);
+    line-height: var(--line-height-m);
+    color: var(--color-secondary-100);
+    background-color: var(--color-neutral-30);
+}
+
+.standard table th,
+.standard table td {
+    padding: var(--space-space-20) var(--space-space-8);
+    text-align: center;
+    font-size: var(--font-size-1);
+    flex-basis: 15%;
+    border: 1rem solid var(--color-neutral-40);
+    min-width: var(--grid-col-9);
+}
+
+.membership table {
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    margin: var(--space-space-48) 0;
+}
+
+.membership table th h3 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.membership table th p,
+.membership table td p {
+    margin: 0;
+}
+
+.membership table td p {
+    white-space: nowrap;
+}
+
+.membership table span.icon {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.membership table th:last-child > span,
+.membership table td:last-child > span {
+    background: var(--color-alert-900);
+}
+
+.membership table th:last-child > p:last-child {
+    color: var(--color-alert-900);
+}
+
+.membership table td {
+    line-height: var(--line-height-m);
+}
+
+.section.columns-2 > div:not(:has(p:only-child)) {
+    margin: 0;
+    flex: 1;
+}
+
+.section.columns-2 > div:has(p:only-child img) {
+    display: none;
+}
+
+.section.columns-2 > div:has(p:only-child img) p {
+    margin: 0;
+    width: 85.6rem;
+    height: 79rem;
+}
+
+html[dir='rtl'] .section.columns-2 > div:not(:has(p:only-child)) {
+    margin: 0;
+}
+
+.membership table tr {
+    padding: var(--space-space-8) 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.membership table th,
+.membership table td {
+    text-align: center;
+    flex-basis: 25%;
+    font-size: var(--font-size-1);
+}
+
+.membership table td:last-child {
+    color: var(--color-alert-900);
+}
+
+.membership table th:first-child {
+    position: relative;
+    flex-basis: 100%;
+}
+
+.membership table td:first-child,
+.membership table th:first-child {
+    text-align: start;
+}
+
+.membership table td:first-child {
+    flex-basis: 52%;
+}
+
+.section.columns-2 .icon.icon-plus-member-icon-title {
+    width: var(--space-space-40);
+}
+
+.dot {
+    content: '';
+    background: var(--color-secondary-40);
+    width: var(--space-space-8);
+    height: var(--space-space-8);
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+
+@media (width > 768px) {
+    .standard table {
+        width: var(--grid-col-8);
+    }
+
+    .membership table tr {
+        justify-content: end;
+        margin-bottom: 0;
+    }
+
+    .standard table th {
+        font-weight: var(--font-weight-6);
+        line-height: var(--line-height-l);
+    }
+
+    .standard table th,
+    .standard table td {
+        font-size: var(--font-size-3);
+    }
+
+    .membership table th,
+    .membership table td {
+        font-size: var(--font-size-2);
+        flex-basis: 22.5%;
+    }
+
+    .membership table td {
+        line-height: 1.56rem;
+    }
+
+    .membership table td:first-child,
+    .membership table th:first-child {
+        flex-basis: 65%;
+    }
+
+    .section.columns-2 > div:not(:has(p:only-child)) {
+        margin: auto;
+    }
+
+    html[dir='rtl'] .section.columns-2 > div:not(:has(p:only-child)) {
+        margin: auto;
+    }
+}
+
+
+@media (width > 1024px) {
+    .section.columns-2 {
+        padding: 0;
+    }
+
+    .section.columns-2 > div:not(:has(p:only-child)) {
+        margin: auto;
+        flex: 1;
+    }
+
+    .section.columns-2 > div:has(p:only-child img) {
+        display: block;
+        margin: 0;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    .membership table {
+        margin: 0;
+    }
+
+    .membership table tr {
+        margin-right: var(--space-space-32);
+    }
+
+    html[dir='rtl'] .membership table tr {
+        margin-right: 0;
+        margin-left: var(--space-space-32);
+    }
+
+    .membership table th,
+    .membership table td {
+        flex-basis: 15%;
+    }
+
+    .membership table td:first-child,
+    .membership table th:first-child {
+        flex-basis: 45%;
+    }
+}

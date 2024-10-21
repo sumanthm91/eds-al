@@ -1,0 +1,110 @@
+.sustainability .heading-wrapper h1,
+.sustainability .heading-wrapper h3,
+.sustainability .heading-wrapper h4,
+.sustainability .heading-wrapper h5,
+.sustainability .heading-wrapper h6 {
+    margin: 0;
+    margin-top: var(--space-space-40);
+    padding: var(--space-space-16) 0 var(--space-space-24) 0;
+    text-align: center;
+}
+
+.sustainability .heading-wrapper h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.sustainability .heading-wrapper {
+    padding: 0 var(--space-space-16);
+}
+
+.sustainability main:not(.sidebar-main) {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.sustainability .main-wrapper .content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.sustainability aside {
+    display: none;
+}
+
+.sustainability .main-wrapper .sidebar-main > div.section {
+    padding-bottom: 0;
+}
+
+.sustainability header .breadcrumbs {
+    display: block;
+    background: var(--color-neutral-white);
+}
+
+@media (width >=768px) {
+    .sustainability main .section {
+        padding: 1.6rem 1.2rem;
+    }
+
+    .sustainability .heading-wrapper h1,
+    .sustainability .heading-wrapper h2,
+    .sustainability .heading-wrapper h3,
+    .sustainability .heading-wrapper h4,
+    .sustainability .heading-wrapper h5,
+    .sustainability .heading-wrapper h6 {
+        margin: 0;
+    }
+
+    .sustainability .heading-wrapper {
+        padding: 0;
+    }
+
+    .sustainability .heading-wrapper h2 {
+        padding: var(--space-space-16) var(--space-space-24);
+    }
+
+    .sustainability .main-wrapper {
+        flex-direction: column;
+        padding-top: var(--nav-height);
+        max-width: min(1600px, calc(100vw - 2 * var(--grid-margin)));
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sustainability .main-wrapper .content-wrapper {
+        flex-direction: row;
+        gap: var(--grid-gutter);
+    }
+
+    .sustainability aside {
+        padding: 0;
+    }
+
+    .sustainability .sidebar-main {
+        margin-top: 0;
+        max-width: var(--grid-col-10);
+        width: 100%;
+    }
+
+    .sustainability .main-wrapper aside,
+    .sustainability .main-wrapper .sidebar-main > div.section:first-child {
+        margin-top: var(--nav-height);
+    }
+
+    .sustainability .main-wrapper main .section {
+        padding: 1.6rem 0;
+    }
+}
+
+@media (width >= 1024px) {
+    .sustainability aside {
+        display: block;
+        max-width: var(--grid-col-2);
+        min-width: var(--grid-col-2);
+    }
+
+    .sustainability .main-wrapper aside,
+    .sustainability .main-wrapper .sidebar-main > div.section:first-child {
+        margin-top: unset;
+    }
+}

@@ -1,0 +1,10 @@
+import getRestApiClient from '../utils/api-client.js';
+
+/**
+ * Fetches the current customer's cart
+ *
+ * @returns {Promise<{response: null}>|*}
+ */
+const getLoggedinUser = () => getRestApiClient('customers/me', true);
+
+export default getLoggedinUser;

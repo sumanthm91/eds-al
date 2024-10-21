@@ -1,0 +1,67 @@
+.card_payment_modal_container {
+    width: 100%;
+    margin: 0 auto;
+    min-height: calc(600px - 65px);
+    padding: var(--space-space-4x);
+    box-sizing: border-box;
+    background-color: var(--color-background-offer-items);
+}
+
+.payment_methods__add_new_card_btn {
+    display: block;
+    margin: 0 auto var(--space-space-4x);
+
+}
+
+.spc-checkout-saved-card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--space-space-4x);
+    padding-bottom: var(--space-space-4x);
+}
+
+.spc-checkout-saved-card-list .payment-card {
+    padding: var(--space-space-4x) var(--space-space-5x);
+    background: var(--color-neutral-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.payment_methods__selected_btn {
+    width: 100%;
+    height: 5rem;
+}
+
+.payment-card .selected-check-icon {
+    height: 1.25rem;
+    width: 0.625rem;
+    border-bottom: 5px solid;
+    border-right: 5px solid;
+    transform: rotate(45deg);
+    border-color: var(--color-order-green);
+}
+
+.payment-card .payment_method__card_block .circle {
+    border: 1px solid var(--color-order-green);
+    padding: var(--space-space-3x-3) var(--space-space-6);
+    border-radius: 100%;
+    height: 3.3rem;
+}
+
+.payment_card__block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.payment_method__card_block {
+    display: flex;
+    gap: var(--space-space-8);
+}
+
+.payment-card .selected-check-icon.btn-icon {
+    margin-right: var(--space-space-8);
+}

@@ -1,0 +1,194 @@
+:root {
+    --dialogue-header-height: 5.6rem;
+}
+
+.checkout__delivery-methods-container .checkout-title {
+    text-align: center;
+    margin-top: 0;
+}
+
+.checkout__sub-container-title {
+    margin-top: var(--space-space-24);
+    margin-bottom: var(--space-space-12);
+}
+
+@media (width >=768px) {
+    .checkout__sub-container-title {
+        margin-top: var(--space-space-40);
+    }
+
+    .checkout__delivery-methods-container .checkout-title {
+        text-align: unset;
+    }
+
+}
+
+.checkout__delivery-information{
+    margin-inline: var(--space-space-10);
+}
+
+.checkout__delivery-information-btn {
+    background-color: var(--color-neutral-50);
+    border: 2.2px solid var(--color-neutral-black);
+    border-radius: var(--border-radius-2);
+    color: var(--color-text-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: var(--space-space-8);
+    padding: var(--space-space-3x) var(--space-space-4x);
+    height: var(--sf-height-52);
+    width: 100%;
+}
+
+.checkout__delivery-information-btn:hover {
+    background-color: var(--color-neutral-50);
+}
+
+.checkout__delivery-information-btn>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-size: var(--font-size-3);
+    letter-spacing: normal;
+    color: var(--color-neutral-black);
+}
+
+.checkout-btn-arrow {
+    width: var(--space-space-16);
+    animation: bounce-right 1.4s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce-right {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(var(--space-space-16));
+    }
+}
+
+
+.checkout__shopping-block .dialog__body {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout__shopping-block .home-delivery .dialog__body {
+    height: var(--sf-height-644);
+    max-height: 100vh;
+}
+
+.checkout__shopping-block .dialog-heading {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-neutral-60);
+    padding: var(--space-space-3x) 0;
+    height: var(--dialogue-header-height);
+}
+
+.checkout__shopping-block .dialog__checkout-container, .checkout__shopping-block .dialog__overlay .dialog__container {
+    overflow: hidden;
+}
+
+.checkout__shopping-block .dialog-form__containter {
+    flex: 2;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.checkout__shopping-block .dialog-heading h2 {
+    display: flex;
+    font: var(--type-details-semibold-7-font);
+    justify-content: center;
+    line-height: var(--line-height-xxl);
+    margin: 0;
+}
+
+.checkout__shopping-block .dialog-heading h2 .dialog-back-icon {
+    position: absolute;
+    left: var(--space-space-4x);
+    cursor: pointer;
+}
+
+.checkout__shopping-block .dialog-form {
+    padding: var(--space-space-4x) var(--space-space-4x) 0;
+}
+
+.checkout__shopping-block .dialog-form .dialog-form-error {
+    background-color: var(--color-alert-100);
+    padding: var(--space-space-2x-2) 0 var(--space-space-2x-2) var(--space-space-6x);
+    margin-bottom: var(--space-space-2x);
+    color: var(--background-color);
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.checkout__shopping-block .dialog-form .error-message a {
+    text-decoration: underline;
+}
+
+.checkout__shopping-block .dialog-form .error-message a:hover {
+    color: var(--color-text-main);
+}
+
+.checkout__shopping-block .dialog-loader {
+    display: flex;
+    height: 300px;
+}
+
+.checkout__shopping-block .dialog-loader .loading-spinner {
+    align-items: center;
+}
+
+.checkout__shopping-block form>.input-field-wrapper {
+    margin-bottom: var(--space-space-2x);
+}
+
+.checkout__shopping-block form .input-field-wrapper,
+.checkout__shopping-block form .input-field-wrapper input {
+    max-width: 100%;
+}
+
+.checkout__shopping-block form .input-field-wrapper.hidden {
+    display: none;
+}
+
+.checkout__shopping-block form button {
+    width: 100%;
+}
+
+.checkout__shopping-block form .input-field-wrapper .input-phone-prefix input {
+    background: var(--neutral-neutral-20);
+}
+
+
+@media (width >=768px) {
+    .dialog__checkout-container {
+        max-width: var(--sf-width-60);
+    }
+
+    .dialog__checkout-container.click-and-collect {
+        max-width: min(var( --sf-width-100), 100%);
+    }
+
+    .checkout__delivery-information{
+        margin-inline: 0;
+    }
+
+}
+
+.dialog__header.dialog__header-checkout {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    display: inline-flex;
+    height: var(--dialogue-header-height);
+}

@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx lint-staged
+## run npm run build only if there are no errors and change in react-app folder
+if [ $? -eq 0 ]; then
+    # Check for changes in the react-app folder
+    if git diff --cached --name-only | grep -q '^react-app/'; then
+        npm run build
+    fi
+fi
+
+# Add the changes to the commit
+git add .
+

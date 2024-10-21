@@ -1,0 +1,897 @@
+/* -- fonts -- */
+@font-face {
+    font-family: HM Serif Regular;
+    /*src: url("https://kw.hm.com/sites/g/files/hm/dy-fonts/HMSerif-Regular.otf") format("opentype");*/
+}
+
+@font-face {
+    font-family: HM Sans Arabic Bold;
+    /*src: url("https://kw.hm.com/sites/g/files/hm/dy-fonts/HMSansArabic-Bold.otf") format("opentype");*/
+}
+
+@font-face {
+    font-family: HM Sans Arabic Semi Bold;
+    /*src: url("https://kw.hm.com/sites/g/files/hm/dy-fonts/HMSansArabic-SemiBold.otf") format("opentype");*/
+}
+
+@font-face {
+    font-family: HM Sans Arabic Regular;
+    /*src: url("https://kw.hm.com/sites/g/files/hm/dy-fonts/HMSansArabic-Regular.otf") format("opentype");*/
+}
+
+@font-face {
+    font-family: HM Sans Arabic Light;
+    /*src: url("https://kw.hm.com/sites/g/files/hm/dy-fonts/HMSansArabic-Light.otf") format("opentype");*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box
+}
+
+.exponea_online_returns {
+    display: none;
+}
+
+.foot-container {
+    width: 100%;
+    max-width: 1026px;
+    margin: 0px auto;
+    padding: 25px 0
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.staticPage.ar {
+    direction: rtl;
+}
+
+.info-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 0 0;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.info-banner-right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 0;
+    flex-basis: calc(58.3333333333% - 48px);
+    min-height: auto;
+    max-width: 724px;
+    margin: 0px auto;
+}
+
+.info-banner-img {
+    height: auto;
+    flex-basis: calc(41.6666666667% - 48px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    line-height: 0;
+}
+
+.info-banner-img img {
+    width: 100%;
+}
+
+.info-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: calc(66.6666666667% - 24px);
+    margin: 0px auto;
+    position: relative;
+    padding: 0 50px;
+}
+
+.info-banner {
+    width: 100%;
+    display: flex;
+    background-color: #f1ebdf;
+    height: auto;
+    white-space: normal;
+}
+
+.info-content h1.heading {
+    color: #e50010;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: normal;
+    text-transform: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+    font-family: "HM Sans Arabic Semi bold", sans-serif, arial;
+}
+
+.info-content p.discription {
+    line-height: 1.25;
+    font-size: 1rem;
+    font-family: "HM Sans Arabic Regular", sans-serif, arial;
+    font-weight: normal;
+    text-transform: none;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-btn {
+    width: 100%;
+    height: auto;
+    padding: 24px 0;
+}
+
+.cta {
+    border-radius: 0;
+    background-color: transparent;
+    color: #222;
+    line-height: 1;
+    font-size: 1rem;
+    letter-spacing: normal;
+    font-weight: normal;
+    text-transform: none;
+    font-family: 'HM Sans Arabic Semi Bold', sans-serif, arial;
+    margin-left: 0;
+    width: auto;
+    margin-right: 12px;
+    min-height: 48px;
+    padding: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #222;
+}
+
+.cta-bg {
+    box-shadow: 0 0 0 0 #000;
+    background: #222;
+    margin: 0;
+    color: #fff;
+}
+
+.cta-bg:hover {
+    color: #fff !important;
+}
+
+.faq-container {
+    width: 100%;
+    margin: 38px 0 0 0;
+}
+
+.faq-container h2.heading {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'HM Sans Arabic Semi Bold', sans-serif, arial;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+    font-weight: normal;
+}
+
+.benefits {
+    background-color: #faf9f8;
+    display: flex;
+}
+
+.benefits-left {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    flex-basis: calc(58.3333333333% - 48px);
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    max-width: 724px;
+    padding: 40px 24px 24px;
+    margin: 0 auto;
+    font-family: hm sans regular, hm sans arabic regular, "sans-serif", arial;
+}
+
+.benefits-left:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+
+.benefits-right {
+    display: flex;
+    position: relative;
+    flex-basis: calc(41.6666666667% - 48px);
+    height: auto;
+    overflow: hidden;
+}
+
+.benefits-banner {
+    width: 100%;
+}
+
+.benefits-banner img {
+    width: 100%;
+}
+
+.benefits-table {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    padding: 0 24px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.benefits-table {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.benefits-table td {
+    font-size: .8125rem;
+    line-height: 1.2307692308;
+    color: #222;
+}
+
+.benefits-table p.table-heading {
+    width: 90%;
+    margin: 8px 0 0;
+    white-space: pre-wrap;
+    line-height: 1.2307692308;
+    font-size: .8125rem;
+    font-family: "HM Sans Arabic Regular", sans-serif, arial;
+    font-weight: normal;
+    text-transform: none;
+    text-align: center;
+}
+
+.FOxb,
+.__1b95 {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.FOxb .dmG6,
+.__1b95 .dmG6 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.FOxb .DSWM,
+.FOxb .dmG6,
+.__1b95 .DSWM,
+.__1b95 .dmG6 {
+    flex-basis: 60%;
+}
+
+.FOxb .blCe,
+.FOxb .fM8L,
+.__1b95 .blCe,
+.__1b95 .fM8L {
+    align-items: center;
+    display: flex;
+    flex-basis: 20%;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.__1b95 .fHct {
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-basis: 20%;
+    justify-content: center;
+}
+
+.FOxb .blCe svg,
+.FOxb .fM8L svg,
+.__1b95 .blCe svg,
+.__1b95 .fM8L svg {
+    width: 32px;
+}
+
+.bnUx {
+    height: 24px;
+}
+
+._hGm {
+    flex-shrink: 0;
+}
+
+.FOxb,
+.__1b95 {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.FOxb .fU76,
+.__1b95 .fU76 {
+    margin: 8px 0 0;
+    white-space: pre-wrap;
+}
+
+.CJg8 {
+    text-align: center;
+}
+
+.EI4A,
+.UG_B {
+    font-family: "HM Sans Arabic Regular", sans-serif, arial;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.UG_B {
+    line-height: 1.2307692308;
+    font-size: .8125rem;
+}
+
+table td,
+table th {
+    text-align: left;
+    text-transform: none;
+}
+
+.FOxb .fM8L,
+.__1b95 .fM8L {
+    color: #e50010;
+}
+
+.J6bH {
+    color: #e50010;
+}
+
+.acKe {
+    margin: 0;
+}
+
+.cc3W {
+    line-height: 1.2;
+    font-size: 1.25rem;
+    font-family: 'HM Sans Arabic Semi Bold', sans-serif, arial;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.dot {
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 8px;
+    width: 8px;
+    background-color: #707070;
+}
+
+.red-dot {
+    background-color: #e50010;
+}
+
+.how-it-works {
+    background-color: #f1ebdf;
+    padding: 128px 0;
+}
+
+.how-it-works h2.sub-head {
+    line-height: 1.2;
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: none;
+    font-family: 'HM Sans Arabic Semi Bold', sans-serif, arial;
+    color: #e50010;
+    padding: 0 48px 32px 48px;
+    margin: 0;
+}
+
+.how-it-works h3.how-head {
+    color: #e50010;
+    font-family: 'HM Sans Arabic Semi Bold', sans-serif, arial;
+    line-height: 1.2;
+    font-size: 1.25rem;
+    font-weight: normal;
+    text-transform: none;
+    margin: 0;
+    padding: 0;
+}
+
+.how-it-works a.normal-cta {
+    line-height: 1.25;
+    font-size: 1rem;
+    font-family: "HM Sans Arabic Regular", sans-serif, arial;
+    text-decoration: underline;
+    color: #222;
+}
+
+.how-it-works .disc {
+    line-height: 1.25;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    min-height: 10vh;
+    font-weight: normal;
+    text-transform: none;
+    font-family: "HM Sans Arabic Regular", sans-serif, arial;
+    margin-top: 10px;
+}
+
+.works-step-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+
+.work-box {
+    padding: 0 12px;
+}
+
+.works-step-img img {
+    width: 70%;
+}
+
+.work-slider {
+    padding-left: 40px;
+    padding-right: 40px;
+    direction: ltr;
+}
+
+.articles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url(https://kw.hm.com/sites/g/files/bndsjb1556/files/2024-04/w17-hm-membership-info-bnr-03.jpg) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+.article-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-cont {
+    width: calc(66.6666666667% - 24px);
+    margin: 0px auto;
+    position: relative;
+    padding: 0 50px;
+}
+
+.article-box {
+    width: 60%;
+    padding: 18px 18px;
+    margin: 0px auto;
+}
+
+.article-area {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #f1ebdf;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.article-area h3 {
+    line-height: 1.142857143;
+    font-size: 1.75rem;
+    color: #e50010;
+    font-family: 'HM Sans Arabic Semi Bold', sans-serif, arial;
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.article-area p.article-dis,
+.article-area .date {
+    line-height: 1.2307692308;
+    font-size: .8125rem;
+    color: #222;
+    padding: 0;
+    margin: 0;
+    font-family: "HM Sans Arabic Regular", sans-serif, arial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Accordion styles */
+.faq-part {
+    background-color: #faf9f8;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 60px 0 0 0;
+}
+
+.tabs {
+    width: 100%;
+    margin-top: 0;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.tabs h2.sub-heading {
+    color: #e50010;
+    margin: 24px;
+    text-align: right;
+    line-height: 1.142857143;
+    font-size: 1.75rem;
+    font-family: 'HM Sans Arabic Semi Bold', sans-serif, arial;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.tabs input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab {
+    width: 100%;
+    color: #000;
+    overflow: hidden;
+    margin-top: 10px;
+    border: none;
+    background-color: #FFF;
+    padding-bottom: 0;
+}
+
+.tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px 12px 24px;
+    font-weight: normal;
+    cursor: pointer;
+    position: relative;
+    /* Icon */
+}
+
+/*
+
+  .tab-label::after {
+      content: "";
+      background-image: url(https://cdn-eu.dynamicyield.com/api/9876644/images/22f794c75dae7__48-px.svg);
+      width:35px;
+      height:35px;
+      text-align: center;
+      transition: all 0.35s;
+      background-size: cover;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+  }
+  */
+.tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #2c3e50;
+    background: white;
+    transition: all 0.35s;
+}
+
+.tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer;
+}
+
+.tab-close:hover {
+    background: #1a252f;
+}
+
+input:checked+.tab-label::after {
+    transform: rotate(90deg);
+}
+
+.tab-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.tab-icon.minus {
+    display: none;
+}
+
+input:checked+.tab-label .tab-icon.plus {
+    display: none;
+}
+
+input:checked+.tab-label .tab-icon.minus {
+    display: block;
+}
+
+input:checked+.tab-label .tab-icon svg {
+    color: #e50010;
+    fill: #e50010;
+}
+
+input:checked~.tab-content {
+    max-height: 100vh;
+    padding: 0 23px 10px 23px;
+}
+
+.faq-block h3.tab-heading {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    color: #222222;
+    font-family: "HM Sans Arabic Regular", sans-serif, arial;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.2307692308;
+    font-size: .8125rem;
+}
+
+.faq-block h3.plus-icon {
+    font-size: 12px;
+}
+
+.tab-content p.tab-discription {
+    width: 95%;
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-family: "HM Sans Arabic Regular", sans-serif, arial;
+    font-size: .8125rem;
+}
+
+input:checked+.tab-label h3.tab-heading {
+    color: #e50010;
+}
+
+.info-bottom {
+    background-color: #f1ebdf;
+    padding: 64px 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.info-bottom h3.heading {
+    width: 100%;
+    line-height: 1.142857143;
+    font-size: 1.75rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-family: 'HM Sans Arabic Semi Bold', sans-serif, arial;
+    color: #e50010;
+}
+
+.info-bottom .discription {
+    font-family: "HM Sans Arabic Regular", sans-serif, arial;
+    line-height: 1.45;
+    font-size: .688rem;
+    font-weight: 400;
+    text-transform: none;
+    margin: 0 0 20px 0;
+    padding: 10px 60px 0;
+}
+
+.work-slider .slick-arrow {
+    position: absolute;
+    bottom: 0;
+    top: inherit !important;
+}
+
+.slick-next {
+    right: 20px !important;
+    left: inherit !important;
+}
+
+.slick-prev {
+    left: 20px !important;
+    right: inherit !important;
+}
+
+.tab-label:before {
+    display: none;
+}
+
+p:empty {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .info-banner {
+        flex-direction: column-reverse;
+    }
+
+    .benefits-right {
+        display: none;
+    }
+
+    .benefits-left {
+        flex-basis: inherit;
+        width: 100%;
+    }
+
+    .article-cont {
+        width: 100%;
+    }
+
+    .info-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .info-banner {
+        flex-direction: column-reverse;
+    }
+
+    .info-banner-right {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 15px;
+    }
+
+    .benefits-right {
+        display: none;
+    }
+
+    .benefits-left {
+        flex-basis: inherit;
+        padding: 20px 0;
+        max-width: 100%;
+    }
+
+    .info-content h1.heading {
+        line-height: 1.285714286;
+        font-size: 1.75rem;
+    }
+
+    .how-it-works h2.sub-head {
+        line-height: 1.2;
+        font-size: 1.25rem;
+    }
+
+    .how-it-works {
+        padding: 40px 0;
+    }
+
+    .how-it-works h2.sub-head {
+        padding: 0 15px;
+    }
+
+    .work-slider {
+        padding: 0 15px;
+    }
+
+    .how-it-works h3.how-head {
+        font-size: 1rem;
+        margin-top: 25px;
+    }
+
+    .work-box {
+        padding: 0;
+    }
+
+    .how-it-works .disc {
+        min-height: auto;
+    }
+
+    .articles {
+        padding: 40px 0;
+    }
+
+    .article-cont {
+        width: 100%;
+        padding: 0;
+        flex-basis: inherit;
+        padding: 0 15px;
+    }
+
+    .article-box {
+        padding: 15px 0;
+    }
+
+    .faq-part {
+        padding: 0;
+    }
+
+    .article-area h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .article-box {
+        width: 100%;
+    }
+
+    .tab {
+        padding-bottom: 6px;
+    }
+
+    .tabs {
+        width: 100%;
+        padding: 0 0;
+        margin-top: 30px;
+    }
+
+    .faq-block h3.tab-heading {
+        font-size: 12px;
+        width: 90%;
+    }
+
+    .tab-content p.tab-discription {
+        font-size: 12px;
+        padding: 8px 0 0 0;
+    }
+
+    input:checked~.tab-content {
+        padding: 0 15px;
+    }
+
+    .tab-label {
+        padding: 13px 10px 0 10px;
+    }
+
+    .tab-label::after {
+        right: 0px;
+    }
+
+    .faq-container {
+        margin-top: 10px;
+    }
+
+    .info-bottom h3.heading {
+        font-size: 1.5rem;
+    }
+
+    .info-bottom {
+        padding: 30px 20px;
+    }
+
+    .info-bottom .discription {
+        padding: 10px 0px 0;
+    }
+
+    .cta {
+        min-height: auto;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .work-slider {
+        padding-bottom: 60px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .articles {
+        background: url(https://sa.hm.com/sites/g/files/bndsjb1561/files/2024-05/w17-hm-membership-info-bnr-03-m_0.jpg);
+        background-size: 410px;
+        background-attachment: unset;
+    }
+}

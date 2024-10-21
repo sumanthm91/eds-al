@@ -1,0 +1,68 @@
+.department .main-wrapper main div.section:first-child .default-content-wrapper h1,
+.department .main-wrapper main div.section:first-child .default-content-wrapper h2,
+.department .main-wrapper main div.section:first-child .default-content-wrapper h3,
+.department .main-wrapper main div.section:first-child .default-content-wrapper h4,
+.department .main-wrapper main div.section:first-child .default-content-wrapper h5,
+.department .main-wrapper main div.section:first-child .default-content-wrapper h6 {
+    margin: 0;
+}
+
+.department .main-wrapper {
+    padding-top: var(--nav-height);
+}
+
+.department aside {
+    display: none;
+}
+
+.department .main-wrapper main {
+    width: 100%;
+}
+
+.department .main-wrapper .sidebar-main>div.section:first-child {
+    padding-bottom: 0;
+}
+
+@media (width >=768px) {
+    .department .main-wrapper main div.section:first-child .default-content-wrapper h1,
+    .department .main-wrapper main div.section:first-child .default-content-wrapper h2,
+    .department .main-wrapper main div.section:first-child .default-content-wrapper h3,
+    .department .main-wrapper main div.section:first-child .default-content-wrapper h4,
+    .department .main-wrapper main div.section:first-child .default-content-wrapper h5,
+    .department .main-wrapper main div.section:first-child .default-content-wrapper h6 {
+        padding-bottom: var(--space-space-16);
+    }
+
+    .department aside {
+        display: block;
+        padding: 0;
+    }
+
+    .department .main-wrapper {
+        flex-direction: row;
+        max-width: min(1600px, calc(100vw - 2 * var(--grid-margin)));
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: revert;
+    }
+
+    .department .sidebar-main {
+        margin-top: 0;
+    }
+
+    .department .main-wrapper aside,
+    .department .main-wrapper .sidebar-main>div.section:first-child {
+        margin-top: var(--nav-height);
+    }
+
+    .department .main-wrapper main .section {
+        padding: 0;
+    }
+}
+
+@media (width >= 1024px) {
+    .department .main-wrapper aside,
+    .department .main-wrapper .sidebar-main>div.section:first-child {
+        margin-top: unset;
+    }
+}

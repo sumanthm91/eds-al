@@ -1,0 +1,34 @@
+.account-communication-preferences .communication-container form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-20);
+}
+
+.account-communication-preferences button {
+  width: 100%;
+  margin-top: 0;
+}
+
+
+.account-communication-preferences .communication-container .input-field-wrapper input[type="checkbox"]:checked+label {
+  font-weight: var(--font-weight-6);
+}
+
+@media (width >= 768px) { 
+  .account .main-wrapper main .section.account-communication-preferences-container { 
+    padding-right: 0;
+  }
+
+  [dir='rtl'] .account .main-wrapper main .section.account-communication-preferences-container { 
+    padding-right: var(--space-space-24);
+  }
+
+  .account-communication-preferences .communication-container form {
+    gap: var(--space-space-12);
+  }
+
+  .account-communication-preferences button {
+    width: 24rem;
+    margin-top: var(--space-space-12);
+  }
+}

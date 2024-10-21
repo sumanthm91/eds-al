@@ -1,0 +1,180 @@
+.accordion details {
+  width: 100%;
+  color: var(--color-text-main);
+  overflow: hidden;
+  margin-top: 1rem;
+  padding: var(--space-space-5x) 0 var(--space-space-5x) 0;
+}
+
+.accordion.border details {
+  border: 1px solid var(--color-secondary-20);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.accordion details + details {
+  margin-top: var(--space-space-3x);
+}
+
+.accordion details summary {
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  transition: margin .35s;
+}
+
+.accordion details[open] summary{
+  margin-bottom: var(--space-space-3x);
+}
+
+.accordion details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion details summary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  background-image: url('/icons/chevron-down.svg');
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  transform: translateY(-50%);
+}
+
+.accordion details[open] summary::after {
+  background-image: url('/icons/chevron-up.svg');
+}
+
+.accordion.plus details summary::after {
+  background-image: url('/icons/plus.svg');
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  transform: translateY(-50%);
+}
+
+.accordion details .accordion-item-body {
+  margin: 0;
+  font-size: var(--text-s);
+  line-height: var(--line-height-s);
+  font-family: 'hm sans regular', Arial, Helvetica, sans-serif;
+}
+
+.accordion details .accordion-item-body a{
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-xs);
+  text-decoration: underline;
+}
+
+.accordion details .accordion-item-body a:hover{
+  color: var(--color-text-main);
+}
+
+.accordion details[open] .accordion-item-body p {
+  margin-top: var(--space-space-3x);
+  margin-bottom: auto;
+}
+
+.accordion details[open] .accordion-item-body p:first-child{
+  margin-top: 0;
+}
+
+.accordion details[open] .accordion-item-body ul {
+  margin-block-start: unset;
+  margin-block-end: unset;
+  margin-top: var(--space-space-3x);
+  margin-bottom: auto;
+  padding-inline-start: var(--space-space-4x);
+}
+
+.accordion details summary h3 {
+  width: auto;
+  height: auto;
+  text-transform: lowercase;
+  padding-inline-end: 5rem;
+  margin: 0;
+  color: var(--color-text-main);
+  font-family: 'hm sans semibold', Arial, Helvetica, sans-serif;
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-l);
+}
+
+.accordion details summary h3::first-letter {
+  text-transform: uppercase;
+}
+
+.section.accordion-container.space-80 > div > h3 {
+  margin-top : 0;
+}
+
+.section.accordion.highlight-open details[open] summary h3 {
+  color: var(--color-primary-100);
+}
+
+.accordion-container.space-80 {
+  padding: var(--space-space-11x) var(--space-space-3x);
+}
+
+.accordion-container h5{
+  margin-bottom: var(--space-space-5x);
+  font-weight: var(--font-weight-4);
+}
+
+.accordion.no-right-padding details {
+  padding-right: 0;
+}
+
+.accordion.summary-border details summary {
+  border-bottom: 1px solid var(--color-neutral-30);
+  padding-bottom: var(--space-space-8);
+}
+
+.accordion.summary-border details summary::after {
+  padding-bottom: var(--space-space-16);
+}
+
+html[dir='rtl'] .accordion details summary::after {
+  right: auto;
+  left: 0.5rem;
+}
+
+.accordion.highlight-open details[open] summary::after {
+  color: var(--color-primary-100);
+}
+
+.accordion.plus details[open] summary::after {
+  background-image: url('/icons/minus.svg');
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  color: var(--color-primary-100);
+}
+
+html[dir='rtl'] .accordion.plus details summary::after {
+  transform: translateY(-50%);
+}
+
+@media (width >= 768px){
+  .accordion details summary h3{
+    font-size: var(--font-size-4);
+    line-height: var(--line-height-m);
+
+  } 
+
+  .accordion details {
+    padding: var(--space-space-4x) var(--space-space-4x) var(--space-space-4x) 0;
+  }
+
+  [dir="rtl"] .accordion details {
+    padding: var(--space-space-4x) 0 var(--space-space-4x) var(--space-space-4x);
+  }
+
+  .accordion-container h5{
+    margin-bottom: var(--space-space-4x);
+  }
+}

@@ -1,0 +1,291 @@
+{
+    "data": {
+        "storeLocationDetails": {
+            "items": [
+                {
+                    "id": 372,
+                    "store_code": "RD1-3526-HEN",
+                    "store_name": "Villagio",
+                    "latitude": "25.259220",
+                    "longitude": "51.443743",
+                    "status": 1,
+                    "website_id": 21,
+                    "pudo_service": 0,
+                    "sts_service": 1,
+                    "sts_delivery_time_label": "1-2 days",
+                    "rnc_service": 0,
+                    "store_phone": "97444529648 ",
+                    "store_email": "hnmmgr.vil-qtr@alshaya.com",
+                    "address": [
+                        {
+                            "code": "firstname",
+                            "value": "Naseem Abukar"
+                        },
+                        {
+                            "code": "lastname",
+                            "value": ""
+                        },
+                        {
+                            "code": "telephone",
+                            "value": "97444529648 "
+                        },
+                        {
+                            "code": "street",
+                            "value": "Villaggio Mall"
+                        },
+                        {
+                            "code": "address",
+                            "value": "baaya street Al waab Doha"
+                        },
+                        {
+                            "code": "address_building_segment",
+                            "value": ""
+                        },
+                        {
+                            "code": "address_city_segment",
+                            "value": "10053"
+                        },
+                        {
+                            "code": "area",
+                            "value": "10059"
+                        }
+                    ],
+                    "store_hours": [
+                        {
+                            "code": "2",
+                            "label": "Sunday",
+                            "value": "9 AM - 10 PM"
+                        },
+                        {
+                            "code": "5",
+                            "label": "Monday",
+                            "value": "9 AM - 10 PM"
+                        },
+                        {
+                            "code": "8",
+                            "label": "Tuesday",
+                            "value": "9 AM - 10 PM"
+                        },
+                        {
+                            "code": "11",
+                            "label": "Wednesday",
+                            "value": "9 AM - 10 PM"
+                        },
+                        {
+                            "code": "14",
+                            "label": "Thursday",
+                            "value": "9 AM - 11 PM"
+                        },
+                        {
+                            "code": "17",
+                            "label": "Friday",
+                            "value": "9 AM - 11 PM"
+                        },
+                        {
+                            "code": "20",
+                            "label": "Saturday",
+                            "value": "9 AM - 10 PM"
+                        }
+                    ],
+                    "created_at": "2021-01-26 08:51:08",
+                    "modified_at": "2021-01-26 08:51:08",
+                    "store_id": 42,
+                    "included_in_store": "",
+                    "price_amount": "0.00",
+                    "distance": null,
+                    "low_stock": null,
+                    "collection_point": null
+                },
+                {
+                    "id": 379,
+                    "store_code": "RD1-3600-HEN",
+                    "store_name": "Mall of Qatar",
+                    "latitude": "25.326737",
+                    "longitude": "51.349877",
+                    "status": 1,
+                    "website_id": 21,
+                    "pudo_service": 0,
+                    "sts_service": 1,
+                    "sts_delivery_time_label": "1 - 2 days",
+                    "rnc_service": 0,
+                    "store_phone": "97444529048 ",
+                    "store_email": "hnm.moq-qtr@alshaya.com",
+                    "address": [
+                        {
+                            "code": "firstname",
+                            "value": "Helen Edwards"
+                        },
+                        {
+                            "code": "lastname",
+                            "value": ""
+                        },
+                        {
+                            "code": "telephone",
+                            "value": "97444529048 "
+                        },
+                        {
+                            "code": "street",
+                            "value": "Alrayan , Doha Qatar"
+                        },
+                        {
+                            "code": "address",
+                            "value": ""
+                        },
+                        {
+                            "code": "address_building_segment",
+                            "value": ""
+                        },
+                        {
+                            "code": "address_city_segment",
+                            "value": "10053"
+                        },
+                        {
+                            "code": "area",
+                            "value": "10152"
+                        }
+                    ],
+                    "store_hours": [
+                        {
+                            "code": "2",
+                            "label": "Sunday",
+                            "value": "10 AM - 10 PM"
+                        },
+                        {
+                            "code": "5",
+                            "label": "Monday",
+                            "value": "10 AM - 10 PM"
+                        },
+                        {
+                            "code": "8",
+                            "label": "Tuesday",
+                            "value": "10 AM - 10 PM"
+                        },
+                        {
+                            "code": "11",
+                            "label": "Wednesday",
+                            "value": "10 AM - 10 PM"
+                        },
+                        {
+                            "code": "14",
+                            "label": "Thursday",
+                            "value": "10 AM - 12 AM"
+                        },
+                        {
+                            "code": "17",
+                            "label": "Friday",
+                            "value": "1 PM - 12 AM"
+                        },
+                        {
+                            "code": "20",
+                            "label": "Saturday",
+                            "value": "10 AM - 11 PM"
+                        }
+                    ],
+                    "created_at": "2021-02-14 08:20:08",
+                    "modified_at": "2021-02-14 08:20:08",
+                    "store_id": 42,
+                    "included_in_store": "",
+                    "price_amount": "0.00",
+                    "distance": null,
+                    "low_stock": null,
+                    "collection_point": null
+                },
+                {
+                    "id": 382,
+                    "store_code": "RD1-3711-HEN",
+                    "store_name": "Doha Festival City  Family",
+                    "latitude": "25.385092",
+                    "longitude": "51.442139",
+                    "status": 1,
+                    "website_id": 21,
+                    "pudo_service": 0,
+                    "sts_service": 1,
+                    "sts_delivery_time_label": "1 - 2 days",
+                    "rnc_service": 0,
+                    "store_phone": "97444529914 ",
+                    "store_email": "hnmmen.dfc-qtr@alshaya.com",
+                    "address": [
+                        {
+                            "code": "firstname",
+                            "value": "Sherif Elsayed"
+                        },
+                        {
+                            "code": "lastname",
+                            "value": ""
+                        },
+                        {
+                            "code": "telephone",
+                            "value": "97444529914 "
+                        },
+                        {
+                            "code": "street",
+                            "value": "Umm salal Muhammed, Doha Qatar"
+                        },
+                        {
+                            "code": "address",
+                            "value": ""
+                        },
+                        {
+                            "code": "address_building_segment",
+                            "value": ""
+                        },
+                        {
+                            "code": "address_city_segment",
+                            "value": "10053"
+                        },
+                        {
+                            "code": "area",
+                            "value": "10077"
+                        }
+                    ],
+                    "store_hours": [
+                        {
+                            "code": "2",
+                            "label": "Sunday",
+                            "value": "10 AM - 10 PM"
+                        },
+                        {
+                            "code": "5",
+                            "label": "Monday",
+                            "value": "10 AM - 10 PM"
+                        },
+                        {
+                            "code": "8",
+                            "label": "Tuesday",
+                            "value": "10 AM - 10 PM"
+                        },
+                        {
+                            "code": "11",
+                            "label": "Wednesday",
+                            "value": "10 AM - 10 PM"
+                        },
+                        {
+                            "code": "14",
+                            "label": "Thursday",
+                            "value": "10 AM - 11 PM"
+                        },
+                        {
+                            "code": "17",
+                            "label": "Friday",
+                            "value": "10 AM - 11 PM"
+                        },
+                        {
+                            "code": "20",
+                            "label": "Saturday",
+                            "value": "10 AM - 11 PM"
+                        }
+                    ],
+                    "created_at": "2021-02-14 08:22:07",
+                    "modified_at": "2021-02-14 08:22:07",
+                    "store_id": 42,
+                    "included_in_store": "",
+                    "price_amount": "0.00",
+                    "distance": null,
+                    "low_stock": null,
+                    "collection_point": null
+                }
+            ],
+            "total_count": 3
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.checkout__methods-option {
+    display: flex;
+    gap: var(--space-space-8);
+    margin-bottom: var(--space-space-8);
+    background-color: var(--color-neutral-50);
+    min-height: var(--space-space-62);
+    padding: var(--space-space-12) var(--space-space-16);
+}
+
+.checkout__methods-option input[type='radio'] {
+    align-self:flex-start;
+    top: 0;
+    appearance: none;
+    border-radius: 50%;
+    border: 1px solid var(--color-neutral-700);
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    width: var(--space-space-24);
+    height: var(--space-space-24);
+    padding: var(--space-space-3x-2);
+}
+
+.checkout__delivery-information__wrapper .checkout__methods-option input[type='radio']{
+    top: var(--space-space-11);
+}
+
+.checkout__delivery-information__wrapper .checkout__shipping-method-option.disabled{
+   position: relative;
+}
+
+.checkout__methods-option input[type='radio']:checked {
+    border: 1px solid var(--color-success-100);
+}
+
+.checkout__delivery-information__wrapper .checkout__shipping-method-option.disabled input[type='radio']{
+    top:var(--space-space-0-1);
+}
+
+
+.checkout__methods-option.disabled .checkout__methods-label span:not(.checkout__methods-info),
+.checkout__methods-option.disabled input[type='radio']:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.checkout__methods-option input[type='radio']:checked::before {
+    content: '';
+    position: absolute;
+    width: var(--space-space-15);
+    height: var(--space-space-15);
+    background-color: var(--color-success-100);
+    border: 1px solid var(--color-success-100);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@media (width >=768px) {
+    .checkout__methods-option {
+        min-height: var(--space-space-68);
+    }
+
+    .checkout__methods-option input[type='radio'] {
+        top: var(--spacing-xxsmall-2);
+        appearance: none;
+        border-radius: 50%;
+        border: 1px solid var(--color-neutral-700);
+        cursor: pointer;
+        margin: 0;
+        position: relative;
+        width: var(--space-space-5x);
+        height: var(--space-space-5x);
+        padding: var(--space-space-2x-1);
+    }
+
+    .checkout__delivery-information__wrapper .checkout__methods-option input[type='radio']{
+        top: var(--space-space-16);
+    }
+
+    .checkout__delivery-information__wrapper .checkout__shipping-method-option.disabled input[type='radio']{
+        top:var(--spacing-xxxsmall);
+    }
+
+    .checkout__methods-option input[type='radio']:checked::before {
+        content: '';
+        position: absolute;
+        width:var(--space-space-3x);
+        height: var(--space-space-3x);
+        background-color: var(--color-success-100);
+        border: 1px solid var(--color-success-100);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.checkout__methods-option .checkout__methods-label {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: var(--space-space-8);
+    align-self: center;
+}
+
+.checkout__methods-option .checkout__methods-label .icon-wrapper {
+    align-items: center;
+    display: flex;
+}
+
+.checkout__methods-option .checkout__methods-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.checkout__methods-option .checkout__methods-description .checkout__methods-type {
+    display: flex;
+    justify-content: space-between;
+    font: var(--type-details-4-font);
+    line-height: var(--line-height-m);
+}
+
+.checkout__methods-option .checkout__methods-description .checkout__methods-title {
+    font: var(--type-details-3-font);
+    color: var(--color-text-dark);
+    line-height: var(--line-height-xs);
+}
+
+.checkout__methods-option .checkout__methods-description .checkout__methods-info {
+    color: var(--color-order-info-10);
+    padding-top: var(--space-space-12);
+    font: var(--type-details-4-font);
+}
+
+html[dir="rtl"] .checkout__delivery-methods-option .checkout__methods-label .icon-wrapper {
+    margin-left: var(--space-space-8);
+}

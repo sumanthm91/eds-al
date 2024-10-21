@@ -1,0 +1,23 @@
+## system files
+.DS_Store
+
+## npm
+/node_modules
+/npm-debug.log
+
+## testing
+/coverage
+
+## temp folders
+/.tmp
+
+# build
+/_site
+/dist
+/out-tsc
+
+custom-elements.json
+demo-libraries.md
+
+src/plugins/tags
+src/plugins/api-test

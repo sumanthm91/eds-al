@@ -1,0 +1,72 @@
+/* stylelint-disable-line length-zero-no-unit */
+
+.section.commerce-login-container {
+    padding-top: var(--space-space-0x);
+    padding-bottom: var(--space-space-0x);
+}
+
+.login-container .input-wrapper {
+    height: 5.4rem;
+    position: relative;
+}
+
+.commerce-login-container .commerce-login form button {
+    margin: 0;
+}
+
+.commerce-login-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-16);
+}
+
+.commerce-login-container  a.forgot-password {
+    font-size: var(--font-size-2);
+    line-height: var(--line-height-s);
+    text-align: center;
+    margin-top: var(--space-space-8);
+}
+
+@media(width >=768px) {
+    .commerce-login-container.social-login-container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-top: var(--space-space-32);
+    }
+
+    .section.commerce-login-container > .commerce-login-wrapper {
+        max-width: 56.5%;
+        width: 100%;
+        padding-right: 8%;
+        margin: 0;
+    }
+
+    html[dir='rtl'] .commerce-login-container > .commerce-login-wrapper {
+        max-width: 56.5%;
+        width: 100%;
+        padding-left: 8%;
+        padding-right: var(--space-space-0x);
+    }
+
+    .commerce-login-container .commerce-login form input, .commerce-login-container .commerce-login form .input-field-wrapper {
+        max-width: unset;
+    }
+
+    .commerce-login-container .commerce-login form button {
+        width: 100%;
+        margin-top: var(--space-space-16);
+    }
+
+    .commerce-login-container .button-container a {
+        width: var(--grid-col-4);
+    }
+
+    .commerce-login-wrapper form {
+        gap: var(--space-space-24);
+    }
+
+    .commerce-login-container  a.forgot-password {
+        margin-top: 0;
+    }
+}

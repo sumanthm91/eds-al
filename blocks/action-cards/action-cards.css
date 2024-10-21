@@ -1,0 +1,112 @@
+.action-cards-container {
+  display: flex;
+  padding: 0 var(--grid-margin);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-space-8x);
+  align-self: stretch;
+}
+
+.action-cards-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-4x);
+  place-content: center;
+  width: 100%;
+}
+
+
+.action-cards-item {
+  padding: var(--space-space-4x);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-3x);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.action-cards-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.action-cards-button>p.button-container {
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
+.action-cards-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-space-4x);
+  flex: 1 0 0;
+}
+
+.action-cards-content>h4 {
+  font-size: var(--font-size-3);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.action-cards-content>p {
+  margin: 0;
+}
+
+.action-cards-button>p.button-container a.button {
+  margin-top: unset;
+  margin-bottom: unset;
+  width: 16rem;
+}
+
+.action-cards.border .action-cards-item {
+  border: 1px solid var(--color-neutral-60);
+}
+
+.action-cards.background .action-cards-item {
+  background: var(--color-neutral-10);
+}
+
+@media (width >=768px) {
+  .action-cards {
+    max-width: var(--grid-col-10);
+  }
+
+  .action-cards-block {
+    gap: var(--space-space-6x);
+    flex-flow: row wrap;
+    justify-content: stretch;
+    align-items: center;
+  }
+
+  .action-cards-block>div {
+    flex: 1;
+    height: auto;
+  }
+
+  .action-cards-item {
+    padding: var(--space-space-6x);
+    gap: var(--space-space-7x);
+    justify-content: start;
+    align-items: flex-end;
+    align-self: stretch;
+  }
+
+  .action-cards-content>h4 {
+    font-size: var(--font-size-7);
+  }
+
+  .action-cards-button {
+    display: unset;
+    width: auto;
+  }
+}
+
+@media (width >=1024px) {
+  .action-cards-item {
+    flex-direction: row;
+  }
+}

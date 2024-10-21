@@ -1,0 +1,10 @@
+# Blocks from react-app are minified. So it is ignored from  style lint - Start.
+blocks/cart/
+blocks/cart-login/
+blocks/checkout/
+blocks/order-confirmation/
+blocks/payment-error/
+blocks/payment-success/
+tools/promotion/dist/
+tools/picker/dist/
+# Blocks from react-app are minified. So it is ignored from  style lint - End.

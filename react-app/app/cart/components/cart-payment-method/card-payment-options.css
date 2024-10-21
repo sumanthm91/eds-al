@@ -1,0 +1,40 @@
+.payment_method_logos_blocks {
+  display: block;
+  background-color: var( --color-neutral-white);
+  padding: 0 var(--space-space-20);
+}
+
+.payment_logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: var(--spacing-small);
+}
+
+.logos_bar .icon {
+  height: unset;
+  width: unset;
+}
+
+.logos_bar img {
+  height: var(--space-space-5x);
+  width: var(--space-space-48-1);
+  flex-shrink: 0;
+  margin: var(--space-space-4) var(--space-space-2) 0 var(--space-space-2);
+  padding: 0 var(--space-space-2);
+}
+
+.payment_logos_title {
+  line-height: var(--space-space-15-3);
+  text-align: center;
+  font-size: var(--spacing-xsmall-2);
+  color: var(--color-brand-700);
+  padding-top: var(--space-space-1x-3);
+}
+
+@media (min-width: 768px) {
+  .payment_logos_title {
+    padding-top: var(--spacing-small);
+  }
+}

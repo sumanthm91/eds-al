@@ -1,0 +1,343 @@
+/** All Styling related to the eGift Purchase Block egift-card/purchase */
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.egift-purchase-container {
+  .egift-hidden {
+    display: none;
+  }
+
+  .egift-visible {
+    animation-name: fade-in-up;
+    animation-duration: 0.45s;
+    animation-fill-mode: backwards;
+  }
+
+  .greyed {
+    color: var(--color-brand-200);
+  }
+}
+
+.egift-content {
+  margin-top: var(--space-space-5x);
+}
+
+.egift-purchase-container .default-content-wrapper {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-neutral-40);
+  margin-bottom: var(--space-space-3x);
+
+  h1 {
+    font-size: 1.8rem;
+    line-height: 2.376rem;
+    font-weight: var(--font-weight-6);
+  }
+}
+
+.egift-content-left {
+  padding: var(--space-space-3x);
+}
+
+.egift-content-right {
+  gap: var(--space-space-3x);
+
+  .egift-choose-card {
+    font-size: var(--font-size-4);
+    line-height: 2.24rem;
+    font-weight: var(--font-weight-6);
+  }
+
+  p.egift-card-name {
+    font-size: var(--font-size-3);
+    line-height: 1.82rem;
+    font-weight: var(--font-weight-4);
+    color: var(--color-text-dark);
+  }
+
+  .egift-card-list {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-space-3x);
+
+    div {
+      display: flex;
+      align-items: center;
+      padding: var(--space-space-2);
+    }
+
+    div.selected {
+      border: 1px solid var(--color-neutral-black);
+    }
+
+    img {
+      height: 4.064rem;
+    }
+  }
+
+  .egift-choose-amount {
+    font-size: var(--font-size-4);
+    line-height: 2.24rem;
+    font-weight: var(--font-weight-6);
+  }
+
+  .egift-amount-list {
+    display: flex;
+    flex-flow: wrap;
+    gap: var(--space-space-2x);
+
+    p {
+      height: 3.4rem;
+      width: fit-content;
+      font-size: var(--font-size-3);
+      line-height: 1.82rem;
+      border: 1px solid var(--color-brand-700);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: var(--space-space-10);
+      margin: 0;
+      cursor: pointer;
+    }
+
+    p.selected {
+      background-color: var(--color-neutral-black);
+      color: var(--color-neutral-50);
+    }
+  }
+
+  .egift-custom-amount {
+    font-size: var(--font-size-4);
+    line-height: 2.24rem;
+    font-weight: var(--font-weight-6);
+  }
+}
+
+.egift-content-bottom {
+  .egift-recipient {
+    border-top: 1px solid var(--color-neutral-40);
+    padding-top: var(--space-space-5x);
+    font-size: var(--font-size-7);
+    line-height: 3.168rem;
+    font-weight: var(--font-weight-6);
+  }
+
+  .egift-recipient-wrapper {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-6);
+    line-height: 1.82rem;
+  }
+
+  .egift-recipient-container textarea {
+    width: 100%;
+    height: 8.5rem;
+    border-color: var(--color-neutral-40);
+  }
+
+  .egift-action-btns {
+    display: flex;
+    gap: var(--space-space-16);
+    height: 7.8rem;
+    align-items: center;
+
+    p {
+      width: 100%;
+
+      a {
+        width: 100%;
+      }
+    }
+
+    .egift-add-to-bag a {
+      background-color: var(--color-neutral-50);
+      color: var(--color-brand-700);
+      border: 1px solid var(--color-neutral-black);
+    }
+
+    .disabled-btn a {
+      background-color: var(--color-neutral-40);
+      border: unset;
+      color: var(--color-secondary-40);
+    }
+  }
+}
+
+.error-message-container.hide {
+  display: none;
+}
+
+.error-message-container {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    filter: invert(10%);
+  }
+
+  .error-message {
+    display: inline;
+    color: var(--color-error-100);
+    font-size: var(--font-size-2);
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  display: block;
+  margin-bottom: var(--space-space-3x);
+
+  /* stylelint-disable no-descending-specificity */
+  input, textarea {
+    font-family: var(--type-base-font-family);
+    font-size: var(--font-size-4);
+    height: 5.4rem;
+    padding: var(--space-space-20) var(--space-space-16) var(--space-space-8) var(--space-space-16);
+    border-radius: 0;
+    border: 0.1rem solid var(--color-neutral-40);
+    width: 100%;
+    margin: 0;
+  }
+
+  input.invalid {
+    border: 0.1rem solid var(--color-error-100);
+  }
+
+  label {
+    position: absolute;
+    font-size: var(--font-size-4);
+    line-height: var(--line-height-l);
+    top: var(--space-space-15);
+    padding: 0 var(--space-space-16);
+    z-index: 1;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border: 0.1rem solid var(--color-neutral-700);
+  }
+
+  input:focus~label, label.inputfilled, textarea:focus~label, textarea.inputfilled {
+    transform: translateY(-50%);
+    font-size: var(--font-size-2);
+    color: var(--color-text-dark);
+  }
+  
+}
+
+.egift-amount-input {
+  text-indent: 4ch;
+}
+
+.open-amount-currency {
+  display: none;
+  position: absolute;
+  left: var(--space-space-16);
+  right: unset;
+  color: var(--color-text-dark);
+  top: 2.2rem;
+}
+
+input:focus~span, .open-amount-currency.show {
+  display: block;
+}
+
+.egift-add-to-bag:not(.disabled-btn) a.button:hover {
+  border: var(--shape-border-width-1) solid transparent;
+  color: var(--color-neutral-50);
+  background-color: var(--color-brand-700);
+}
+
+html[dir='rtl'] .open-amount-currency {
+  left: unset;
+  right: var(--space-space-16);
+}
+
+@media (min-width: 768px) {
+  .egift-purchase-container {
+    margin-left: 20%;
+    margin-right: 20%;
+
+    .input-wrapper {
+      margin-bottom: unset;
+    }
+  
+    .egift-action-btns {
+      border-top: 1px solid var(--color-neutral-40);
+      padding-top: var(--space-space-8x);
+      justify-content: flex-end;
+  
+      p.button-container {
+        width: 16.8rem;
+      }
+    }
+
+    .default-content-wrapper h1 {
+      font-size: var(--font-size-7);
+      line-height: 3.168rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .egift-content-top {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-space-5x);
+    }
+
+    .egift-amount-list {
+      width: 31.3rem;
+    }
+
+    .egift-content-left {
+      width: 51.2rem;
+      text-align: end;
+
+      img {
+        width: 32rem;
+        margin-top: var(--space-space-5x);
+      }
+    }
+
+    .egift-recipient {
+      font-size: var(--font-size-6);
+    }
+
+    .egift-recipient.greyed {
+      font-size: var(--font-size-7);
+    }
+
+    .egift-recipient-detail {
+      display: flex;
+      gap: var(--space-space-10);
+      margin-bottom: var(--space-space-5x);
+    }
+
+    .egift-recipient-container textarea {
+      width: 64.6rem;
+      margin-bottom: var(--space-space-5x);
+    }
+
+    .egift-recipient-container .input-field:last-child {
+      width: 63.6rem;
+    }
+
+    .egift-recipient-detail input {
+      width: 31.8rem;
+    }
+  }
+}

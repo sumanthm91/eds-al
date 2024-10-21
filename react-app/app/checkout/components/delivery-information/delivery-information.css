@@ -1,0 +1,143 @@
+.checkout__billing-information {
+    margin-top: var(--space-space-6x);
+}
+
+.checkout__delivery-information__wrapper,
+.checkout__billing-information-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-16);
+    background-color: var(--color-neutral-white);
+    padding: var(--space-space-16);
+}
+
+.checkout__delivery-information__wrapper .delivery-information__header,
+.checkout__billing-information__header .delivery-information__header {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-space-12);
+}
+
+.checkout__delivery-information__wrapper .delivery-information__header .delivery-information__header__customer-info,
+.checkout__billing-information__header .delivery-information__header .delivery-information__header__customer-info{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-4);
+}
+
+.checkout__billing-information__header .delivery-information__header .delivery-information__customer-name,
+.dialog__body .delivery-information__address-container .delivery-information__customer-name,
+.checkout__delivery-information__wrapper .delivery-information__header .delivery-information__header__customer-info .delivery-information__customer-name {
+    font: var(--type-details-semibold-4-font);
+    line-height: var(--line-height-m);
+}
+
+.dialog__body .delivery-information__header__customer-address {
+    font: var(--type-details-4-font);
+    color: var(--color-text-dark);
+    margin-top: var(--space-space-4x);
+}
+
+.dialog__body .delivery-information__header__customer-address .delivery-information__customer-mobile {
+    display: block;
+    margin-top: var(--space-space-2x-1);
+}
+
+.checkout__billing-information__header .delivery-information__header .delivery-information__header__customer-address,
+.checkout__delivery-information__wrapper .delivery-information__header .delivery-information__header__customer-info .delivery-information__header__customer-address {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-4);
+    font: var(--type-details-4-font);
+    color: var(--color-text-dark);
+}
+
+.checkout__billing-information__header .delivery-information__header .delivery-information__header__customer-address *,
+.checkout__delivery-information__wrapper .delivery-information__header .delivery-information__header__customer-info .delivery-information__header__customer-address *{
+    line-height: var(--line-height-m);
+}
+
+.checkout__delivery-information__wrapper .delivery-information__header .delivery-information__header__action button,
+.checkout__billing-information__header .delivery-information__header .delivery-information__header__action button {
+    margin: 0;
+    padding: var(--space-space-2x-1) var(--space-space-4x);
+    font: var(--type-details-2-font);
+    line-height: var(--line-height-s);
+    border-color: var(--color-neutral-40);
+}
+
+.checkout__delivery-information__wrapper .delivery-information__header .delivery-information__header__action button::after,
+.checkout__billing-information__header .delivery-information__header .delivery-information__header__action button::after {
+    content: unset;
+}
+
+
+.checkout__delivery-information__wrapper .checkout__shipping-method-option {
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.delivery-information__address-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--space-space-4x) 5%;
+    box-sizing: border-box;
+    background-color: var(--color-background-offer-items);
+    flex: 2;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.delivery-information__address-container .secondary.delivery-information__new-address {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.delivery-information__address-container .delivery-information__address-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .delivery-information__address-container .delivery-information__address-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.delivery-information__address-container .delivery-information__header {
+    padding: var(--space-space-4x) var(--space-space-5x);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.delivery-information__address-container .delivery-information__header__action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.delivery-information__address-container .delivery-information__header__action .secondary {
+    margin-bottom: 0;
+}
+
+.delivery-information__address-container .delivery-information__header__action .secondary .secondary-tick span {
+    margin-right: var(--space-space-2x);
+    width: 20px;
+    margin-top: var(--space-space-1x-4);
+}
+
+.delivery-information__header__action .secondary.edit-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}

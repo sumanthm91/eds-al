@@ -1,0 +1,28 @@
+.icon-delivery-truck {
+  width: 5rem;
+  height: 3rem;
+}
+
+.delivery-note {
+  background: var(--color-tertiary-100);
+  -webkit-font-smoothing: antialiased;
+}
+
+.delivery-note-content {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.delivery-note p {
+  margin: 1.5rem;
+}
+
+.delivery-note p:last-child {
+  font-size: var(--font-size-3);
+  font-weight: normal;
+  text-align: start;
+  color: var(--color-text-main);
+  margin: 0;
+  line-height: 1.4;
+}

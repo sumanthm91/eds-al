@@ -1,0 +1,111 @@
+.teaser-block {
+    display: flex;
+    padding: var(--space-space-4x);
+    align-items: center;
+    flex-direction: column;
+    place-content: center;
+}
+
+.teaser.border .teaser-block {
+    border: 1px solid var(--color-neutral-60);
+}
+
+.teaser.background .teaser-block {
+    background: var(--color-neutral-10);
+}
+
+.teaser-content {
+    text-align: center;
+    padding: var(--space-space-4x);
+}
+
+.teaser-content-text {
+    text-align: start;
+    margin-bottom: var(--space-space-5x);
+}
+
+.teaser-content-text h3 {
+    margin: auto;
+}
+
+.teaser-content-text p {
+    margin: auto;
+    margin-top: var(--space-space-4x);
+}
+
+.teaser-img > div {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-space-3x);
+}
+
+.teaser-img > div > picture {
+    max-width: 41.8rem;
+    height: auto;
+}
+
+.teaser-buttons > div {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-space-4x);
+}
+
+.teaser-buttons > div > .button-container {
+    margin-top: unset;
+    margin-bottom: unset;
+    flex-basis: 100%
+}
+
+.teaser-buttons > div > .button-container .button {
+    width: 100%;
+    margin: 0;
+}
+
+.teaser-item {
+    flex: unset;
+}
+
+@media (width >= 768px) {
+    .teaser-block {
+        display: flex;
+        max-width: var(--grid-col-10);
+        padding: var(--space-space-8x) var(--grid-margin);
+        gap: var(--space-space-7x) var(--grid-gutter);
+        flex-flow: row wrap;
+        align-items: flex-end;
+    }
+
+    .teaser-content {
+        text-align: unset;
+    }
+
+    .teaser-content > div {
+        width: var(--grid-col-4, 51.2rem);
+    }
+
+    .teaser-img > div {
+        justify-content: end;
+        padding: 0;
+    }
+
+    .teaser-img > div > picture {
+        max-width: 41.8rem;
+    }
+
+    .teaser-content-text {
+        text-align: center;
+    }
+  }
+  
+  /* stylelint-disable-next-line */
+  @media (max-width: 600px) {
+    .teaser-buttons > div {
+        flex-direction: column;
+    }
+  }
+
+  @media (width >= 1024px) {
+    .teaser-item {
+        flex: 1;
+    }
+  }

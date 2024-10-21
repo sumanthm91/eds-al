@@ -1,0 +1,43 @@
+.dialog__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: var(--color-background-overley);
+    z-index: 1000;
+    justify-content: center;
+}
+
+.dialog__overlay .dialog__container {
+    position: relative;
+    background: var(--color-neutral-white);
+    margin: auto 0;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.dialog__overlay .dialog__container .dialog__header {
+    padding: var(--space-space-8) var(--space-space-12);
+}
+
+.dialog__overlay .dialog__container .dialog__header .icon-close-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.dialog__overlay .dialog__container .dialog__header .icon-close-wrapper .icon {
+    cursor: pointer;
+    margin-left: auto;
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+@media (width >=1024px) {
+    .dialog__overlay .dialog__container {
+        margin: auto;
+        width: 50%;
+    }
+}
+

@@ -1,0 +1,239 @@
+.dialog__container-discount-and-voucher-loggedin-user {
+    position: relative;
+}
+
+.dialog__header.dialog__header-discount-and-voucher-loggedin-user {
+    position: absolute;
+    top: var(--space-space-2);
+    right: 0;
+    width: var(--spacing-xbig);
+    height: var(--spacing-xbig);
+    padding: var(--space-space-2x) var(--space-space-12);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .popup-header {
+    text-align: center;
+    padding: var(--space-space-15) 0;
+    position: relative;
+    box-shadow: 0 0.0625rem 0 0 var(--color-box-shadow-color);
+}
+
+
+html[dir="rtl"] .dialog__header.dialog__header-discount-and-voucher-loggedin-user {
+    left: 0;
+    right: unset;
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .popup-heading {
+    font-size: var(--font-size-6);
+    font-family: var(--type-base-font-family-bold);
+    font-weight: var(--font-weight-6);
+    margin: 0;
+    line-height: normal;
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: var(--shape-border-width-1) solid var(--color-neutral-60);
+    margin-top: var(--spacing-xxsmall);
+    margin-bottom: var(--space-space-16);
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .tab-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-4);
+    color: var(--color-brand-700);
+    padding: var(--space-space-16) 0;
+    font-family: var(--type-base-font-family);
+    height: unset;
+    margin: 0;
+    width: 50%;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .tab-button.active {
+    border-bottom: var(--shape-border-width-1) solid var(--color-text-main);
+    font-family: var(--type-base-font-family-bold);
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .tab-content {
+    height: 25.6rem;
+    max-height: 25.6rem;
+    overflow-y: auto;
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .tab-content .error-messages {
+    color: var(--color-error-100);
+    font-size: var(--font-size-3);
+    margin-bottom: var(--space-space-16);
+    display: inline-block;
+    line-height: normal;
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .popup-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--space-space-20);
+    padding-inline-end: var(--space-space-2x-2);
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .popup-footer .icon {
+    height: var(--embed-width-2-3-6);
+    width: var(--embed-width-2-3-6)
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .apply-button,
+.clear-button {
+    width: 100%;
+    letter-spacing: normal;
+    font-family: var(--type-base-font-family-semibold);
+    font-weight: var(--font-weight-6);
+}
+
+
+.dialog__container-discount-and-voucher-loggedin-user .apply-button {
+    background-color: var(--color-icon-inactive);
+    border: 1.6px solid var(--color-icon-inactive);
+    margin: 0;
+}
+
+
+.dialog__container-discount-and-voucher-loggedin-user .clear-button {
+    background: none;
+    color: var(--color-text-main);
+    margin: var(--space-space-26) 0 var(--space-space-16) 0;
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .clear-button-disabled {
+    color: var(--color-icon-inactive);
+    pointer-events: none;
+}
+
+.discounts-vouchers-body {
+    padding: var(--text-s) var(--space-space-6x);
+}
+
+.discounts-vouchers-body .title-label:has(p) {
+    padding: var(--space-space-8);
+    text-align: center;
+}
+
+.discounts-vouchers-body p {
+    margin: 0;
+    font-size: var(--space-space-12);
+    font-family: var(--type-base-font-family-semibold);
+}
+
+.discounts-vouchers-items {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-background-offer-items);
+    border: 0.0625rem solid var(--color-background-border-color);
+    padding: var(--space-space-20) var(--space-space-16);
+    margin: 0 0 var(--space-space-2x-2) 0;
+    margin-inline-end: var(--space-space-12);
+    height: var(--spacing-xlarge-71);
+    max-height: var(--spacing-xlarge-71);
+    cursor: pointer;
+}
+
+.discounts-vouchers-items div:nth-child(1) {
+    margin-inline-end: var(--space-space-16);
+}
+
+.discounts-vouchers-items div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+.discounts-vouchers-items .desc-text {
+    font-size: var(--space-space-3x);
+    line-height: var(--space-space-3x);
+    font-family: var(--type-base-font-family-semibold);
+    padding-bottom: var(--space-space-1x);
+
+}
+
+.discounts-vouchers-items .expiry_date {
+    font-size: var(--space-space-2x-2);
+    line-height: var(--space-space-2x-2);
+    font-family: var(--type-base-font-family-semibold);
+    color: var(--color-text-dark);
+
+}
+
+.radio-input,
+.checkbox-input {
+    appearance: none;
+    margin: 0;
+    width: var(--space-space-18);
+    height: var(--space-space-18);
+    cursor: pointer;
+    padding: 0;
+    border: 1px solid var(--color-text-main);
+    position: relative;
+    background-color: transparent;
+}
+
+.checkbox-input {
+    border-radius: 3px;
+}
+
+.radio-input:hover,
+.checkbox-input:hover {
+    border-color: var(--color-text-main);
+}
+
+.square-checkbox:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--space-space-10);
+    height: var(--spacing-xxsmall-2);
+    border: solid var(--color-text-main);
+    border-width: 0 1px 1px 0;
+    transform: translate(-50%, -70%) rotate3d(5, 11, 0, 180deg);
+}
+
+.round-radio {
+    border-radius: 50%;
+}
+
+.round-radio:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--font-size-2-1);
+    height: var(--font-size-2-1);
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--color-text-main);
+    transform: translate(-50%, -50%);
+}
+
+@media (width >=768px) {
+    .dialog__container.dialog__container-discount-and-voucher-loggedin-user {
+        max-width: 48.8rem;
+    }
+
+    .discounts-vouchers-body {
+        padding: var(--text-s) var(--space-space-36);
+        padding-inline-end: var(--space-space-46);
+    }
+}
+
+.dialog__container-discount-and-voucher-loggedin-user .apply-button.active {
+    background-color: var(--color-secondary-100);
+    border-color: var(--color-secondary-100);
+    cursor: pointer;
+    opacity: 1;
+}

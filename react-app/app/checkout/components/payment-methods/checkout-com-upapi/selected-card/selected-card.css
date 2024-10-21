@@ -1,0 +1,16 @@
+ .spc-checkout-payment-data {
+     padding-left: var(--space-space-20);
+ }
+
+ .spc-checkout-payment-saved-card-number,
+ .spc-checkout-payment-saved-card-expiry {
+     margin-bottom: var(--space-space-6);
+ }
+
+ .spc-payment-checkout_com .spc-checkout-card-option .spc-checkout-payment-saved-card-preview .secondary.spc-add-new-card-change-btn {
+     margin: 0;
+     padding: var(--space-space-2x-1) var(--space-space-4x);
+     font: var(--type-details-2-font);
+     line-height: var(--line-height-s);
+     border-color: var(--color-neutral-40);
+ }

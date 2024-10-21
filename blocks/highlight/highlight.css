@@ -1,0 +1,67 @@
+.highlight {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--grid-gutter);
+    place-content: flex-start center;
+    align-content: flex-start;
+  }
+
+  .highlight > div {
+    display: flex;
+    padding: var(--space-space-3x) 0;
+    width: var(--grid-col-4);
+    gap: var(--space-space-4x);
+  }
+  
+  .highlight img {
+    width: 4.8rem;
+    height: 4.8rem;
+    max-width: unset;
+  }
+  
+  .highlight > div > div {
+    order: 1;
+  }
+  
+  .highlight > div > .highlight-img {
+    order: 0;
+    display: contents;
+  }
+  
+  .highlight > div > .highlight-img img {
+    display: block;
+  }
+
+  .highlight > div > div > p {
+    margin-top: unset;
+    margin-bottom: var(--space-space-3x);
+    font-size: var(--font-size-3);
+  }
+
+  .highlight > div > div > p > strong {
+    font-size: var(--font-size-4);
+  }
+
+  .highlight > div > div > p:last-child {
+    margin-bottom: unset;
+  }
+  
+  @media (width >= 768px) {
+    .highlight > div {
+      align-items: flex-start;
+      flex-direction: unset;
+      gap: var(--space-space-4x);
+      padding: 0 var(--space-space-3x) var(--space-space-3x);
+    }
+  
+    .highlight > div > div {
+      flex: 1;
+      order: unset;
+    }
+  }
+
+@media (width >= 900px) {
+    .section.highlight-container > div {
+       width: auto;
+    }
+}

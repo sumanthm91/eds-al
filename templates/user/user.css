@@ -1,0 +1,103 @@
+@import url("../../styles/forms.css");
+
+.user .main-wrapper .default-content-wrapper {
+  text-align: center;
+}
+
+.user .main-wrapper main .section > div {
+  max-width: var(--grid-col-8);
+}
+
+.user .main-wrapper h2, 
+.user .main-wrapper h3, 
+.user .main-wrapper h4 {
+  padding-bottom: var(--space-space-1x);
+  border-bottom: 0.1rem solid var(--color-neutral-40);
+  margin-bottom: var(--space-space-2x);
+  font: var(--type-details-5-font);
+}
+
+.user .main-wrapper p {
+  margin: 0;
+  color: var(--color-text-dark);
+  font-size: var(--font-size-3);
+  padding: var(--space-space-16) 0;
+}
+
+.user .main-wrapper button {
+  width: 100%;
+  margin: 0;
+}
+
+.user .error-container {
+  color: var(--color-primary-100);
+  font-size: var(--font-size-3);
+}
+
+.user .error-container ul {
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+.user .error-container li {
+  list-style-type: none;
+  text-align: start;
+}
+
+a.sign-up.button.secondary:hover span.icon-user{
+  filter: invert(100%);
+}
+
+.user .main-wrapper button.backtotop,
+.user .main-wrapper .modal .modal-close {
+  width: 2.4rem;
+}
+
+.user .main-wrapper .modal dialog .modal-header h4 {
+  border-bottom: none;
+  width: 100%;
+}
+
+.user .main-wrapper h2 {
+  font-size: var(--font-size-5);
+}
+
+@media (width >= 768px) {
+  .user .main-wrapper {
+    max-width: 110.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+  }
+
+  .user .main-wrapper .default-content-wrapper {
+    text-align: start;
+  }
+
+  .user .main-wrapper h2 {
+    font-size: var(--font-size-7);
+  }
+
+  .user .main-wrapper p {
+    margin-bottom: 2.5rem;
+    font-size: var(--font-size-4);
+    padding: revert;
+  }
+
+  .user .main-wrapper button {
+    width: 50rem;
+  }
+
+  .user .page-success-message, .user .page-error-message {
+    max-width: var(--grid-col-8);
+  }
+
+  .user main .section:first-child { 
+    padding-top: var(--space-space-64);
+  }
+
+  .user .page-error-message.visible + .section,
+  .user .page-success-message.visible + .section {
+    padding-top: var(--space-space-16);
+  }
+}

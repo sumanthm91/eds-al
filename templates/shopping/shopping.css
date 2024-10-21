@@ -1,0 +1,11 @@
+.shopping {
+  background-color: var(--color-brand-100);
+}
+
+@media (width >= 768px) {
+  .shopping header,
+  .shopping .nav-wrapper,
+  .shopping header .search-container {
+    background-color: var(--color-brand-100);
+  }
+}

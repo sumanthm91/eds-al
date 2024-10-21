@@ -1,0 +1,58 @@
+.sidekick-library .banner .desktop-bg-link, 
+.sidekick-library .banner .mobile-bg-link,
+.sidekick-library .banner .badge-left-link,
+.sidekick-library .banner .badge-right-link,
+.sidekick-library .banner .logo-link {
+    border: 1px solid var(--color-secondary-50);
+    color: var( --color-secondary-50);
+    font-size: var(--font-size-3);
+    padding: var(--space-space-2x);
+    height: 3rem;
+}
+
+.sidekick-library .banner .desktop-bg-lbl, 
+.sidekick-library .banner .mobile-bg-lbl,
+.sidekick-library .banner .badge-left-lbl,
+.sidekick-library .banner .badge-right-lbl,
+.sidekick-library .banner .logo-link-lbl {
+    font-size: var(--font-size-3);
+    display: none;
+}
+
+.sidekick-library .banner .image-wrapper {
+    position: absolute;
+    left: 1rem;
+    background: var(--color-neutral-50);
+    padding: var(--spacing-xxsmall-2);
+    top: 1rem;
+    text-align: left;
+    border: 1px solid var(--color-neutral-60);
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+} 
+
+.sidekick-library .banner-container {
+    margin-top: var(--space-space-2x-2);
+}
+
+.sidekick-library .banner .logo-link {
+    display: block;
+    max-width: 20rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.settings-panel-active.sidekick-library .banner .desktop-bg-link, 
+.settings-panel-active.sidekick-library .banner .mobile-bg-link,
+.settings-panel-active.sidekick-library .banner .badge-left-link,
+.settings-panel-active.sidekick-library .banner .badge-right-link,
+.settings-panel-active.sidekick-library .banner .logo-link,
+.settings-panel-active.sidekick-library .banner .desktop-bg-lbl, 
+.settings-panel-active.sidekick-library .banner .mobile-bg-lbl,
+.settings-panel-active.sidekick-library .banner .badge-left-lbl,
+.settings-panel-active.sidekick-library .banner .badge-right-lbl,
+.settings-panel-active.sidekick-library .banner .logo-link-lbl,
+.settings-panel-active.sidekick-library .banner .image-wrapper {
+    display: block;
+}

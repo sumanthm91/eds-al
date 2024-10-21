@@ -1,0 +1,626 @@
+version: 1
+indices:
+  en:
+    target: /en/query-index.json
+    include:
+      - '/en/**'
+    exclude:
+      - '**/enrichment/**'
+      - '**/fragments/**'
+    properties:
+     title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, 'content')
+     date:
+        select: head > meta[name="publication-date"]
+        value: |
+          dateValue(attribute(el, 'content'))
+     image:
+        select: head > meta[property="og:image"]
+        value: |
+          attribute(el, 'content')
+     description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, 'content')
+     robots:
+        select: head > meta[name="robots"]
+        value: |
+          attribute(el, 'content')
+     lastModified:
+        select: none
+        value: |
+          parseTimestamp(headers["last-modified"])
+     navtitle:
+        select: head > meta[name="nav-title"]
+        value: |
+          attribute(el, 'content') 
+     hide-from-nav:
+        select: head > meta[name="hide-from-nav"]
+        value: |
+          attribute(el, 'content')
+  ar:
+    target: /ar/query-index.json
+    include:
+      - '/ar/**'
+    exclude:
+      - '**/enrichment/**'
+      - '**/fragments/**'
+    properties:
+     title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, 'content')
+     date:
+        select: head > meta[name="publication-date"]
+        value: |
+          dateValue(attribute(el, 'content'))
+     image:
+        select: head > meta[property="og:image"]
+        value: |
+          attribute(el, 'content')
+     description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, 'content')
+     robots:
+        select: head > meta[name="robots"]
+        value: |
+          attribute(el, 'content')
+     lastModified:
+        select: none
+        value: |
+          parseTimestamp(headers["last-modified"])
+     navtitle:
+        select: head > meta[name="nav-title"]
+        value: |
+          attribute(el, 'content') 
+     hide-from-nav:
+        select: head > meta[name="hide-from-nav"]
+        value: |
+          attribute(el, 'content')
+  enrichment:
+    target: /enrichment/enrichment.json
+    include:
+      - '**/enrichment/**'
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, 'content')
+      products:
+        select: head > meta[name="enrichment-products"]
+        values: |
+          match(attribute(el, 'content'), '([^,]+)')
+      categories:
+        select: head > meta[name="enrichment-categories"]
+        values: |
+          match(attribute(el, 'content'), '([^,]+)')
+      positions:
+        select: head > meta[name="enrichment-positions"]
+        values: |
+          match(attribute(el, 'content'), '([^,]+)')
+  # Progressive banners
+  progressivebanners:
+    target: /en/fragments/banners/meta/banner-list.json
+    include:
+      - '/en/fragments/banners/offers/**'
+      - '/en/fragments/banners/categories/**'
+      - '/en/fragments/banners/tabs/**'
+      - '/en/fragments/banners/links/**'
+    properties:
+      variations:
+        select: main > div > div.progressive-banner
+        value: attribute(el, 'className')
+      categorysubheading1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div h3
+        value: textContent(el)
+      categorysubheading2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div h3
+        value: textContent(el)
+      categorysubheading3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div h3
+        value: textContent(el)
+      categoryheader1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div h2
+        value: textContent(el)
+      categoryheader2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div h2
+        value: textContent(el)
+      categoryheader3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div h2
+        value: textContent(el)
+      categoryoffer1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div p:not(:has(a))
+        value: textContent(el)
+      categoryoffer2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div p:not(:has(a))
+        value: textContent(el)
+      categoryoffer3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div p:not(:has(a))
+        value: textContent(el)
+      categorycountdown1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div h5
+        value: textContent(el)
+      categorycountdown2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div h5
+        value: textContent(el)
+      categorycountdown3:
+        select: main > div > div.progressive-banner >div:nth-of-type(3):not(:last-of-type) > div h5
+        value: textContent(el)
+      categoryctaLinks1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div a
+        values: attribute(el, 'href')
+      categoryctaLinks2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div a
+        values: attribute(el, 'href')
+      categoryctaLinks3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div a
+        values: attribute(el, 'href')
+      categoryctaTitles1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div p a
+        values: textContent(el)
+      categoryctaTitles2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div p a
+        values: textContent(el)
+      categoryctaTitles3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div p a
+        values: textContent(el)
+      configurations:
+        select: main > div > div.progressive-banner > div:nth-last-of-type(1) > div
+        values: textContent(el)
+      slider:
+        select: head > meta[name="slider"]
+        value: attribute(el, 'content')
+      type:
+        select: head > meta[name="type"]
+        value: attribute(el, 'content')
+      marginTop:
+        select: head > meta[name="margin-top"]
+        value: attribute(el, 'content')
+      marginBottom:
+        select: head > meta[name="margin-bottom"]
+        value: attribute(el, 'content')
+      textColorGlobal:
+        select: head > meta[name="text-color-global"]
+        value: attribute(el, 'content')
+      startDateTime:
+        select: head > meta[name="start-date-time"]
+        value: attribute(el, 'content')
+      endDateTime:
+        select: head > meta[name="end-date-time"]
+        value: attribute(el, 'content')
+      promotionId:
+        select: head > meta[name="schedule-id"]
+        value: attribute(el, 'content')
+  # Arabic banners indexing
+  progressivebanners-ar:
+    target: /ar/fragments/banners/meta/banner-list.json
+    include:
+      - '/ar/fragments/banners/offers/**'
+      - '/ar/fragments/banners/categories/**'
+      - '/ar/fragments/banners/tabs/**'
+      - '/ar/fragments/banners/links/**'
+    properties:
+      variations:
+        select: main > div > div.progressive-banner
+        value: attribute(el, 'className')
+      categorysubheading1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div h3
+        value: textContent(el)
+      categorysubheading2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div h3
+        value: textContent(el)
+      categorysubheading3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div h3
+        value: textContent(el)
+      categoryheader1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div h2
+        value: textContent(el)
+      categoryheader2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div h2
+        value: textContent(el)
+      categoryheader3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div h2
+        value: textContent(el)
+      categoryoffer1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div p:not(:has(a))
+        value: textContent(el)
+      categoryoffer2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div p:not(:has(a))
+        value: textContent(el)
+      categoryoffer3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div p:not(:has(a))
+        value: textContent(el)
+      categorycountdown1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div h5
+        value: textContent(el)
+      categorycountdown2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div h5
+        value: textContent(el)
+      categorycountdown3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div h5
+        value: textContent(el)
+      categoryctaLinks1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div a
+        values: attribute(el, 'href')
+      categoryctaLinks2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div a
+        values: attribute(el, 'href')
+      categoryctaLinks3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div a
+        values: attribute(el, 'href')
+      categoryctaTitles1:
+        select: main > div > div.progressive-banner > div:nth-of-type(1) > div p a
+        values: textContent(el)
+      categoryctaTitles2:
+        select: main > div > div.progressive-banner > div:nth-of-type(2) > div p a
+        values: textContent(el)
+      categoryctaTitles3:
+        select: main > div > div.progressive-banner > div:nth-of-type(3):not(:last-of-type) > div p a
+        values: textContent(el)
+      configurations:
+        select: main > div > div.progressive-banner > div:nth-last-of-type(1) > div
+        values: textContent(el)
+      slider:
+        select: head > meta[name="slider"]
+        value: attribute(el, 'content')
+      type:
+        select: head > meta[name="type"]
+        value: attribute(el, 'content')
+      marginTop:
+        select: head > meta[name="margin-top"]
+        value: attribute(el, 'content')
+      marginBottom:
+        select: head > meta[name="margin-bottom"]
+        value: attribute(el, 'content')
+      textColorGlobal:
+        select: head > meta[name="text-color-global"]
+        value: attribute(el, 'content')
+      startDateTime:
+        select: head > meta[name="start-date-time"]
+        value: attribute(el, 'content')
+      endDateTime:
+        select: head > meta[name="end-date-time"]
+        value: attribute(el, 'content')
+      promotionId:
+        select: head > meta[name="schedule-id"]
+        value: attribute(el, 'content')
+  banners:
+    target: /en/fragments/banners/meta/banner-list.json
+    include:
+      - '/en/fragments/banners/offers/**'
+      - '/en/fragments/banners/categories/**'
+      - '/en/fragments/banners/tabs/**'
+      - '/en/fragments/banners/links/**'
+    properties:
+      variations:
+        select: main > div > div.banner
+        value: attribute(el, 'className')
+      images:
+        select: main > div > div.banner > div:nth-of-type(1) > div:nth-of-type(1) a:nth-last-of-type(-n+3)
+        values: |
+          match(attribute(el, 'href'), 'https:\/\/[^\/]+\/adobe\/assets\/urn:aaid:aem:.*')
+      logo:
+        select: main > div > div.banner > div > div + div a
+        value: |
+          match(attribute(el, 'href'), 'https:\/\/[^\/]+\/adobe\/assets\/urn:aaid:aem:.*')
+      vignette:
+        select: main > div > div.banner > div > div + div  h3:nth-of-type(1)
+        value: textContent(el)
+      header:
+        select: main > div > div.banner > div > div + div h2
+        value: textContent(el)
+      preamble:
+        select: main > div > div.banner > div > div + div h3:nth-of-type(2)
+        value: textContent(el)
+      usp:
+        select: main > div > div.banner > div > div + div h4
+        value: textContent(el)
+      offer:
+        select: main > div > div.banner > div > div + div p:not(:has(a))
+        value: textContent(el)
+      countdown:
+        select: main > div > div.banner > div > div + div h5
+        value: textContent(el)
+      ctaLinks:
+        select: main > div > div.banner > div > div + div a
+        values: |
+          match(attribute(el, 'href'), '^(?!https:\/\/[^\/]+\/adobe\/assets\/urn:aaid:aem:.*).*')
+      ctaTitles:
+        select: main > div > div.banner > div > div + div p a
+        values: match(textContent(el), '^(?!.*\.(jpe?g|png|gif|bmp|webp|svg|tiff?)$).+$')
+      configurations:
+        select: main > div > div.banner > div + div:nth-of-type(2)
+        values: textContent(el)
+      priceInfo:
+        select: main > div > div.banner > div + div:nth-of-type(n+3)
+        values: textContent(el)
+      bannerURL:
+        select: main > div > div.banner > div:nth-of-type(1) > div:nth-of-type(1) a
+        value:  match(attribute(el, 'href'), '^(?!https:\/\/[^\/]+\/adobe\/assets\/urn:aaid:aem:.*).*')
+      slider:
+        select: head > meta[name="slider"]
+        value: attribute(el, 'content')
+      bannerOrder:
+        select: head > meta[name="banner-order"]
+        value: attribute(el, 'content')
+      marginTop:
+        select: head > meta[name="margin-top"]
+        value: attribute(el, 'content')
+      marginBottom:
+        select: head > meta[name="margin-bottom"]
+        value: attribute(el, 'content')
+      bodyText:
+        select: main > div > div.banner > div > div + div  h3:nth-of-type(1)
+        value: innerHTML(el)
+      linkButtonURLS:
+        select: main > div > div.banner > div > div + div  h3:nth-of-type(1) a
+        values: attribute(el, 'href')
+      linkButtonTitles:
+        select: main > div > div.banner > div > div + div  h3:nth-of-type(1) a
+        values: textContent(el)
+      aspectRatio:
+        select: head > meta[name="aspect-ratio"]
+        value: attribute(el, 'content')
+      textColorGlobal:
+        select: head > meta[name="text-color-global"]
+        value: attribute(el, 'content')
+      iconColor:
+        select: head > meta[name="icon-color"]
+        value: attribute(el, 'content')
+      iconSize:
+        select: head > meta[name="icon-size"]
+        value: attribute(el, 'content')
+      alignTextBlock:
+        select: head > meta[name="align-text-block"]
+        value: attribute(el, 'content')
+      startDateTime:
+        select: head > meta[name="start-date-time"]
+        value: attribute(el, 'content')
+      endDateTime:
+        select: head > meta[name="end-date-time"]
+        value: attribute(el, 'content')
+      # shop by category and roundels
+      title:
+        select: main *:has(~ .cards) > h4
+        value: textContent(el)
+      categoryTitles:
+        select: main .cards > div > div:last-child  a
+        values: textContent(el)
+      subCategoryTitles:
+        select: main .cards > div > div:last-child > p:last-child
+        values: textContent(el)
+      categoryUrls:
+        select: main .cards > div > div:last-child a
+        values: attribute(el, 'href')
+      categoryImages:
+        select: main .cards > div > div:first-child a
+        values: |
+          match(attribute(el, 'href'), 'https:\/\/[^\/]+\/adobe\/assets\/urn:aaid:aem:.*')
+      numberOfRows: 
+        select: head > meta[name="number-of-rows"]
+        value: attribute(el, 'content')
+      numberOfColumns: 
+        select: head > meta[name="number-of-columns"]
+        value: attribute(el, 'content')
+      titleFontSize:
+        select: head > meta[name="title-font-size"]
+        value: attribute(el, 'content')
+      titleColor:
+        select: head > meta[name="title-color"]
+        value: attribute(el, 'content')
+      categoryNameFontSize: 
+        select: head > meta[name="category-name-font-size"]
+        value: attribute(el, 'content')
+      categoryNameColor: 
+        select: head > meta[name="category-name-color"]
+        value: attribute(el, 'content')
+      subCategoryNameFontSize: 
+        select: head > meta[name="sub-category-name-font-size"]
+        value: attribute(el, 'content')
+      subCategoryNameColor: 
+        select: head > meta[name="sub-category-name-color"]
+        value: attribute(el, 'content')
+      presetName:
+        select: head > meta[name="preset-name"]
+        value: attribute(el, 'content')
+      type:
+        select: head > meta[name="type"]
+        value: attribute(el, 'content')
+      promotionId:
+        select: head > meta[name="schedule-id"]
+        value: attribute(el, 'content')
+      imageShapeVariant:
+        select: head > meta[name="image-shape-variant"]
+        value: attribute(el, 'content')
+      # Tabs
+      tabTitle:
+        select: main *:has(~ .tabs.recommendation) > h4
+        value: textContent(el)
+      recommendationTitles:
+        select: main .tabs.recommendation > div > div:first-child
+        values: textContent(el)
+      recommendationIds:
+        select: main .tabs.recommendation > div > div:last-child
+        values: textContent(el)
+      # links
+      linkTitles:
+        select: main .links ul > li a
+        values: textContent(el)
+      linkURLs:
+        select: main .links ul > li a
+        values: attribute(el, 'href')
+      backgroundColor :
+        select: head > meta[name="background-color"]
+        value: attribute(el, 'content')
+  # Arabic banners indexing
+  banners-ar:
+    target: /ar/fragments/banners/meta/banner-list.json
+    include:
+      - '/ar/fragments/banners/offers/**'
+      - '/ar/fragments/banners/categories/**'
+      - '/ar/fragments/banners/tabs/**'
+      - '/ar/fragments/banners/links/**'
+    properties:
+      variations:
+        select: main > div > div.banner
+        value: attribute(el, 'className')
+      images:
+        select: main > div > div.banner > div:nth-of-type(1) > div:nth-of-type(1) a:nth-last-of-type(-n+3)
+        values: |
+          match(attribute(el, 'href'), 'https:\/\/[^\/]+\/adobe\/assets\/urn:aaid:aem:.*')
+      logo:
+        select: main > div > div.banner > div > div + div a
+        value: |
+          match(attribute(el, 'href'), 'https:\/\/[^\/]+\/adobe\/assets\/urn:aaid:aem:.*')
+      vignette:
+        select: main > div > div.banner > div > div + div  h3:nth-of-type(1)
+        value: textContent(el)
+      header:
+        select: main > div > div.banner > div > div + div h2
+        value: textContent(el)
+      preamble:
+        select: main > div > div.banner > div > div + div h3:nth-of-type(2)
+        value: textContent(el)
+      usp:
+        select: main > div > div.banner > div > div + div h4
+        value: textContent(el)
+      offer:
+        select: main > div > div.banner > div > div + div p:not(:has(a))
+        value: textContent(el)
+      countdown:
+        select: main > div > div.banner > div > div + div h5
+        value: textContent(el)
+      ctaLinks:
+        select: main > div > div.banner > div > div + div a
+        values: |
+          match(attribute(el, 'href'), '^(?!https:\/\/[^\/]+\/adobe\/assets\/urn:aaid:aem:.*).*')
+      ctaTitles:
+        select: main > div > div.banner > div > div + div p a
+        values: match(textContent(el), '^(?!.*\.(jpe?g|png|gif|bmp|webp|svg|tiff?)$).+$')
+      configurations:
+        select: main > div > div.banner > div + div:nth-of-type(2)
+        values: textContent(el)
+      priceInfo:
+        select: main > div > div.banner > div + div:nth-of-type(n+3)
+        values: textContent(el)
+      bannerURL:
+        select: main > div > div.banner > div:nth-of-type(1) > div:nth-of-type(1) a
+        value:  match(attribute(el, 'href'), '^(?!https:\/\/[^\/]+\/adobe\/assets\/urn:aaid:aem:.*).*')
+      slider:
+        select: head > meta[name="slider"]
+        value: attribute(el, 'content')
+      bannerOrder:
+        select: head > meta[name="banner-order"]
+        value: attribute(el, 'content')
+      marginTop:
+        select: head > meta[name="margin-top"]
+        value: attribute(el, 'content')
+      marginBottom:
+        select: head > meta[name="margin-bottom"]
+        value: attribute(el, 'content')
+      bodyText:
+        select: main > div > div.banner > div > div + div  h3:nth-of-type(1)
+        value: innerHTML(el)
+      linkButtonURLS:
+        select: main > div > div.banner > div > div + div  h3:nth-of-type(1) a
+        values: attribute(el, 'href')
+      linkButtonTitles:
+        select: main > div > div.banner > div > div + div  h3:nth-of-type(1) a
+        values: textContent(el)
+      aspectRatio:
+        select: head > meta[name="aspect-ratio"]
+        value: attribute(el, 'content')
+      textColorGlobal:
+        select: head > meta[name="text-color-global"]
+        value: attribute(el, 'content')
+      iconColor:
+        select: head > meta[name="icon-color"]
+        value: attribute(el, 'content')
+      iconSize:
+        select: head > meta[name="icon-size"]
+        value: attribute(el, 'content')
+      alignTextBlock:
+        select: head > meta[name="align-text-block"]
+        value: attribute(el, 'content')
+      startDateTime:
+        select: head > meta[name="start-date-time"]
+        value: attribute(el, 'content')
+      endDateTime:
+        select: head > meta[name="end-date-time"]
+        value: attribute(el, 'content')
+      # shop by category and roundels
+      title:
+        select: main *:has(~ .cards) > h4
+        value: textContent(el)
+      categoryTitles:
+        select: main .cards > div > div:last-child a
+        values: textContent(el)
+      subCategoryTitles:
+        select: main .cards > div > div:last-child > p:last-child
+        values: textContent(el)
+      categoryUrls:
+        select: main .cards > div > div:last-child a
+        values: attribute(el, 'href')
+      categoryImages:
+        select: main .cards > div > div:first-child a
+        values: |
+          match(attribute(el, 'href'), 'https:\/\/[^\/]+\/adobe\/assets\/urn:aaid:aem:.*')
+      numberOfRows: 
+        select: head > meta[name="number-of-rows"]
+        value: attribute(el, 'content')
+      numberOfColumns: 
+        select: head > meta[name="number-of-columns"]
+        value: attribute(el, 'content')
+      titleFontSize:
+        select: head > meta[name="title-font-size"]
+        value: attribute(el, 'content')
+      titleColor:
+        select: head > meta[name="title-color"]
+        value: attribute(el, 'content')
+      categoryNameFontSize: 
+        select: head > meta[name="category-name-font-size"]
+        value: attribute(el, 'content')
+      categoryNameColor: 
+        select: head > meta[name="category-name-color"]
+        value: attribute(el, 'content')
+      subCategoryNameFontSize: 
+        select: head > meta[name="sub-category-name-font-size"]
+        value: attribute(el, 'content')
+      subCategoryNameColor: 
+        select: head > meta[name="sub-category-name-color"]
+        value: attribute(el, 'content')
+      presetName:
+        select: head > meta[name="preset-name"]
+        value: attribute(el, 'content')
+      type:
+        select: head > meta[name="type"]
+        value: attribute(el, 'content')
+      promotionId:
+        select: head > meta[name="schedule-id"]
+        value: attribute(el, 'content')
+      imageShapeVariant:
+        select: head > meta[name="image-shape-variant"]
+        value: attribute(el, 'content')
+      # Tabs
+      tabTitle:
+        select: main *:has(~ .tabs.recommendation) > h4
+        value: textContent(el)
+      recommendationTitles:
+        select: main .tabs.recommendation > div > div:first-child
+        values: textContent(el)
+      recommendationIds:
+        select: main .tabs.recommendation > div > div:last-child
+        values: textContent(el)
+      # links
+      linkTitles:
+        select: main .links ul > li a
+        values: textContent(el)
+      linkURLs:
+        select: main .links ul > li a
+        values: attribute(el, 'href')
+      backgroundColor :
+        select: head > meta[name="background-color"]
+        value: attribute(el, 'content')

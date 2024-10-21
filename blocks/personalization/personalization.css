@@ -1,0 +1,45 @@
+.personalization-dialog {
+    position: relative;
+    background-color: var(--color-tertiary-40);
+}
+
+.modal .personalization-dialog .modal-header{
+    padding: 0;
+    height: 0;
+}
+
+.personalization-dialog .modal-header > *:not(button) {
+    display:none;
+}
+
+.personalization-dialog .modal-header button {
+    position: absolute;
+    right: 0.5rem;
+    top: 1rem;
+}
+
+.modal .personalization-dialog .modal-content {
+    padding: var( --space-space-11x) var(--space-space-24);
+}
+
+.personalization-dialog .banner.slug{
+    padding: 0;
+}
+
+html[dir='rtl'] .personalization-dialog .modal-header button {
+    left: 0.5rem;
+    right: unset;
+}
+
+.target-banner .banner-content h2:not(:has(+ h3)) {
+    margin-bottom: 0;
+}
+
+.personalization.target-banner {
+    z-index: -1;
+    position: relative;
+}
+
+.target-popup .banner .banner-content h3 a {
+    width: 100%;
+}

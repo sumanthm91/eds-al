@@ -1,0 +1,126 @@
+.cart__login-checkout-mobile-container,
+.cart__login-container {
+  padding: 0 var(--space-space-16);
+}
+
+.back-to-basket {
+  font-size: var(--font-size-2);
+  display: none;
+  width: 100%;
+  text-align: center;
+  margin-top: var(--space-space-28);
+}
+
+.cart__login-container h2 {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-4);
+  margin: 0;
+  padding-bottom: var(--space-space-4);
+  border-bottom: var(--shape-border-width-1) solid var(--color-neutral-40);
+  margin-bottom: var(--space-space-16);
+  text-align: center;
+}
+
+.back-to-basket:hover {
+  color: var(--color-text-main);
+}
+
+.cart__login-btn-mobile {
+  border: var(--spacing-xxxsmall) solid var(--color-brand-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--space-space-48);
+  margin-top: var(--space-space-24);
+  font-size: var(--font-size-3);
+  letter-spacing: var(--spacing-xxxsmall);
+  text-transform: uppercase;
+}
+
+.cart__login-mobile-separator {
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  font-size: var(--font-size-4);
+  margin: var(--space-space-32) 0;
+  position: relative;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cart__login-mobile-separator span {
+  background-color: var(--color-brand-100);
+  padding: var(--space-space-6) var(--space-space-10);
+}
+
+.cart__login-mobile-separator::after {
+  content: "";
+  width: 100%;
+  background: var(--color-brand-200);
+  height: var(--spacing-xxxsmall);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+}
+
+.cart__login-container a.sign-up {
+  background-color: var(--color-brand-100);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing-xxxsmall);
+  font-size: var(--font-size-3);
+  display: none;
+}
+
+.cart__login-container a.sign-up:hover {
+  background-color: var(--color-brand-100);
+  color: var(--color-brand-700);
+}
+
+legend.cart__login-legend {
+  text-align: center;
+  margin-bottom: var(--space-space-20);
+}
+
+legend.cart__login-legend span {
+  font-size: var(--space-space-18);
+  font-family: var(--type-base-font-family-semibold);
+}
+
+.commerce-login-container .social-login-wrapper .social-login.block {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.social-login-wrapper .account-text:empty {
+  display: none;
+}
+
+@media (width >=768px) {
+  .cart__login-btn-mobile,
+  .cart__login-mobile-separator {
+    display: none;
+  }
+
+  .cart__login-container a.sign-up {
+    display: block;
+  }
+
+  legend.cart__login-legend {
+    text-align: unset;
+  }
+
+  .back-to-basket {
+    display: inline-block;
+  }
+
+  .cart__login-container h2 {
+    margin-bottom: 0;
+    font-size: var(--font-size-7);
+    text-align: left;
+  }
+
+  html[dir="rtl"] .cart__login-container h2 {
+    text-align: right;
+  }
+}

@@ -1,0 +1,416 @@
+.loyalty__main-wrapper {
+  background-color: var(--color-neutral-white);
+  padding: var(--space-space-5x) var(--space-space-5x) var(--space-space-7x) var(--space-space-8x);
+}
+
+.loyalty__main-wrapper .aura-details__container {
+  display: flex;
+}
+
+.aura-form-items-link-card-options {
+  display: flex;
+  gap: var(--space-space-5x);
+  flex-wrap: wrap;
+  padding: var(--space-space-6x) 0;
+}
+
+.loyalty__main-wrapper .linking-option {
+  background: var(--color-neutral-white);
+  margin-bottom: var(--space-space-1x);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-space-10);
+}
+
+.loyalty__main-wrapper input[type="radio"].linking-option-radio ~ .radio-label {
+  font: var(--type-details-3-font);
+  flex: 2;
+}
+
+.loyalty__main-wrapper input[type="radio"].linking-option-radio{
+  position: relative;
+  height: var(--space-space-16);
+  width: var(--space-space-16);
+  border-radius: 50%;
+  background-color:  var(--color-neutral-white);
+  margin: 0;
+  padding: 0;
+  padding-inline: 0;
+  appearance: none;
+  cursor: pointer;
+  border: none;
+}
+
+.loyalty__main-wrapper input[type="radio"].linking-option-radio::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--color-aura-radion);
+}
+
+.loyalty__main-wrapper input[type="radio"].linking-option-radio::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: calc(100% - var(--spacing-xxxsmall));
+  height: calc(100% - var(--spacing-xxxsmall));
+  border-radius: 50%;
+  background-color:  var(--color-neutral-white);
+}
+
+.loyalty__main-wrapper input[type="radio"]:checked::after {
+  opacity: 1;
+  width: 50%;
+  height: 50%;
+}
+
+.loyalty__salesinfo {
+  color: var(--color-aura-info-link);
+  margin-top: var(--space-space-3x-2);
+  padding-left: var(--space-space-7x);
+  display: inline-block;
+}
+
+.spc-aura-link-card-wrapper .form-items {
+  height: 3.6rem;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+
+.spc-aura-link-card-wrapper .form-items input {
+  border: 1px solid var(--color-aura-input-border);
+  border-radius: 2.5px 0 0 2.5px;
+  border-right: 0;
+  padding-left: var(--space-space-1x-2);
+  width: calc(100% - 100px);
+  height: 100%;
+}
+
+html[dir="rtl"] .spc-aura-link-card-wrapper .form-items input{
+  border-right: 1px solid var(--color-aura-input-border);
+  border-left: 0;
+  border-radius: 0 2.5px 2.5px 0;
+}
+
+.spc-aura-link-card-wrapper .form-items input#spc-aura-link-card-input-mobile-mobile-number {
+  padding-inline-start: 6rem;
+}
+
+html[dir="rtl"] .spc-aura-link-card-wrapper .form-items input#spc-aura-link-card-input-mobile-mobile-number {
+  padding-inline-start: unset;
+  padding-inline-end: 6rem;
+  text-align: right;
+}
+
+.spc-aura-link-card-wrapper .form-items label.countrycode {
+  color: var(--color-text-dark);
+  left: var(--space-space-16);
+  position: absolute;
+  font-size: var(--text-m);
+  direction: ltr;
+  top: 7px;
+  vertical-align: text-top;
+}
+
+html[dir="rtl"] .spc-aura-link-card-wrapper .form-items label.countrycode{
+  left: unset;
+  right:var(--space-space-16);
+} 
+
+
+
+.spc-aura-link-card-wrapper .form-items button {
+  width: 100px;
+  font-size: var(--text-s);
+  margin: 0;
+  padding: 0 24px;
+  height: 100%;
+  background-color: var(--color-neutral-white);
+  border-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  color: var(--color-aura-info-question);
+  border: 1px solid var(--color-aura-info-question);
+}
+
+html[dir="rtl"] .spc-aura-link-card-wrapper .form-items button{
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.spc-aura-link-card-form.active {
+  padding-top: 20px;
+}
+
+.spc-aura-link-card-form.active .aura-points-info {
+  border-radius: 0.625rem;
+  background: linear-gradient(98deg, rgb(227 28 121 / 14%), rgb(119 37 121 / 14%));
+  padding: 14px 20px;
+}
+
+.spc-aura-link-card-form.active .aura-points-info .total-points,
+.spc-aura-points-expiry-item {
+  font-size: var(--text-s);
+}
+
+.spc-aura-link-card-form.active .spc-aura-highlight {
+  font-weight: normal;
+  padding: 0 var(--space-space-1x);
+  color: var(--color-aura-highlight-card);
+}
+
+.spc-aura-link-card-form.active  .aura-redeem-points {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spc-aura-link-card-form.active  .aura-redeem-points .aura-enter-otp {
+  display: flex;
+}
+
+.spc-aura-link-card-form.active  .aura-redeem-points .redeem-msg {
+  display: inline-block;
+  font-size: var(--text-s);
+}
+
+.spc-aura-link-api-response-message.error {
+  color: var(--color-primary-100);
+  font-size: var(--font-size-2);
+  padding-top: 7px;
+}
+
+.spc-aura-link-card-form.active  .aura-redeem-points .spc-aura-button {
+  border: 0.0625rem solid var(--color-primary-aura);
+  background: var(--color-neutral-white);
+  color: var(--color-primary-aura);
+  font-size: var(--font-size-2-1);
+  border-radius: 0.25rem;
+  height: 3.2rem;
+  min-width: 171px;
+  margin: 0;
+  padding: 1px 6px;
+  box-sizing: border-box;
+
+  /* font-family: "PTSans-Bold", "Almarai-Bold", "Arial"; */
+}
+
+.aura-modal-form .aura-tool-tip__title {
+  display: flex;
+
+  /* font-family: "PTSans-Bold", "Almarai-Bold", "Arial"; */
+}
+
+.aura-modal-form .otp-field-section {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.aura-modal-form .spc-type-textfield {
+  margin-top: 2rem;
+  order: 1;
+  width: 52%;
+  position: relative;
+  margin-bottom: 1.5rem;
+  margin-right: 8px;
+}
+
+.aura-modal-form .aura-verify-otp {
+  order: 2;
+}
+
+.aura-modal-form .aura-otp-submit-description {
+  order: 3;
+}
+
+@media screen and (max-width: 1025px) {
+  .aura-modal-form .aura-otp-submit-description {
+    margin-left: 32px;
+  }  
+}
+
+.aura-modal-form .aura-form-messages-container { 
+  order: 4;
+}
+
+.aura-modal-form .otp-sent-to-mobile-label {
+  order: 5;
+  color: #31281b;
+}
+
+.spc-aura-redeem-points-form-wrapper span.label {
+  font-size: var(--text-s);
+  padding-bottom: 10px;
+  display: block;
+}
+
+.aura-modal-form .otp-sent-to-mobile-label span {
+  /* font-family: "PTSans", "Almarai-Regular", "Arial"; */
+  font-size: var(--text-s);
+}
+
+.aura-modal-form input#otp {
+  height: 2.3rem;
+  font-size: var(--text-s);
+  color: var(--color-neutral-black);
+  width: 100%;
+  border: none;
+  border-bottom: 0.5px solid var(--color-neutral-700);
+  padding: 0;
+  border-radius: 0;
+  appearance: none;
+  margin-bottom: 0;
+}
+
+.aura-modal-form .otp-field-section label {
+  font-size: var(--text-s);
+  color: var(--color-text-dark);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: font-size 0.2s ease-in-out, top 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.aura-modal-form input#otp:focus ~ label, .aura-modal-form input#otp.focus ~ label {
+    top: -1rem;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    font-size: 12px;
+}
+
+.aura-modal-form .c-input__bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.aura-modal-form .c-input__bar::before, .c-input__bar::after {
+  content: "";
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: transparent;
+  transition: 0.5s ease all;
+  z-index: 3;
+}
+
+.aura-modal-form .c-input__bar::before {
+  left: 50%;
+}
+
+.aura-modal-form .c-input__bar::after {
+  right: 50%;
+}
+
+.aura-modal-form input#otp:focus ~ label {
+  top: -1rem;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  font-size: 12px;
+}
+
+.aura-modal-form div#otp-error {
+  color: #d6001c;
+}
+
+.aura-modal-form .aura-modal-form-submit {
+  border: 0.0625rem solid var(--color-primary-aura);
+  background: #fff;
+  color: var(--color-primary-aura);
+  font-size: 13px;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  padding: 0.375rem;
+  min-width: 100px;
+  text-align: center;
+
+  /* font-family: "PTSans-Bold", "Almarai-Bold", "Arial"; */
+  cursor: pointer;
+  margin: 0;
+  height: 31px;
+}
+
+.aura-modal-form .resend-otp {
+  text-decoration: underline;
+  color: var(--color-aura-info-link);
+  cursor: pointer;
+  margin: 0 0 0 32px;
+  padding: 0;
+
+  /* font-family: "PTSans", "Almarai-Regular", "Arial"; */
+  font-size: var(--text-s);
+  background: transparent;
+}
+
+.spc-aura-redeem-points-form-wrapper {
+  margin-top: 5px;
+  padding: 20px 0;
+}
+
+.spc-aura-redeem-points-form-wrapper .inputs {
+  display: flex;
+  align-items: center;
+}
+
+.spc-aura-redeem-points-form-wrapper .inputs input[type="text"] {
+  height: 3.6rem;
+  border: 1px solid var(--color-aura-input-border);
+  width: 100%;
+  border-radius: 4px;
+  font-size: var(--text-s);
+  margin-bottom: 0;
+  padding: 8px 16px;
+}
+
+.spc-aura-redeem-points-form-wrapper .spc-aura-redeem-points-separator {
+  padding: 0 13px;
+  color: var(--color-primary-aura);
+  font-family: var(-type-base-font-family-bold);
+  font-weight: normal;   
+}
+
+.spc-aura-redeem-points-form-wrapper .successful-redeem-msg {
+  font-size: var(--text-s);
+}
+
+.spc-aura-redeem-points-form-wrapper .successful-redeem-msg span {
+  color: var(--color-primary-aura);
+  font-family: var(--type-base-font-family-bold);
+  font-weight: normal;
+  padding-right: 0.1rem;
+}
+
+.spc-aura-redeem-points-form-wrapper .successful-redeem-msg span.successful-redeem-msg {
+  font-family: var(--type-base-font-family);
+  color: var(--color-brand-700);
+}
+
+.spc-aura-redeem-points-form-wrapper .spc-aura-redeem-form-submit.spc-aura-button {
+  margin: 0 0 0 30px;
+  width: 145px;
+  border-radius: 4px;
+  color: var(--color-primary-aura);
+  background: var(--color-neutral-white);
+  border: 1px solid var(--color-primary-aura);
+  font-size: var(--font-size-2-1);
+  padding: 0;
+  height: 3.6rem;
+}
+
+.spc-aura-redeem-points-form-wrapper .spc-aura-redeem-form-submit.spc-aura-button:disabled {
+  opacity: 0.4;
+}

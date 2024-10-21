@@ -1,0 +1,120 @@
+.cod-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-5x);
+}
+
+.cod-container .cod-disabled {
+    pointer-events: none;
+    color: var(--color-secondary-40);
+}
+
+.cod-container .cod-surcharge-desc {
+    display: flex;
+    align-items: center;
+    gap: var(--space-space-6);
+}
+
+.cod-container .cod-surcharge-desc .cod-surcharge-desc-text {
+    line-height: var(--line-height-xxl-2);
+    color: var(--color-order-info-10);
+}
+
+.cod-container .cod-surcharge-desc .icon {
+    height: var(--space-space-24);
+    width: var(--space-space-24);
+}
+
+.cod-text-wrapper {
+    color: var(--color-text-dark);
+}
+
+.cod-text-wrapper.resend-btn{
+    display:flex;
+}
+
+.cod-text-wrapper .cod-text-action {
+    text-decoration: underline;
+    color: var(--color-neutral-black);
+    cursor: pointer;
+    margin-inline-start: var(--space-space-2x);
+}
+
+.cod-text-wrapper .cod-text-action .icon {
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+.cod-text-wrapper .cod-text-action>div {
+    font-size: var(--font-size-3) !important;
+    font-family: var(--type-base-font-family) !important;
+    color: var(--color-neutral-black) !important;
+}
+
+.cod-text-wrapper .cod-text-action>div>button {
+    text-decoration: underline;
+    font-size: var(--font-size-3) !important;
+    font-family: var(--type-base-font-family) !important;
+    color: var(--color-neutral-black) !important;
+    background: none !important;
+    border: none !important;
+    padding: 0;
+    margin: 0 !important;
+    height: auto !important;
+}
+
+.cod-mobile-otp__form {
+    margin-top: var(--space-space-52);
+}
+
+.cod-mobile-otp__form .cod-mobile-otp__input-container {
+    gap: var(--space-space-15);
+}
+
+.cod-mobile-otp__form .cod-mobile-otp__input-container .cod-mobile-otp__input {
+    width: 100% !important;
+    border: none;
+    border-bottom: 1px solid var(--color-neutral-700);
+    padding: 0;
+    color: var(--color-brand-750);
+    font-size: var(--font-size-6);
+    margin-bottom: 0;
+}
+
+.cod-mobile-otp__form .cod-mobile-otp__input-container .cod-mobile-otp__input-error {
+    color: var(--color-dropdown-error);
+    border-color: var(--color-dropdown-error);
+}
+
+.cod-mobile-otp__form .cod-mobile-otp__error {
+    font-size: var(--font-size-2);
+    color: var(--color-primary-100);
+    padding-top: var(--space-space-6);
+    display: block;
+}
+
+.cod-mobile-otp__form .cod-mobile-otp__controls {
+    display: flex;
+    margin: var(--space-space-32) auto var(--space-space-20);
+    gap: var(--space-space-26);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cod-mobile-otp__form .cod-mobile-otp__controls .cod-mobile-otp__submit {
+    margin: 0;
+    width: 100%;
+}
+
+
+@media (width >=768px) {
+    .cod-mobile-otp__form .cod-mobile-otp__controls {
+        flex-direction: row;
+        margin: var(--space-space-70) auto var(--space-space-12);
+    }
+
+    .cod-mobile-otp__form .cod-mobile-otp__controls .cod-mobile-otp__submit {
+        width: var(--space-space-162);
+    }
+}

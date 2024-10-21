@@ -1,0 +1,294 @@
+.section.account-orders-detail-container .default-content-wrapper {
+  position: relative;
+  margin-bottom: var(--space-space-4x);
+}
+
+.order-return-eligibility a {
+  color: var(--color-neutral-white);
+  text-decoration: underline;
+}
+
+.account-orders-detail-container .default-content-wrapper > a {
+  display: block;
+  text-align: end;
+  margin-top: var(--spacing-xxsmall-2);
+}
+
+.account-orders-detail-container .order-details-page-title {
+  display: flex;
+  gap: var(--space-space-3x);
+  align-items: center;
+}
+
+.account-orders-detail-container .button-back-to-orders {
+  display: block;
+}
+
+.account-orders-detail-container .button-back-to-orders::before {
+  content: '';
+  display: block;
+  background-image: url('/icons/arrow-left.svg');
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.order-return-eligibility {
+  font-size: var(--font-size-2);
+}
+
+.delivery-details-content {
+  /** existing ux color value */
+  background-color: rgb(86 157 229 / 19%);
+}
+
+.delivery-details-content.click-n-collect .billing-details-info {
+  display: none;
+}
+
+.delivery-details-content > div {
+  padding: var(--space-space-4x);
+}
+
+.delivery-details-content .collection-times {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-2x);
+}
+
+.delivery-details-content .mobile {
+  margin-top: var(--space-space-3x);
+}
+
+.order-delivery-details .delivery-details-msg {
+  display: flex;
+  gap: var(--space-space-3x);
+  padding: var(--space-space-4x);
+  background-color: var(--color-order-info);
+  align-items: center;
+  border-top: 1px solid var(--color-neutral-white);
+  border-bottom: 1px solid var(--color-neutral-white);
+}
+
+.order-delivery-details .delivery-details-msg .message {
+  color: var(--color-neutral-white);
+}
+
+.order-delivery-details .payment-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-30);
+  grid-column-start: 1;
+}
+
+.order-itemized-title {
+  padding: var(--space-space-3x);
+}
+
+.order-return-eligibility > div {
+  display: flex;
+  gap: var(--space-space-3x);
+  align-items: center;
+}
+
+.account-orders-detail .ico img {
+  width: 2rem;
+}
+
+.order-totals-wrapper .total-row .surcharge-price-info img {
+  cursor: help;
+}
+
+.order-item .order-item-review .review-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.order-item .order-item-review .review-item .icon {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.order-item .order-item-review .review-item .review-link {
+  font: var(--type-details-2-font);
+  text-decoration: underline;
+}
+
+.order-totals-wrapper .total-row > div {
+  padding: var(--space-space-6) var(--space-space-3x);
+}
+
+.order-totals-wrapper .total-row .price {
+  background-color: var(--color-neutral-450);
+  display: flex;
+  align-items: center;
+}
+
+.order-totals-wrapper .total-row .surcharge-price-info {
+  position: relative;
+}
+
+.order-totals-wrapper .total-row .surcharge-price-info span {
+  position: absolute;
+  bottom: calc(100% + var(--space-space-2x-2));
+  min-width: 20rem;
+  font-size: var(--font-size-2);
+  text-align: center;
+  right: 0;
+  transform: translateX(calc(50% - 20px));
+  padding: var(--space-space-10);
+  background-color: #3680cb;
+  border-radius: var(--shape-border-radius-5);
+  color: var(--color-neutral-white);
+}
+
+.order-totals-wrapper .total-row .surcharge-price-info span::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: var(--shape-border-width-8) solid transparent;
+  border-right: var(--shape-border-width-8) solid transparent;
+  border-top: var(--shape-border-width-8) solid #3680cb;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.order-return-eligibility a.button {
+  font-size: var(--font-size-2);
+  text-transform: uppercase;
+  padding: var(--space-space-2x) var(--space-space-5x);
+  line-height: 1.59rem;
+  height: auto;
+}
+
+.account-orders-detail button {
+  padding: var(--space-space-2x) var(--space-space-3x);
+  font-size: var(--font-size-3);
+  line-height: 1.82rem;
+  text-align: center;
+}
+
+.account-orders-detail .delivery-details-info .view-on-map {
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-space-4x);
+  margin-bottom: var(--space-space-8x);
+}
+
+.account-orders-detail .delivery-details-info .view-on-map::before {
+  content: '';
+  background-image: url('/icons/map-view.svg');
+  width: 3rem;
+  height: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.account-orders-detail .delivery-details-info .view-on-map a {
+  font-size: var(--font-size-2);
+}
+
+html[dir='rtl'] .account-orders-detail-container .default-content-wrapper a {
+  right: auto;
+  left: 0;
+}
+
+.account-orders-detail .delivery-details-info .view-on-map a:hover {
+  text-decoration: underline;
+}
+
+.return-rma-bucket .return-rma-bucket-list-item-head .list-item-head-right {
+  width: 100%;
+  margin-top: var(--space-space-3x);
+}
+
+.return-rma-bucket .return-rma-bucket-list-item-head .list-item-head-right .btn-return-request-cancel:not(.disabled) {
+  background-color: var(--color-neutral-white);
+  color: var(--color-secondary-100);
+  width: 100%;
+  border-color: var(--color-secondary-100);
+  text-transform: uppercase;
+}
+
+.return-rma-bucket .return-rma-bucket-list-item-head .list-item-head-right .btn-return-request-cancel::before {
+  content: '';
+  background-image: url('/icons/close.svg');
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  padding-right: var(--space-space-2x-2);
+  background-size: contain;
+  display: block;
+}
+
+@media screen and (width >= 1024px) {
+  .account-orders-detail-container .default-content-wrapper a {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .order-summary-row,
+  .delivery-details-content,
+  .order-itemized-wrapper .order-item,
+  .order-totals-wrapper .total-row {
+    grid-template-columns: minmax(100px, 1fr) minmax(100px, 2fr) 21rem minmax(100px, 1fr) 19rem;
+  }
+
+  .order-summary-row .order-total,
+  .order-itemized-wrapper .order-item .total {
+    background-color: var(--color-neutral-450);
+  }
+
+  .order-summary-row .order-total {
+    display: flex;
+  }
+
+  .order-summary-row .order-name {
+    grid-row-start: initial;
+  }
+
+  .order-delivery-details .payment-info,
+  .order-itemized-wrapper .order-item .order-item-review {
+    grid-column-start: initial;
+  }
+
+  .order-delivery-details .payment-info {
+    background-color: rgb(86 157 229 / 30%);
+  }
+
+  .order-itemized-wrapper .order-item .unit-info *,
+  .delivery-details-content.click-n-collect .billing-details-info {
+    display: block;
+  }
+
+  .order-totals-wrapper .total-row .col-1 {
+    grid-column-start: 3;
+    text-align: end;
+  }
+
+  .order-item .order-item-review .review-item {
+    text-align: center;
+  }
+
+  .account-orders-detail-container .button-back-to-orders {
+    display: none;
+  }
+
+  .account-orders-detail-container .default-content-wrapper > a {
+    margin-top: 0;
+  }
+
+  .order-itemized-wrapper .order-item .total-info {
+    background-color: var(--color-neutral-450);
+  }
+
+  .return-rma-bucket .return-rma-bucket-list-item-head .list-item-head-right {
+    width: auto;
+    margin-top: 0;
+  }
+}

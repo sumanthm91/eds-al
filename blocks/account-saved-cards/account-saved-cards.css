@@ -1,0 +1,246 @@
+.account-saved-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-24);
+}
+
+.card-wrapper-outer {
+  display: flex;
+  flex-flow: column wrap;
+  gap: var(--space-space-24);
+  padding-top: 0;
+  justify-content: start;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  gap: var(--space-space-24);
+  padding-top: var(--space-space-24);
+  justify-content: start;
+  margin-top: var(--space-space-16);
+}
+
+.card-wrapper .card {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-space-3x);
+  padding: var(--space-space-4x);
+  width: 100%;
+  border: 1px solid var(--color-neutral-501);
+  justify-content: space-between;
+}
+
+.card-details-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-space-3x);
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-4x);
+}
+
+.card-details > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-2);
+}
+
+.card-details .card-label {
+    font: var(--type-details-3-font);
+    color: var(--color-text-dark);
+    line-height: var(--line-height-l);
+}
+
+
+.card-details .card-number-masked,
+.card-details .card-expiry-date {
+    font: var(--type-details-semibold-3-font);
+    color: var(--color-text-main);
+    line-height: var(--line-height-l);
+}
+
+.card-actions .icon {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.card-actions {
+    cursor: pointer;
+}
+
+.card-actions .icon.hovericon {
+    display: none;
+}
+
+.card-actions:hover .icon {
+    display: none;
+}
+
+.card-actions:hover .icon.hovericon {
+    display: inline-block;
+}
+
+a.delete-card {
+    font: var(--type-details-4-font);
+    text-decoration: underline;
+    padding: var(--space-space-16) 0;
+    display: block;
+  }
+  
+  dialog.delete-card-modal .delete-content {
+    text-align: center;
+    font: var(--type-details-3-font);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-4x);
+  }
+
+  dialog.delete-card-modal .delete-content .delete-icon {
+    display: flex;
+    justify-content: center;
+    height: 1.6rem;
+  }
+
+  dialog.delete-card-modal .delete-content .delete-title {
+    font: var(--type-details-5-font);
+  }
+  
+  dialog.delete-card-modal .delete-content .delete-buttons {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 0 var(--space-space-3x);
+  
+  }
+  
+  dialog.delete-card-modal .modal-header button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  dialog.delete-card-modal .delete-content .delete-buttons button {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  html[dir='rtl'] dialog.delete-card-modal .modal-header button {
+    right: auto;
+    left: 0;
+  }
+
+  dialog.delete-card-modal .modal-header h4 {
+    display: none;
+  }
+
+  dialog.delete-card-modal .modal-header {
+    border-bottom: none;
+    height: auto;
+    justify-content: center;
+  }
+  
+  dialog.delete-card-modal .modal-header button::after {
+    content: none;
+    border-radius: 0;
+  }
+
+  dialog.delete-card-modal .modal-content {
+    padding-top: 0;
+  }
+
+.empty-cards {
+    display: none;
+}
+
+.empty-cards p {
+    margin: 0;
+    padding: var(--space-space-24) 0;
+}
+
+.empty-cards .button-container {
+    padding: 0;
+}
+
+.empty-cards .button-container a {
+    margin: 0;
+    width: 100%;
+}
+
+.account-saved-cards.empty .empty-cards {
+    display: block;
+    padding: var(--space-space-24) 0;
+    font-size: var(--font-size-3);
+}
+
+.account-saved-cards.hide > div {
+    display: none;
+}
+
+.account-saved-cards > div.loading-block {
+    display: none;
+}
+
+.account-saved-cards.hide > div.loading-block {
+    display: flex;
+    width: 100%;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-neutral-200);
+}
+
+.account-saved-cards.hide > div.loading-block .loading-spinner {
+    display: block;
+    margin: auto;
+}
+
+.expiry-message {
+    text-align: center;
+    font: var(--type-details-4-font);
+    line-height: var(--line-height-xl);
+}
+
+@media (width >= 768px) {
+    .card-wrapper {
+      flex-direction: row;
+    }
+
+    .card-wrapper .card {
+        width: 38rem;
+      }
+
+    a.delete-card {
+        font: var(--type-details-2-font);
+        text-decoration: underline;
+    }
+    
+    .delete-card-modal .icon.icon-trash {
+      height: 3.2rem;
+      width: var(--grid-gutter);
+    }
+
+    dialog.delete-card-modal .delete-content .delete-buttons {
+        flex-direction: row;
+        gap: var(--space-space-16);
+    }
+
+    html[dir='rtl'] dialog.delete-card-modal .delete-content .delete-buttons {
+      flex-direction: row;  
+    }
+  
+    dialog.delete-card-modal .delete-content .delete-buttons button {
+        width: 50rem;
+    }
+
+    .empty-cards .button-container a {
+        width: 24rem;
+    }
+
+    .expiry-message {
+        text-align: start;
+    }
+}

@@ -1,0 +1,56 @@
+.scrollable-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: unset;
+    height: 25.8rem;
+    padding: 4rem 0;
+}
+
+.scrollable-banner h4 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: var(--space-space-4);
+}
+
+.scrollable-banner > div {
+    padding: 1.8rem;
+    margin: 0 auto;
+}
+
+.scrollable-banner > div > div { 
+    line-height: 130%;
+    margin: 0 auto;
+    background-color: var(--color-brand-800);
+    padding: var(--space-space-40) var(--space-space-32);
+}
+
+.scrollable-banner > div > div > p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--font-size-3);
+}
+
+@media (width >= 768px) {
+    .scrollable-banner {
+        min-height: 40rem;
+        background-attachment: fixed;
+        align-items: revert;
+    }
+
+    .scrollable-banner > div > div { 
+        line-height: 140%;
+        width: 100%;
+        padding: var(--space-space-40) var(--space-space-32);
+        text-align: center;
+        transform: translate(0%, 50%);
+    }
+
+    .scrollable-banner > div > div > p {
+        font-size: revert;
+    }
+}

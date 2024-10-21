@@ -1,0 +1,142 @@
+@supports not (-webkit-touch-callout: none) {
+    @font-face {
+    font-family: HM Serif Regular;
+    src: url("file:///android_asset/fonts/HMSerif-Regular. ttf") format("opentype");
+    }
+    @font-face {
+    font-family: HM Sans Arabic Bold;
+    src: url("file:///android_asset/fonts/HMSansArabic-Bold. ttf") format("opentype");
+    }
+    @font-face {
+    font-family: HM Sans Arabic Semi Bold;
+    src: url("file:///android_asset/fonts/HMSansArabic- SemiBold.ttf") format("opentype");
+    }
+    @font-face {
+    font-family: HM Sans Arabic Regular;
+    src: url("file:///android_asset/fonts/HMSansArabic-Regular. ttf") format("opentype");
+    }
+    }
+    @supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    @font-face {
+    font-family: HM Serif Regular;
+    src: url("https://kw.hm.com/sites/g/files/hm/dy-fonts /HMSerif-Regular.otf") format("opentype");
+    }
+    @font-face {
+    font-family: HM Sans Arabic Semi Bold;
+    src: url("https://kw.hm.com/sites/g/files/hm/dy-fonts /HMSansArabic-SemiBold.otf") format("opentype");
+    }
+    @font-face {
+    font-family: HM Sans Arabic Bold;
+    src: url("https://kw.hm.com/sites/g/files/hm/dy-fonts /HMSansArabic-Bold.otf") format("opentype");
+    }
+    @font-face {
+    font-family: HM Sans Arabic Regular;
+    src: url("https://kw.hm.com/sites/g/files/hm/dy-fonts /HMSansArabic-Regular.otf") format("opentype");
+    }
+    }
+
+    body {
+        display: block;
+        margin: 0px;
+    }
+
+    /* DY-HM Landing Page */
+    .hm-studio-lp-wrap {
+        width: 100%;
+        height: auto;
+        /* overflow: hidden;
+        max-width: 1026px; */
+         margin:0
+    }
+
+    .banner-wrap img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .banner-wrap {
+        width: 100%;
+    }
+
+    .desktop-visible{
+        display: block;
+    }
+    .mobile-visible{
+        display: none;
+    }
+
+    .studio-text-wrap {
+        text-align: center;
+        margin: 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap:5px;
+    }
+
+    .studio-text-wrap h1, .studio-text-wrap p {
+       margin: 0;
+    }
+
+    .studio-text-wrap h1.main-title {
+        font-size: 1.8rem;
+        font-weight: 400;
+        /* text-transform: uppercase; */
+        line-height: 1.1em;
+        margin: 0;
+        font-family: "HM Sans Arabic Semi Bold", sans-serif, arial;
+        color: #000;
+        margin-bottom: 8px;
+    }
+
+   .studio-text-wrap p.studio-para {
+        font-size: 1rem;
+        font-family: "HM Sans Regular","HM Sans Arabic Regular","sans-serif","Arial";
+        /* text-transform: uppercase; */
+        color: #000;
+        /* margin-bottom: 5px; */
+    }
+    .banner-wrap {
+        width: 100%;
+        margin: 7% auto;
+    }
+    .mt-0{
+     margin-top: 0;
+    }
+    .mb-0{
+        margin-bottom: 0;
+    }
+    @media only screen and (max-width: 767px) {
+        .desktop-visible{
+            display: none;
+        }
+        .mobile-visible{
+            display: block;
+        }
+        .studio-text-wrap h1.main-title {
+            font-size: 1.2rem;
+            
+        }
+        .studio-text-wrap {
+            margin: 10% 4%;
+        }
+        .studio-text-wrap p.studio-para {
+            font-size: .9rem;
+            line-height: 20px;
+        }
+        body.nodetype--static_html .page-standard {
+            padding-left: 0!important;
+            padding-right: 0!important;
+        }
+}
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+   
+    }
+
+    @media (min-width: 1680px) {
+        body.nodetype--static_html .page-standard {
+            padding-left: 0!important;
+            padding-right: 0!important;
+        }
+    }

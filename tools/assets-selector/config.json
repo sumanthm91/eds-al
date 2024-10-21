@@ -1,0 +1,52 @@
+{
+  "blockName": [
+    {
+      "mimeType": "video/*",
+      "value": "Embed"
+    }
+  ],
+  "copyMode": [
+    {
+      "mimeType": "image/*",
+      "value": "reference"
+    }
+  ],
+  "assetDomainMapping": {
+    "delivery-p129961-e1274490.adobeaemcloud.com" : "mediapreprod.store.alshaya.com",
+    "delivery-p129961-e1274544.adobeaemcloud.com" : "media.alshaya.com",
+    "delivery-p129961-e1281974.adobeaemcloud.com" : "mediauat.store.alshaya.com",
+    "delivery-p129961-e1274489.adobeaemcloud.com" : "mediaqa.store.alshaya.com"
+  },
+  "filterSchema": [
+    {
+      "header": "File Types",
+      "groupKey": "FileTypeGroup",
+      "fields": [
+        {
+          "excludeTags": ["image/*", "video/*", "application/pdf"],
+          "element": "checkbox",
+          "name": "type",
+          "defaultValue": [
+            "image/*",
+            "video/*"
+          ],
+          "options": [
+            {
+              "label": "Images",
+              "value": "image/*"
+            },
+            {
+              "label": "Videos",
+              "value": "video/*"
+            },
+            {
+              "label": "PDFs",
+              "value": "application/pdf"
+            }
+          ],
+          "orientation": "horizontal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+.embed {
+  width: unset;
+  text-align: center;
+  max-width: var(--embed-width-2);
+  margin: var(--space-space-7x) auto;
+}
+
+.embed > div {
+  display: flex;
+  justify-content: center;
+}
+
+.embed.embed-twitter .twitter-tweet-rendered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embed .embed-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.embed .embed-placeholder > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.embed .embed-placeholder picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.embed .embed-placeholder-play button {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(3);
+  width: var(--embed-height-1);
+  height: var(--embed-width-1);
+  border: var(--shape-border-width-3) solid;
+  border-radius: var(--shape-border-radius-4);
+  padding: 0;
+}
+
+.embed .embed-placeholder-play button::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: var(--embed-height-2);
+  border-top: var(--shape-border-width-5) solid transparent;
+  border-bottom: var(--shape-border-width-5) solid transparent;
+  border-left: var(--shape-border-width-6) solid;
+  top: var(--spacing-xxsmall);
+  left: var(--space-space-1x-2);
+}

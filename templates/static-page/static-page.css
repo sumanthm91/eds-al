@@ -1,0 +1,108 @@
+/* static page css(privacypolicy,faq,tnc) */
+.static-page main .default-content-wrapper h3{
+    margin: 0 0 var(--space-space-24);
+    font-weight:var(--font-weight-4);
+    text-align: center;
+  }
+  
+  .static-page main {
+    max-width: var(--grid-col-8);
+    margin: auto;
+  }
+  
+  .static-page main .default-content-wrapper > * {
+    margin: 0 0 var(--space-space-12);
+  }
+  
+  .static-page main .default-content-wrapper > h5 {
+    margin-top: var(--space-space-40);
+    font-weight:var(--font-weight-4);
+  }
+  
+  .static-page main .default-content-wrapper h3+* {
+    margin-top: var(--space-space-0x);
+  }
+  
+  .static-page main .default-content-wrapper p{
+    font-size: var(--font-size-3);
+    line-height: var(--line-height-s);
+  }
+  
+  .static-page a.button{
+    margin: var(--space-space-0x);
+  }
+
+  @media (width >= 768px) {
+    .static-page main .default-content-wrapper p{
+      font-size: var(--font-size-4);
+      line-height: var(--line-height-xl);
+    }
+  }
+
+  /* table for terms condition sale page */
+
+.static-page .table table{
+    border-collapse: collapse;
+    width: var(--grid-col-8);
+    margin: 0 auto var(--space-space-20);
+    font-size: var(--font-size-4);
+}
+
+.static-page .table-wrapper{
+    overflow-x: auto;
+}
+
+.static-page .table table body tr{
+    border-radius: var(--shape-border-width-1);
+}
+
+.static-page .table table th {
+    font-weight: var(--font-weight-7);
+    border-left: none;
+    border-right: none;
+    padding: var(--space-space-8) var(--space-space-16);
+    text-align: center;
+    color: var(--color-neutral-700);
+}
+
+.static-page .table table td {
+    padding: var(--space-space-8) var(--space-space-16);
+    border: var(--shape-border-width-1) solid var(--color-brand-200);
+    text-align: center;
+}
+
+.static-page main .default-content-wrapper > h3{
+  padding-top: var(--space-space-40);
+}
+
+@media only screen and (width >=768px) {
+    .static-page .table table th {
+        padding: var(--space-space-12) var(--space-space-16);
+    }
+    
+   .static-page .table table td {
+        padding: var(--space-space-16) var(--space-space-24);
+        font-size: var(--font-size-3);
+        line-height: var(--line-height-xl);
+    }
+}
+
+@media (width >= 1024px) {
+   .static-page .table table th {
+        padding: var(--space-space-16) var(--space-space-24);
+    }
+
+   .static-page .table table td {
+        padding: var(--space-space-12) var(--space-space-16);
+        font-size: var(--font-size-4);
+        line-height: var(--line-height-xl);
+    }
+
+    .static-page .table-wrapper{
+        overflow-x: unset;
+    }
+
+    .static-page main .default-content-wrapper > h3{
+      padding-top: 0;
+    }
+}

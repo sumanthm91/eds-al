@@ -1,0 +1,314 @@
+.size-guide-hide {
+  display: none;
+}
+
+.size-guide-filters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-space-12);
+    width: 100%;
+    height: 7rem;
+}
+
+.size-guide-filter label {
+    color: var(--color-text-dark);
+    min-width: 5.3rem;
+    min-height: 1.6rem;
+    font-size: 1.2rem;
+    line-height: 1.56rem;
+}
+
+.size-guide-filter {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-xxsmall-2);
+    border: 1px solid var(--color-secondary-20);
+    padding: var(--spacing-xsmall) var(--spacing-xsmall-2);
+    flex: 1;
+    justify-content: space-between;
+    height: 5.4rem;
+}
+
+.size-guide-filter-select {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: inherit;
+    height: 2.2rem;
+}
+
+.size-guide-filter-option {
+    width: 100%; /* Ensure each option fits within the select element */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.modal dialog.pdp-modal.size-guide-modal {
+    max-height: 100%;
+    height: calc(100% - 2rem);
+}
+
+.size-guide-filter .size-guide-filter-block {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-2);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.size-guide-filter-arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+    position: relative;
+    top: var(--spacing-xsmall-2);
+    align-content: flex-end;
+    cursor: pointer;
+  }
+
+.size-guide-filter select {
+    border: none;
+    font-size: var(--font-size-4);
+    color: var(--color-text-main);
+    cursor: pointer;
+    outline: none; 
+    appearance: none;    
+    background: url('/icons/chevron-down.svg') no-repeat right center;
+    background-size: auto;
+    background-position-y: -0.8rem;
+    font-family: var(--type-base-font-family);
+    padding-right: 1.5rem;
+}
+
+.section.dynamic-size .default-content-wrapper picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section.dynamic-size .table.block {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.section.dynamic-size table table {
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid var(--color-text-light);
+    font-weight: 400;
+
+    strong {
+        font-weight: 400;
+    }
+
+    tr {
+        text-align: center;
+        font-size: var(--font-size-1);
+        flex-basis: 15%;
+        height: fit-content;
+        padding: var(--space-space-3x);
+        line-height:  3.5rem;
+    }
+
+    tr > td {
+        text-overflow: ellipsis;
+        width: 13.4rem;
+        white-space: nowrap;
+    }
+
+    tr:first-of-type {
+        background-color: #F5F5F5;
+    }
+
+    th:first-child {
+        color: var(--color-alert-900);
+    }
+}
+
+.section.dynamic-size .table-wrapper .table > table {
+    border-collapse: collapse;
+}
+
+.section.dynamic-size .table-wrapper .table tbody tr > td:first-child {
+    text-align: start;
+    padding: 0 0.8rem;
+}
+
+.size-guide-filter-selection {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: var(--space-space-8);
+    cursor: default;
+}
+
+.size-guide-filter-selection > button {
+    flex: 1;
+    height: 3.4rem;
+    background-color: inherit;
+    border: 1px solid var(--color-secondary-20);
+    font-size: var(--font-size-3);
+    line-height: 1.82rem;
+    text-align: center;
+    font-weight: 400;
+    color: #222;
+    cursor: default;
+}
+
+.size-guide-filter-selection button.selected {
+    border: 1px solid #222;
+}
+
+.modal dialog.size-guide-modal .modal-content {
+    p, h3, h4 {
+        color: var(--color-text-main);
+    }
+
+    .tabs-list {
+        overflow-x: hidden;
+    }
+
+    .tabs-tab {
+        height: 5.4rem;
+        width: 5.6rem;
+        font-size: var(--font-size-3);
+        line-height: 2.24rem;
+        color: #222;
+        padding: var(--space-space-4x);
+    }
+
+    .tabs-tab[aria-selected='false'] {
+        color: var(--color-text-dark);
+    }
+
+    .tabs-panel {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+dialog.size-guide-modal .section.dynamic-size .steps-container {
+    h3 {
+        height: 2.6rem;
+        width: 53.4rem;
+        line-height: 2.6rem;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .steps-list, .step-content {
+        margin-top: 0;
+    }
+
+    .steps-list li {
+        margin: 0;
+    }
+
+    .step-number {
+        height: 3.6rem;
+        width: 1.2rem;
+        line-height: 3.64rem;
+        margin-top: 2.1rem;
+        font-size: var(--font-size-7);
+    }
+
+    .step-item {
+        gap: 0.2rem;
+        display: inline-flex;
+        align-items: flex-start;
+    }
+
+    .step-text h4 {
+        font-size: var(--font-size-3);
+        line-height: 2.24rem;
+        font-weight: 400;
+        height: 2.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .step-text p {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+
+    img {
+        align-items: center;
+    }
+}
+
+[dir='rtl'] dialog.size-guide-modal .section.dynamic-size.steps-container {
+    .step-number {
+        margin: 2.1rem 0 0 1.2rem;
+    }
+
+    img {
+        margin-right: 2.4rem;
+    }
+}
+
+[dir='rtl'] .size-guide-filter select {
+    background: url('/icons/chevron-down.svg') no-repeat left center;
+    background-size: auto;
+    background-position-y: -0.8rem;
+}
+
+@media(width > 768px) {
+    dialog.size-guide-modal.pdp-modal {
+        width: 57.4rem;
+    }
+
+    .modal dialog.size-guide-modal .modal-content .tabs-tab {
+        font-size: var(--font-size-4);
+    }
+
+    .modal dialog.pdp-modal.size-guide-modal {
+        max-height: 100%;
+        height: 100%;
+    }
+
+    dialog.size-guide-modal .section.dynamic-size .steps-container {
+        .step-text h4 {
+            font-size: 1.6rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .step-number {
+            margin-top: 2.1rem;
+            font-size: 2.8rem;
+        }
+
+        img {
+            margin-left: 6rem;
+        }
+
+    }
+
+    .section.dynamic-size .default-content-wrapper picture {
+        display: unset;
+        align-items: unset;
+    }
+
+    .size-guide-filter-select {
+        min-width: 24rem;
+    }
+
+    .section.dynamic-size table table {
+        tr {
+            font-size: var(--font-size-2);
+        }
+    }
+
+    [dir='rtl'] dialog.size-guide-modal .section.dynamic-size.steps-container {
+        img {
+            margin-right: 6rem;
+        }
+
+        .step-number {
+            margin: 1.1rem 0 0 2rem;
+        }
+    }
+}

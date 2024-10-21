@@ -1,0 +1,26 @@
+.section.commerce-registration-welcome-banner-container {
+    padding-top: 0;
+}
+
+.commerce-registration-welcome-banner-container .default-content-wrapper p {
+    font-size: var(--font-size-2);
+    margin-bottom: var(--space-space-15);
+    color: var(--color-secondary-100);
+    padding: 0;
+    text-align: start;
+}
+
+.commerce-registration-welcome-banner-container .default-content-wrapper a {
+    font-weight: var(--font-weight-6);
+    text-decoration: underline;
+}
+
+.commerce-registration-welcome-banner-container .default-content-wrapper a:hover {
+    color: var(--color-secondary-100);
+}
+
+@media (width >=768px) {
+    .commerce-registration-welcome-banner-container .default-content-wrapper p {
+        font-size: var(--font-size-3);
+    }
+}

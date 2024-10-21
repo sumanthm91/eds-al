@@ -1,0 +1,20 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+}
+
+.promo-item--title button , .promo-item--urlkey button{
+  height: auto;
+}
+
+.promo-item--title {
+  font-weight: bold;
+}

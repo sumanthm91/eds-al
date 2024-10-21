@@ -1,0 +1,51 @@
+.account-details-wrapper {
+    display: none;
+}
+
+.account-details-wrapper .account-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-16);
+}
+
+.account-details-wrapper .account-details-container .email-container,
+.account-details-wrapper .account-details-container .contact-number-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    gap: var(--space-space-8);
+    font: var(--type-details-4-font);
+}
+
+.account-details-container .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: var(--space-space-8);
+    border-bottom: 0.1rem solid var(--color-neutral-40);
+    align-items: last baseline;
+    margin-top: var(--space-space-16);
+}
+
+.account .main-wrapper .account-details-container .title-wrapper h2,
+.account .main-wrapper .account-details-container .title-wrapper h3,
+.account .main-wrapper .account-details-container .title-wrapper h4,
+.account .main-wrapper .account-details-container .title-wrapper h5,
+.account .main-wrapper .account-details-container .title-wrapper h6 {
+    border-bottom: none;
+}
+
+.account-details-container .title-wrapper a {
+    text-decoration: underline;
+}
+
+.account-details-container .value {
+    color: var(--color-text-dark);
+}
+
+@media (width >= 767px) {
+    .account-details-wrapper {
+        display: block;
+    }
+}

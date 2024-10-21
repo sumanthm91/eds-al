@@ -1,0 +1,48 @@
+.check-icon {
+    flex-shrink: 0;
+    height: 2.2rem;
+    width: 1.25rem;
+    border-bottom: 5px solid;
+    border-right: 5px solid;
+    transform: rotate(45deg);
+    border-color: var(--color-neutral-350);
+}
+
+.check-icon.icon-selected {
+    border-color: var(--color-order-green);
+}
+
+
+.spc-checkout-card-option {
+    display: flex;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.spc-checkout-card-option:first-child {
+    border-bottom: 1px solid var(--color-neutral-350);
+}
+
+.spc-payment-checkout_com {
+    padding-left: 3rem;
+}
+
+.spc-checkout-card-new-card-label {
+    padding-left: 2rem;
+    display: block;
+}
+
+.spc-checkout-payment-saved-card-preview {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: var(--space-space-16) 0;
+    position: relative;
+}
+
+.existing-card-icon {
+    margin-top: var(--space-space-16);
+}

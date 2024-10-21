@@ -1,0 +1,72 @@
+.payment-form-wrapper {
+    margin: var(--space-space-16) 0;
+}
+
+.payment-form-wrapper input {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+.spc-payment-save-card input {
+    height: var(--space-space-24);
+    width: var(--space-space-24);
+}
+
+html[dir="rtl"] .payment-form-wrapper input {
+  text-align: right;
+}
+
+.spc-expiry-cvv-column {
+    display: flex;
+    gap: var(--space-space-16);
+}
+
+.spc-card-type svg {
+    height: 2rem;
+    width: 2.5rem;
+}
+
+.spc-card-types-wrapper .spc-card-type svg {
+    width: var(--space-space-20);
+    height: var(--space-space-20);
+}
+
+.spc-card-types-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-space-8);
+}
+
+.spc-type-expiry,
+.spc-type-cvv,
+.spc-expiry-cvv-column {
+    width: 100%;
+}
+
+#spc-cc-number-error,
+#spc-cc-cvv-error,
+#spc-cc-expiry-error {
+    font-size: var(--font-size-2);
+    color: var(--color-primary-100);
+    padding-top: var(--space-space-0-3);
+    display: block;
+}
+
+.spc-type-textfield {
+    margin-bottom: var(--space-space-16);
+}
+
+.allowed-payments-logos {
+    display: flex;
+    gap: var(--space-space-10);
+}
+
+.spc-payment-save-card {
+    color: var(--color-order-grey);
+    margin-top: var(--space-space-6x);
+    display: flex;
+    gap: var(--space-space-8);
+    align-items: flex-start;
+}
+

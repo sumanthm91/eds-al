@@ -1,0 +1,479 @@
+/* stylelint-disable no-empty-source */
+
+.add-more-container {
+  display: flex;
+}
+
+.error-message {
+  color: var(--color-error-100);
+}
+
+.user .main-wrapper p{
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-4);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+.accordion details[open] .accordion-item-body p:nth-child(1) {
+  margin-top: 0;
+  padding: 0;
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-4);
+}
+
+#otp-verification-dialog .modal-content .otp-verification-container>p {
+  margin: 0;
+  padding-bottom: 0;
+  font-size: var(--font-size-4);
+  color: var(--color-text-main);
+}
+
+#otp-verification-dialog .otp-verification-container>p.otp-message-container {
+    color: var(--color-error-100);
+    font-size: var(--font-size-2);
+}
+
+#otp-verification-dialog .otp-verification-container button.otp-verify-button {
+    width: auto;
+}
+
+#otp-verification-dialog .otp-verification-container>p:last-child {
+     color: var(--color-text-dark);
+     font-size: var(--font-size-2);
+     font-weight: var(--font-weight-4);
+}
+
+form .input-field-wrapper>.input-wrapper label[for="newsletter"]:checked {
+  font-size: var(--font-size-2);
+  color: var(--color-text-dark);
+}
+
+form .input-field-wrapper>.input-wrapper input[type="checkbox"]:checked+label[for="newsletter"]{
+  color: var(--color-text-main);
+  font-weight: var(--font-weight-4);
+}
+
+form .input-field-wrapper>.input-wrapper>.newsletter {
+  max-height: var(--space-space-36);
+}
+
+.terms-condition-text,
+.terms-condition-link {
+  font-size: var(--font-size-2);
+  color: var(--color-text-dark);
+  line-height: var(--line-height-l);
+  display: inline-block;
+}
+
+.input-field-wrapper>.input-wrapper a.terms-condition-link {
+  color: var(--color-text-dark);
+  text-decoration: underline;
+}
+
+.input-field-wrapper>.input-wrapper .terms-condition-link a:hover {
+  color: var(--color-text-main);
+}
+
+.commerce-signup-container .commerce-sign-up {
+  background: var(--color-neutral-200);
+  max-width: 50rem;
+}
+
+.accordion details {
+  background-color: var(--color-neutral-200);
+}
+
+.accordion details+details {
+  margin-top: var(--space-space-3x);
+}
+
+.accordion.border details {
+  border: var(--shape-border-width-1) solid var(--color-secondary-20);
+}
+
+details > summary {
+  list-style: none;
+}
+
+.accordion details summary {
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  transition: margin 0.35s;
+}
+
+.accordion details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion details summary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: var(--space-space-12);
+  transform: translateY(-50%) rotate(135deg);
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 0.2rem solid;
+  border-width: 0.2rem 0.2rem 0 0;
+  transition: transform 0.2s;
+}
+
+.accordion details[open] summary::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+html[dir="rtl"] .accordion details summary::after {
+  right: auto;
+  left: var(--space-space-12);
+}
+
+.commerce-sign-up .accordion.plus details summary::after {
+  background-image: url('/icons/plus.svg');
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  transform: translateY(-50%);
+}
+
+.accordion details .accordion-item-body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-24);
+  background: var(--color-neutral-200);
+  color: var(--color-text-dark);
+  font-size: var(--text-m);
+  padding: var(--space-space-0x) var(--space-space-12) var(--space-space-16) var(--space-space-12);
+}
+
+.input-field-wrapper .input-field.date-field>p.dob-error {
+  color: var(--color-error-100);
+}
+
+.accordion details[open] .accordion-item-body p.dob-error {
+  color: var(--color-error-100);
+}
+
+.accordion-item-body .mobile-wrapper .otp-bottom-text-label {
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-4);
+}
+
+.accordion.highlight-open details[open] summary::after {
+  color: var(--color-primary-100);
+}
+
+.accordion.plus details[open] summary::after {
+  background-image: url("/icons/minus.svg");
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  color: var(--color-primary-100);
+}
+
+html[dir="rtl"] .accordion.plus details summary::after {
+  transform: translateY(-50%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-24);
+}
+
+.acc-item-p {
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-l);
+  color: var(--color-text-dark);
+}
+
+.acc-custom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden-otp {
+  display: none;
+}
+
+/* stylelint-disable selector-class-pattern */
+
+.genderHeading {
+  font-weight: var(--font-weight-4);
+  margin-bottom: var(--space-space-8);
+}
+
+.input-wrapper.input-prefix input {
+  margin-bottom: 0;
+}
+
+.mobileHeading label {
+  color: var(--color-brand-700);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-4);
+  padding-bottom: var(--space-space-4);
+  display: block;
+}
+
+.dob label {
+  position: unset;
+  padding: var(--space-space-20) var(--space-space-16);
+}
+
+.dob .input-field-wrapper .input-wrapper.date-field label {
+  font-size: var(--font-size-2);
+  top: 1rem;
+}
+
+.acc-heading {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-4);
+  margin: 0;
+}
+
+.commerce-sign-up .acc-optional {
+  font-weight: var(--font-weight-4);
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-s);
+  color: var(--color-text-dark);
+}
+
+.commerce-sign-up .acc-body {
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-4);
+  color: var(--color-text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.dob {
+  background: var(--color-neutral-200);
+}
+
+.dob input[type="date"] {
+  border: var(--shape-border-width-1) solid;
+  background: var(--color-neutral-200);
+}
+
+.mobile-block {
+  display: flex;
+}
+
+.otp-button {
+  width: 100%;
+  padding: var(--space-space-15) var(--space-space-24);
+  margin: 0;
+  height: auto;
+}
+
+.input-prefix {
+  display: flex;
+  align-items: center;
+  border: var(--shape-border-width-1) solid var(--color-neutral-black);
+}
+
+.mobile-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: var(--space-space-12);
+}
+
+html[dir='rtl'] .mobile-input-wrapper {
+  flex-direction: row-reverse;
+}
+
+.mobile-input {
+  width: 100%;
+  position: relative;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  /* stylelint-disable property-no-vendor-prefix */
+  -webkit-appearance: none;
+}
+
+.prefix {
+  display: flex;
+  padding: var(--space-space-0x) var(--space-space-1x) var(--space-space-0x) var(--space-space-2x);
+  font-size: var(--font-size-4);
+  color: var(--color-text-dark);
+  direction: ltr;
+}
+
+.phone:focus {
+  outline: none;
+}
+
+.input-wrapper.input-prefix .phone {
+  border: none;
+  outline: none;
+  padding: var(--space-space-8) var(--space-space-12) var(--space-space-8) var(--space-space-2);
+  flex: 1;
+  background: var(--color-neutral-200);
+  height: var(--grid-margin);
+}
+
+html[dir='rtl'] .input-wrapper.input-prefix {
+  flex-direction: row-reverse;
+}
+
+.mobile-button {
+  width: 11rem;
+}
+
+.commerce-sign-up-container .commerce-sign-up form .mobile-button button {
+  width: 100%;
+  margin-bottom: 0;
+  height: var(--grid-margin);
+}
+
+.dob .input-field-wrapper .input-wrapper.date-field .dateOfBirth {
+  -webkit-appearance: none;
+  color: var(--color-text-main);
+}
+
+.dob input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  -webkit-appearance: none;
+}
+
+html[dir='rtl'] .dob input[type="date"]::-webkit-date-and-time-value {
+  text-align: right;
+}
+
+.dob .input-field-wrapper .dobtext {
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-l);
+  color: var(--color-text-dark);
+  margin: var(--space-space-4) 0 0;
+}
+
+html[dir='rtl'] .dob .input-field-wrapper .input-wrapper.date-field .dateOfBirth {
+  text-align: right;
+}
+
+.commerce-sign-up.accordion.plus .dropdown.gender::after {
+  top: 3.8rem;
+}
+
+.commerce-sign-up.accordion.plus .acc-sum {
+  padding-right: var(--space-space-40);
+}
+
+html[dir='rtl'] .commerce-sign-up.accordion.plus .acc-sum {
+  padding-left: var(--space-space-40);
+  padding-right: var(--space-space-16);
+}
+
+.section.commerce-sign-up-container>.commerce-sign-up-wrapper .error-container:empty,
+.section.commerce-sign-up-container>.commerce-sign-up-wrapper .success-container:empty { 
+  display: none;
+}
+
+@media (width >=768px) {
+  .input-field-wrapper {
+    max-width: var(--grid-col-4);
+  }
+
+  .user .main-wrapper p{
+    font-size: var(--font-size-4);
+  }
+
+  .commerce-sign-up details .acc-sum p {
+    font-size: var(--text-xxs);
+    margin-bottom: 0;
+  }
+
+  .commerce-sign-up-container.social-login-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: var(--space-space-32);
+  }
+
+  .section.commerce-sign-up-container>.commerce-sign-up-wrapper {
+    max-width: 56.5%;
+    width: 100%;
+    padding-right: 8%;
+  }
+
+  html[dir="rtl"] .commerce-sign-up-container>.commerce-sign-up-wrapper {
+    max-width: 56.5%;
+    width: 100%;
+    padding-left: 8%;
+    border-right: none;
+    padding-right: var(--space-space-0x);
+  }
+
+  .section.commerce-sign-up-container>.commerce-sign-up-wrapper ul.validation-container{
+    margin-top: calc(-1 * var(--space-space-16));
+  }
+
+  .section.social-sign-up-container>.social-sign-up-wrapper {
+    width: 100%;
+    max-width: calc(100% - 56.5%);
+    padding-left: var(--space-space-84);
+    margin: var(--space-space-0x);
+  }
+
+  html[dir="rtl"] .section.social-login-container>.social-login-wrapper {
+    width: 100%;
+    max-width: calc(100% - 56.5%);
+    padding-right: var(--space-space-84);
+    margin: var(--space-space-0x);
+  }
+
+  .commerce-sign-up-container .commerce-sign-up form input {
+    max-width: unset;
+  }
+
+  .commerce-sign-up-container .commerce-sign-up form button {
+    max-width: var(--grid-col-4);
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .commerce-sign-up-container .button-container a {
+    width: var(--grid-col-4);
+  }
+
+  .commerce-sign-up-container .button-container>a.button {
+    padding: var(--space-space-4);
+    gap: var(--space-space-4);
+    background-color: var(--color-neutral-white);
+    color: var(--color-text-main);
+  }
+
+  .status-message {
+    max-width: var(--grid-col-8);
+    margin: 0 auto;
+  }
+
+  .accordion details summary h3 {
+    font-size: var(--font-size-4);
+    line-height: var(--line-height-m);
+  }
+
+  .acc-sum {
+    padding: var(--space-space-4x) var(--space-space-4x) var(--space-space-4x);
+  }
+}
+
+@media (width <=767px) {
+  .acc-sum {
+    padding: var(--space-space-16);
+  }
+
+  .acc-body {
+    margin: 0;
+  }
+
+  .signup-container .commerce-sign-up {
+    max-width: unset;
+  }
+}

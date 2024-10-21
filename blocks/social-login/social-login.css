@@ -1,0 +1,128 @@
+/* stylelint-disable selector-class-pattern */
+
+.social-login-wrapper .socialauth-button{
+  border: 1px solid var(--color-brand-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.8rem;
+  width: 100%;
+  margin-bottom: var(--space-space-16);
+  gap: var(--space-space-8);
+  position: relative;
+}
+
+.social-login-wrapper .socialauth-button span.icon{
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.social-login-wrapper span{
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-l);
+}
+
+.social-login-wrapper .account-text{
+  margin: var(--space-space-32) 0 0;
+  display: block;
+  text-align: center;
+}
+
+.social-login-wrapper .mobile-onlytext{
+  font-size: var(--font-size-5);
+  line-height: var(--line-height-l);
+  font-weight: var(--font-weight-6);
+  background-color: var(--color-neutral-white);
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  padding: 0 var(--space-space-8);
+  transform: translateX(-50%);
+}
+
+.section.social-login-container > .social-login-wrapper{
+  position: relative;
+  padding-top: var(--space-space-30);
+  border-top: 1px solid var(--color-neutral-40);
+  margin-top: var(--space-space-40);
+}
+
+.login-google .abcRioButton.abcRioButtonBlue{
+  height: auto;
+  width: auto;
+  background-color: unset;
+  box-shadow: none;
+}
+
+.login-google .abcRioButtonContentWrapper{
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-8);
+}
+
+.login-google .abcRioButtonIcon{
+  padding: 0;
+}
+
+/* adding important as the css is coming from google. */
+.login-google .abcRioButton .abcRioButtonIcon{
+  padding: 0 !important;
+}
+
+.login-google .abcRioButtonContents{
+  margin:0
+}
+
+.login-google .abcRioButtonContents span{
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-l);
+  color: var(--color-text-main);
+}
+
+a.socialauth-button.loader::after {
+  background-image: url('/icons/ic-loader.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: '';
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+}
+
+@media(width >=768px) {
+  .social-login-wrapper .socialauth-button{
+    max-width: var(--grid-col-3);
+    margin-bottom: var(--space-space-24);
+  }
+
+  .social-login-wrapper .account-text{
+    margin: var(--space-space-40) 0 0 0;
+    text-align: left;
+  }
+
+  html[dir='rtl'] .social-login-wrapper .account-text{
+    margin: var(--space-space-40) 0 0 0;
+    text-align: right;
+  }
+
+  .social-login-wrapper .mobile-onlytext{
+    display:none;
+  }
+
+  .section.social-login-container > .social-login-wrapper {
+    width: 100%;
+    max-width: calc(100% - 56.5%);
+    padding-left: var(--space-space-84);
+    margin: var(--space-space-0x);
+    padding-top: 0;
+    border-left: 1px solid var(--color-neutral-40);
+    border-top: 0;
+  }
+
+  html[dir='rtl'] .section.social-login-container > .social-login-wrapper {
+    padding-right: var(--space-space-84);
+    padding-left: 0;
+    border-left: 0;
+    border-right: 1px solid var(--color-neutral-40);
+  }
+}

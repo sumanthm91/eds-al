@@ -1,0 +1,15 @@
+#discount-vouchers-guest .section {
+    padding: 0;
+}
+
+#discount-vouchers-guest .section .banner.slug {
+    padding: var(--space-space-14x) var(--space-space-8x);
+}
+
+#discount-vouchers-guest .section .banner .banner-content-wrapper .banner-content h2 {
+    margin: 0;
+}
+
+#discount-vouchers-guest .section .banner .banner-content-wrapper .banner-content h3:first-of-type {
+    margin-top: var(--space-space-78);
+}

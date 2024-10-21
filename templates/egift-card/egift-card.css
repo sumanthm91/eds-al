@@ -1,0 +1,274 @@
+.section.heading-center-line .default-content-wrapper h5 {
+  display: flex;
+  max-width: var(--grid-lg-max-width);
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-space-12);
+  flex: 1 0 0;
+  white-space: pre-line;
+  
+}
+
+.section.heading-center-line .default-content-wrapper h5::before, .section.heading-center-line .default-content-wrapper h5::after {
+  margin: 0;
+} 
+
+.accordion-container .accordion-item {
+  border-radius: var(--radius-radius-none);
+  background: var(--neutral-neutral-20);
+  padding: var(--space-space-4x);
+}
+
+.section.heading-center-line ul li {
+  margin-bottom: var(--space-space-6x);
+  margin-right: 10px; 
+}
+
+dialog.egift-balance {
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal dialog .modal-content {
+  padding: var(--space-space-4x);
+}
+
+.egift-balance .modal-header h4 {
+  font-size: var(--font-size-6);
+}
+
+.egift-balance-modal-ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-1x);
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.egift-balance-modal-ctas span {
+  color: var(--text-text-main);
+  font-size: var(--font-size-2);
+}
+
+.egift-balance form.no-otp .egift-verification-code, .egift-balance form.no-otp .egift-balance-modal-ctas {
+  display: none;
+}
+
+.egift-balance-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-space-20);
+  align-self: stretch;
+}
+
+.egift-balance-modal-content p {
+  font-size: var(--font-size-4);
+  margin: 0;
+  color: var(--text-text-main);
+  text-align: center;
+  font-style: normal;
+  align-self: stretch;
+  letter-spacing: normal;
+}
+
+.egift-balance-modal-content p.grey {
+  color: var(--color-text-dark);
+}
+
+.egift-balance-modal-content p.highlight {
+  font-family: var(--type-base-font-family-semibold);
+  font-size: var(--font-size-7);
+}
+
+.egift-balance-modal-content button {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.egift-balance-modal-content form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-3x);
+}
+
+.egift-balance-modal-content form .input-wrapper{
+  display: flex;
+  height: 5.4rem;
+  align-items: center;
+  align-self: stretch;
+}
+
+.egift-balance-modal-content form .input-field-wrapper.invalid input {
+  border: 1px solid var(--color-error-100);
+}
+
+.egift-balance-modal-content form .input-wrapper label {
+  margin-top: 1.2rem;
+  font-size: var(--font-size-4);
+}
+
+.egift-balance-modal-content form .input-wrapper label.input-number {
+  margin-top: 0;
+  font-size: var(--font-size-2);
+}
+
+.egift-balance-modal-content form .input-wrapper label[for="egift-verification-code"].input-number {
+  margin-top: 0;
+  font-size: var(--font-size-2);
+}
+
+.highlight > div {
+  align-items: center;
+}
+
+.highlight > div > div > p {
+  margin-bottom: unset;
+}
+
+.teaser .teaser-block {
+  gap: var(--space-space-5x);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.teaser .teaser-img div {
+  padding: var(--space-space-0x-1);
+  margin-top: var(--space-space-3x);
+}
+
+.teaser .teaser-content {
+  gap: var(--space-space-5x);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding: var(--space-space-0x-1);
+  width: 100%;
+}
+
+.teaser .teaser-content-text {
+  text-align: left;
+  font-size: var(--font-size-3);
+  margin: 0;
+}
+
+.teaser .teaser-content-text div {
+  display: flex;
+  gap: var(--space-space-4x);
+  flex-direction: column;
+}
+
+.teaser .teaser-content-text p {
+  margin-top: 0;
+}
+
+.teaser .teaser-content-text h3 {
+  font-size: var(--font-size-3);
+  margin: 0;
+}
+
+.teaser .teaser-buttons div {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  gap: var(--space-space-4x);
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.teaser .teaser-buttons .button-container .button {
+  letter-spacing: 0;
+  display: block;
+  width: 100%;
+  padding: var(--space-space-3x) 0;
+}
+
+.section.heading-center-line p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.highlight > div > div > p:last-child {
+  color: var(--text-text-dark);
+}
+
+@media (width >= 768px) {
+  .section.heading-center-line .default-content-wrapper h5 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: unset;
+    padding: 0 0 var(--space-space-4x) 0;
+  }
+
+  .section.heading-center-line ul li {
+    margin-bottom: unset;
+  }
+
+  .section.heading-center-line.accordion-container .accordion.plus details div ul li {
+    margin-bottom: var(--space-space-6x);
+  }
+
+  .teaser-wrapper {
+    width: 100%;
+  }
+
+  .teaser .teaser-block {
+    flex-direction: row;
+  }
+
+  .teaser .teaser-img div {
+    margin-top: 0;
+    padding: var(--space-space-3x);
+  }
+
+  .teaser .teaser-content {
+    padding: var(--space-space-4x);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-space-5x);
+    flex-shrink: 0;
+  }
+
+  .teaser .teaser-content-text h3 {
+    font-size: var(--font-size-7);
+  } 
+
+  .teaser .teaser-content-text {
+    font-size: var(--font-size-4);
+    width: var(--grid-col-3);
+  }
+
+  .accordion-container .accordion.plus details summary::after {
+    background-image: url('/icons/chevron-up.svg');
+    background-repeat: no-repeat;
+  }
+
+  .accordion-container .accordion.plus details[open] summary::after {
+    background-image: url('/icons/chevron-down.svg');
+    background-repeat: no-repeat;
+  }
+
+  .accordion-container .accordion-item {
+    margin-top: 2.4rem;
+  }
+
+  dialog.egift-balance {
+    width: 51.2rem;
+    position: unset;
+    height: fit-content
+  }
+}

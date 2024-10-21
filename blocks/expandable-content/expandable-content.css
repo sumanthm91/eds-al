@@ -1,0 +1,39 @@
+.expandable-content {
+  position: relative;
+}
+
+.expandable-content > div {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.expandable-content.expanded > div {
+  max-height: none;
+  overflow: inherit;
+  display: unset;
+}
+
+.expandable-content.expanded::after {
+  content: none;
+}
+
+.expandable-content p a {
+  text-decoration: underline;
+}
+
+.expandable-content .read-more {
+  display: flex;
+  justify-content: center;
+}
+
+.expandable-content button {
+  box-sizing: border-box;
+  text-decoration: underline;
+  border:none;
+  background: none;
+  cursor: pointer;
+  color:var(--color-text-main);
+  text-align: center;
+}

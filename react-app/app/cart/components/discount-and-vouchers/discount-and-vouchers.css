@@ -1,0 +1,34 @@
+.cart-discount-vouchers {
+    font-weight: var(--font-weight-4);
+    line-height: var(--line-height-m);
+    text-decoration: underline;
+    cursor: pointer;
+    display: flex;
+    color: var(--color-neutral-black);
+}
+
+.cart-discount-vouchers .promo-notification {
+    height: var(--space-space-6);
+    width: var(--space-space-6);
+    background-color: var(--color-primary-100);
+    border-radius: 50%;
+}
+
+.dialog__header.dialog__header-discount-and-voucher-guest-user {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    margin-top: var(--space-space-8);
+}
+
+@media (width >=768px) {
+    .cart-discount-vouchers {
+        font-size: var(--font-size-3);
+        line-height: var(--line-height-l);
+    }
+
+    .dialog__container.dialog__container-discount-and-voucher-guest-user {
+        width: var(--space-space-488) !important;
+        margin: auto !important;
+    }
+}

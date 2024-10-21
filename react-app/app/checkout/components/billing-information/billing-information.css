@@ -1,0 +1,14 @@
+.checkout__billing-information .checkout__billing-information-title,
+.checkout__loyalty-container .checkout__loyalty-title {
+    display: block;
+    font: var(--type-details-semibold-6-font);
+    line-height: var(--line-height-l);
+    text-align: center;
+}
+
+@media (width >=768px) {
+    .checkout__billing-information .checkout__billing-information-title,
+    .checkout__loyalty-container .checkout__loyalty-title {
+        text-align: left;
+    }
+}

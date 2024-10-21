@@ -1,0 +1,129 @@
+.return-confirm-header .default-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: var(--space-space-6);
+  border-bottom: 1px solid var(--color-secondary-100);
+  align-items: center;
+}
+
+.return-confirm-banner.section .default-content-wrapper {
+  background-color: var(--color-success-100);
+  color: var(--color-neutral-white);
+  padding: var(--space-space-3x) var(--space-space-5x);
+}
+
+.return-confirm-banner.section .default-content-wrapper h4 {
+  margin: 0;
+  border: 0;
+  font-size: var(--font-size-3);
+  padding: 0;
+  position: relative;
+  display: flex;
+  gap: var(--space-space-3x);
+  align-items: center;
+}
+
+.return-confirm-banner.section .default-content-wrapper h4::before {
+  content: '';
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url('/icons/tick-verified.svg');
+  display: block;
+  background-size: contain;
+}
+
+.return-confirm-info-box .refund-method-content img {
+  width: 5rem;
+}
+
+.section.return-confirm-what-next > div:not(.default-content-wrapper) > div > div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-6x);
+  margin: var(--space-space-7x) 0;
+}
+
+.section.return-confirm-what-next > div:not(.default-content-wrapper) > div > div img {
+  display: block;
+  min-width: 4.8rem;
+  width: 4.8rem;
+}
+
+.section.return-confirm-what-next h6,
+p {
+  margin: 0;
+}
+
+.section.return-confirm-what-next h6 {
+  margin-bottom: var(--space-space-2x);
+}
+
+.section.return-confirm-what-next p {
+  color: var(--color-secondary-40);
+  font-size: var(--font-size-3);
+}
+
+.return-confirm-section {
+  margin-bottom: var(--space-space-6x);
+}
+
+.return-confirm-section-title {
+  border-bottom: 1px solid var(--color-secondary-100);
+  padding: var(--space-space-6) 0;
+  font-size: var(--font-size-5);
+}
+
+.return-confirm-return-detail-content {
+  padding: var(--space-space-4x);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-7x);
+}
+
+.return-confirm-details-note {
+  border-top: 1px solid var(--color-secondary-100);
+  padding: var(--space-space-4x);
+}
+
+.return-confirm-items-to-return .order-itemized-wrapper .order-item,
+.return-confirm-items-to-return .order-itemized-wrapper .order-item .bg-grey {
+  background-color: var(--color-neutral-white);
+}
+
+.return-confirm-info-box .refund-method-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-2x);
+  font-size: var(--font-size-3);
+}
+
+main .return-confirm-header .default-content-wrapper :is(h1, h2, h3, h4, h5, h6) {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+main .return-confirm-header .default-content-wrapper a:any-link {
+  color: var(--color-neutral-white);
+  margin: 0;
+  text-decoration: none;
+  display: none;
+  text-transform: uppercase;
+  font-size: var(--font-size-3);
+}
+
+@media (width >= 1024px) {
+  main .return-confirm-header .default-content-wrapper a:any-link {
+    display: block;
+  }
+
+  .return-confirm-return-detail-content {
+    flex-direction: row;
+    gap: var(--space-space-10x);
+  }
+
+  .section.return-confirm-what-next > div:not(.default-content-wrapper) > div > div {
+    gap: var(--space-space-9x);
+    padding: 0 var(--space-space-7x);
+  }
+}

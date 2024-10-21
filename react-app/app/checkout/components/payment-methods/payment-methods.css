@@ -1,0 +1,27 @@
+.payment-method-title {
+    font-size: var(--font-size-5);
+    line-height: var(--space-space-24);
+    font-weight: 600;
+    text-align: center;
+
+}
+
+@media (width >=768px) {
+    .payment-method-title {
+        font-size: var(--font-size-6);
+        line-height: var(--line-height-xxx1-2);
+        text-align: left;
+    }
+
+    html[dir="rtl"] .payment-method-title,
+    html[dir="rtl"] .checkout__billing-information .checkout__billing-information-title,
+    html[dir="rtl"] .checkout__delivery-information-title {
+        text-align: right;
+    }
+}
+
+.payment-methods.in-active .payment-method-top-panel,
+.payment-methods.in-active .payment-method-bottom-panel {
+    opacity: 0.2;
+    pointer-events: none;    
+}

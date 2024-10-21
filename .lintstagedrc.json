@@ -1,0 +1,8 @@
+{
+    "*.{js,jsx}": [
+        "eslint --fix"
+    ],
+    "*.css": [
+        "stylelint --fix --allow-empty-input"
+    ]
+}

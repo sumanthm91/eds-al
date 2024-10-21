@@ -1,0 +1,273 @@
+:root {
+  --color-bg-banner: var(--color-background-banner);
+  --color-vignette: var(--color-text-banner-vignette);
+  --color-header: var(--color-text-banner-header);
+  --color-bg-cta: var(--color-background-banner-cta);
+  --color-text-cta: var(--color-text-banner-cta);
+  --color-border-cta: var(--color-brand-700);
+  --color-bg-countdown: var(--color-background-banner-countdown);
+  --color-text-countdown: var(--color-text-banner-countdown);
+
+  /** font size tokens */
+
+  --size-text-header: var(--text-xxl);
+  --line-height-header: var(--line-height-xs);
+  --desktop-size-text-header: var(--text-xxl);
+  --desktop-line-height-header: var(--line-height-xs);
+  --size-text-vignette: var(--text-xl);
+  --line-height-vignette: var(--line-height-xs);
+  --desktop-size-text-vignette: var(--text-xl);
+  --desktop-line-height-vignette: var(--line-height-xs);
+  --size-text-offer: var(--text-s);
+  --line-height-offer: var(--line-height-xs);
+  --desktop-size-text-offer: var(--text-s);
+  --desktop-line-height-offer: var(--line-height-xs);
+  --size-text-cta: var(--text-s);
+  --line-height-cta: var(--line-height-xs);
+  --desktop-size-text-cta: var(--text-s);
+  --desktop-line-height-cta: var(--line-height-xs);
+  --size-text-countdown: var(--text-s);
+  --line-height-countdown: var(--line-height-xxs);
+  --desktop-size-text-countdown: var(--text-s);
+  --desktop-line-height-countdown: var(--line-height-xxs);
+  --size-text-header-inactive: var(--text-xxl);
+  --line-height-header-inactive: var(--line-height-xs);
+  --desktop-size-text-header-inactive: var(--text-xxl);
+  --desktop-line-height-header-inactive: var(--line-height-xs);
+  --size-text-inactive-text: var(--text-s);
+  --line-height-inactive-text: var(--line-height-xs);
+  --desktop-size-text-inactive-text: var(--text-s);
+  --desktop-line-height-inactive-text: var(--line-height-xs);
+}
+
+.progressive-banner {
+  text-align: center;
+  position: relative;
+  background-color: var(--color-bg-banner);
+  display: none;
+}
+
+.progressive-banner.active {
+  display: block;
+}
+
+.progressive-banner .banner-content {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0 var(--space-space-32);
+}
+
+.progressive-banner .banner-content.noreverse {
+  flex-direction: column;
+}
+
+.progressive-banner .coming-soon, .progressive-banner .expired {
+  opacity: 0.5;
+  border-top: 1px solid var(--color-brand-700);
+}
+
+.progressive-banner .banner-content.noreverse .expired {
+  order: 3;
+}
+
+.progressive-banner .banner-content > div {
+  flex: 1;
+  padding: var(--space-space-30);
+}
+
+.progressive-banner .banner-content h2 {
+  color: var(--color-header);
+  font-size: var(--size-text-header);
+  line-height: var(--line-height-header);
+  margin: 0;
+  font-family: var(--type-base-font-family-bold);
+}
+
+.progressive-banner  .banner-content .expired h2, .progressive-banner  .banner-content .coming-soon h2{
+  font-size: var(--size-text-header-inactive);
+  line-height: var(--line-height-header-inactive);
+}
+
+.progressive-banner .banner-content > div > p {
+  color: var(--color-offer);
+  font-size: var(--size-text-offer);
+  line-height: var(--line-height-offer);
+  margin: 0;
+}
+
+.progressive-banner  .banner-content .expired p, .progressive-banner  .banner-content .coming-soon p{
+  font-size: var(--size-text-inactive-text);
+  line-height: var(--line-height-inactive-text);
+}
+
+.progressive-banner .banner-content h3{
+  color: var(--color-vignette);
+  font-size: var(--size-text-vignette);
+  line-height: var(--line-height-vignette);
+  margin: var(--space-space-1x) auto 0;
+}
+
+.progressive-banner .banner-content h5 {
+  color: var(--color-text-countdown);
+  font-size: var(--size-text-countdown);
+  line-height: var(--line-height-countdown);
+  margin: var(--space-space-2x) auto 0;
+  display: inline-flex;
+  align-self: center;
+}
+
+.progressive-banner .banner-content .button-group {
+  display:flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: var(--space-space-16) 0;
+}
+
+.progressive-banner .banner-content .button-container {
+  margin: 0;
+}
+
+.progressive-banner .banner-content .button {
+  color: var(--color-brand-700);
+  padding: 0 var(--space-space-5x);
+  font-size: var(--font-size-3);
+  height: 3.6rem;
+  line-height: var(--line-height-xs);
+}
+
+.progressive-banner .banner-content .button-group .button {
+  font-size: var(--size-text-cta);
+  line-height: var(--line-height-cta);
+  background-color: var(--color-bg-cta);
+  color: var(--color-text-cta);
+  margin: 0;
+}
+
+.progressive-banner .banner-content .button-group .button.primary {
+  background-color: var(--color-bg-cta);
+  color: var(--color-text-cta);
+}
+
+.progressive-banner .banner-content .button-group .button.primary:disabled {
+  background-color: var(--color-neutral-40);
+  color: var(--color-secondary-40);
+}
+
+.progressive-banner .banner-content .button-group .button.secondary {
+  background-color: transparent;
+  color: var(--color-border-cta);
+  border: 1px solid var(--color-border-cta);
+}
+
+.progressive-banner .banner-content h3
+.progressive-banner .banner-content h5 {
+  font-family: var(--type-base-font-family-semibold);
+}
+
+.progressive-banner .inactive-content > *{
+  margin: var(--space-space-14) 0 0;
+}
+
+.progressive-banner .coming-soon > *:not(h2,.inactive-content),
+.progressive-banner .expired > *:not(h2,.inactive-content) {
+  display: none;
+}
+
+.progressive-banner-wrapper .style-configurations {
+  display: none;
+}
+
+.section.fragment-container.progressive-banner-container:not(:has(.block.active)) {
+  padding: 0;
+}
+
+@media screen and (width >= 768px) {
+  .progressive-banner .banner-content {
+    padding: var(--space-space-14) 0;
+    flex-direction: row;
+  }
+
+  .progressive-banner .banner-content.noreverse {
+    flex-direction: row;
+  }
+
+  .progressive-banner .coming-soon, .progressive-banner .expired {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .progressive-banner .banner-content:not(.has-two-category) .active-category {
+    border-left: 1px solid var(--color-border-cta);
+    border-right: 1px solid var(--color-border-cta);
+    order: 2;
+    min-width: 50.4rem;
+  }
+
+  .progressive-banner .banner-content.noreverse .expired,
+  .progressive-banner .banner-content.noreverse .expired + .active-category {
+    order: unset
+  }
+
+  .progressive-banner .banner-content .expired + .expired,
+  .progressive-banner .banner-content .coming-soon + .coming-soon{
+    order: 3;
+  }
+
+  .progressive-banner .banner-content > div {
+    padding: var(--space-space-10);
+  }
+
+  .progressive-banner .banner-content.has-two-category > div:first-child {
+    border-right: 1px solid var(--color-border-cta);
+  }
+
+  html[dir='rtl'] .progressive-banner .banner-content.has-two-category > div:first-child {
+    border-left: 1px solid var(--color-border-cta);
+    border-right: 0;
+  }
+
+  .progressive-banner  .banner-content h2 {
+    font-size: var(--desktop-size-text-header);
+    line-height: var(--desktop-line-height-header);
+  }
+
+  .progressive-banner  .banner-content .expired h2,
+  .progressive-banner  .banner-content .coming-soon h2{
+    font-size: var(--desktop-size-text-header-inactive);
+    line-height: var(--desktop-line-height-header-inactive);
+  }
+
+  .progressive-banner .banner-content > div > p{
+    font-size: var(--desktop-size-text-offer);
+    line-height: var(--desktop-line-height-offer);
+  }
+
+  .progressive-banner  .banner-content .expired p,
+  .progressive-banner  .banner-content .coming-soon p{
+    font-size: var(--size-text-inactive-text);
+    line-height: var(--line-height-inactive-text);
+  }
+  
+  .progressive-banner  .banner-content h3 {
+    font-size: var(--desktop-size-text-vignette);
+    line-height: var(--desktop-line-height-vignette);
+  }
+
+  .progressive-banner .banner-content h5 {
+    font-size: var(--desktop-size-text-countdown);
+    line-height: var(--desktop-line-height-countdown);
+  }
+
+  .progressive-banner .banner-content .button-group .button {
+    font-size: var(--desktop-size-text-cta);
+    line-height: var(--desktop-line-height-cta);
+  }
+
+  .progressive-banner .banner-content .button-group .button.secondary:hover,
+  .banner .banner-content .button-group a.button.secondary:hover {
+    background-color: transparent;
+  }
+
+}
