@@ -288,7 +288,7 @@ header .search-container input {
   width: 100%;
   border: none;
   background-color: inherit;
-  color: var(--color-text-dark);
+  color: black;
   font-size: var(--font-size-3);
   padding: 0;
 }

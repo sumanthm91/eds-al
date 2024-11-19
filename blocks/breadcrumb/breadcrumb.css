@@ -32,7 +32,7 @@
   }
   
   .breadcrumb-wrapper .breadcrumbs ol li:last-of-type {
-    color: var(--color-text-light);
+    color: black;
   }
 
   .breadcrumb-wrapper .breadcrumbs ol li a {
