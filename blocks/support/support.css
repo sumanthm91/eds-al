@@ -1,0 +1,110 @@
+.support {
+  padding: var(--spacing-large);
+  max-width: var(--grid-lg-max-width);
+  margin: 0 auto;
+}
+
+.support-header {
+  background: var(--color-neutral-white);
+  padding: var(--spacing-medium) var(--spacing-large);
+  text-align: center;
+  margin-bottom: var(--spacing-large);
+  border-radius: var(--shape-border-radius-2);
+  box-shadow: var(--shape-shadow-2);
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-large);
+}
+
+.support-item {
+  background: var(--color-neutral-white);
+  padding: var(--spacing-medium) var(--spacing-large);
+  border-radius: var(--shape-border-radius-2);
+  box-shadow: var(--shape-shadow-2);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.support h2 {
+  font: var(--type-headline-1-font);
+  letter-spacing: var(--type-headline-1-letter-spacing);
+  color: var(--color-brand-700);
+  margin-bottom: var(--spacing-small);
+}
+
+.support h3 {
+  font: var(--type-headline-2-strong-font);
+  letter-spacing: var(--type-headline-2-strong-letter-spacing);
+  color: var(--color-brand-700);
+  margin-bottom: var(--spacing-xxsmall);
+}
+
+.support p {
+  font: var(--type-body-1-default-font);
+  letter-spacing: var(--type-body-1-default-letter-spacing);
+  color: var(--color-brand-300);
+  margin-bottom: var(--spacing-medium);
+}
+
+.support-item a {
+  color: var(--color-brand-700);
+  text-decoration: none;
+  font: var(--type-body-2-strong-font);
+  letter-spacing: var(--type-body-2-strong-letter-spacing);
+  margin-top: auto;
+}
+
+.support-item a:hover {
+  color: var(--color-primary-100);
+}
+
+.support-cta {
+  display: inline-block;
+  background-color: var(--color-primary-100);
+  color: var(--color-neutral-white) !important;
+  padding: var(--spacing-small) var(--spacing-large);
+  border-radius: var(--shape-border-radius-5);
+  margin-top: var(--spacing-medium);
+  font: var(--type-button-2-font);
+  letter-spacing: var(--type-button-2-letter-spacing);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.support-cta:hover {
+  background-color: var(--color-primary-50);
+  color: var(--color-neutral-white) !important;
+}
+
+@media (width <= 768px) {
+  .support {
+    padding: var(--spacing-medium);
+  }
+
+  .support-header,
+  .support-item {
+    padding: var(--spacing-medium);
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-medium);
+  }
+
+  .support h2 {
+    font-size: var(--font-size-7);
+  }
+
+  .support h3 {
+    font-size: var(--font-size-5);
+  }
+
+  .support p {
+    font-size: var(--font-size-3);
+  }
+}

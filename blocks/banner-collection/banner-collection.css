@@ -1,0 +1,73 @@
+.banner-collection {
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--color-neutral-50);
+  padding: var(--spacing-medium);
+}
+
+.banner-collection .banner-collection-image {
+  flex: 1;
+}
+
+.banner-collection .banner-collection-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.banner-collection .banner-collection-content {
+  flex: 1;
+  padding: var(--spacing-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--color-neutral-50);
+}
+
+.banner-collection .banner-collection-content h5 {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
+  color: var(--color-text-main);
+  margin-bottom: var(--spacing-small);
+}
+
+.banner-collection .banner-collection-content h2 {
+  font-size: var(--font-size-9);
+  font-weight: var(--font-weight-7);
+  color: var(--color-text-main);
+  margin-bottom: var(--spacing-small);
+}
+
+.banner-collection .banner-collection-content h3 {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-6);
+  color: var(--color-text-main);
+  margin-bottom: var(--spacing-small);
+}
+
+.banner-collection .banner-collection-content p {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-4);
+  color: var(--color-text-main);
+  line-height: var(--line-height-m);
+  margin-bottom: var(--spacing-small);
+}
+
+.banner-collection .banner-collection-content .shop-now {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
+  color: var(--color-primary-100);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .banner-collection {
+    flex-direction: column;
+  }
+  .banner-collection .banner-collection-content {
+    align-items: center;
+    text-align: center;
+  }
+}

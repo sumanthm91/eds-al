@@ -1,0 +1,101 @@
+.download-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-medium);
+}
+
+.download-cards-header {
+  text-align: center;
+  margin-bottom: var(--spacing-large);
+}
+
+.download-cards-header h2 {
+  font: var(--type-headline-1-font);
+  margin-bottom: var(--spacing-medium);
+  color: var(--color-text-main);
+}
+
+.download-cards-header p {
+  font: var(--type-body-1-default-font);
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--color-text-main);
+}
+
+.download-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-medium);
+}
+
+.download-cards-item {
+  background: var(--color-neutral-50);
+  border: 1px solid var(--color-neutral-300);
+  border-radius: var(--shape-border-radius-2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.download-cards-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shape-shadow-2);
+}
+
+.download-cards-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.download-cards-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.download-cards-content {
+  padding: var(--spacing-medium);
+  text-align: center;
+}
+
+.download-cards-content p:first-child {
+  font: var(--type-body-1-strong-font);
+  margin-bottom: var(--spacing-small);
+  color: var(--color-text-main);
+}
+
+.download-cards-content a {
+  display: inline-block;
+  padding: var(--spacing-xxsmall) var(--spacing-medium);
+  background: var(--color-primary-100);
+  color: var(--color-neutral-50);
+  text-decoration: none;
+  border-radius: var(--shape-border-radius-1);
+  transition: background-color 0.3s ease;
+}
+
+.download-cards-content a:hover {
+  background: var(--color-primary-90);
+}
+
+@media (max-width: 768px) {
+  .download-cards {
+    padding: var(--spacing-small);
+  }
+
+  .download-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download-cards-header {
+    margin-bottom: var(--spacing-medium);
+  }
+
+  .download-cards-header h2 {
+    font-size: var(--font-size-7);
+  }
+
+  .download-cards-content {
+    padding: var(--spacing-small);
+  }
+}

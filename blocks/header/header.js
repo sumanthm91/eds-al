@@ -958,27 +958,33 @@ async function decorateHeader(block, placeholders, favouritesWidgetTimeout, frag
 }
 
 async function decorateCheckoutHeader(block, placeholders, favouritesWidgetTimeout, fragment) {
-  const headerMiddleBlock = document.createElement('div');
-  headerMiddleBlock.classList.add('header-middle');
-  const headerMiddleTop = document.createElement('div');
-  headerMiddleTop.classList.add('header-middle-top');
-  headerMiddleTop.setAttribute('id', 'header-middle-top');
-  // decorate header DOM
-  while (fragment.firstElementChild) {
-    headerMiddleTop.append(fragment.firstElementChild);
-  }
-  headerMiddleBlock.append(headerMiddleTop);
-  block.append(headerMiddleBlock);
+  // Create header structure using template literal for better readability and performance
+  const headerStructure = `
+    <div class="header-middle">
+      <div class="header-middle-top" id="header-middle-top">
+        ${fragment.innerHTML}
+      </div>
+    </div>
+  `;
+  
+  // Set the optimized HTML structure
+  block.innerHTML = headerStructure;
 
-  // Brand logo
-  const brandLogoContainerOld = headerMiddleBlock.querySelector('.brand-logo p');
-  const brandLogoContainer = document.createElement('h1');
-  brandLogoContainer.append(...brandLogoContainerOld.children);
-  brandLogoContainerOld.replaceWith(brandLogoContainer);
-  const brandLogoLink = headerMiddleBlock.querySelector('.brand-logo a');
-  brandLogoLink.classList.remove('button');
-  brandLogoLink.setAttribute('title', brandLogoLink.textContent);
-  brandLogoLink.innerHTML = '<span class="icon"></span> <img class="brand-logo-image" src="/icons/logo.svg" alt="logo"/>';
+  // Optimize brand logo transformation
+  const headerMiddleBlock = block.querySelector('.header-middle');
+  const brandLogoP = headerMiddleBlock.querySelector('.brand-logo p');
+  if (brandLogoP) {
+    const brandLogoH1 = document.createElement('h1');
+    brandLogoH1.innerHTML = brandLogoP.innerHTML;
+    brandLogoP.replaceWith(brandLogoH1);
+    
+    const brandLogoLink = brandLogoH1.querySelector('a');
+    if (brandLogoLink) {
+      brandLogoLink.className = ''; // Remove button class efficiently
+      brandLogoLink.title = brandLogoLink.textContent;
+      brandLogoLink.innerHTML = '<span class="icon"></span> <img class="brand-logo-image" src="/icons/logo.svg" alt="logo"/>';
+    }
+  }
 }
 
 /**
