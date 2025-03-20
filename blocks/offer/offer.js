@@ -1,24 +1,45 @@
-export default function decorate(block) {
-  const offerContent = block.querySelector('div');
-  if (!offerContent) return;
+/**
+ * Decorates the offer block
+ * @param {Element} block The offer block element
+ */
+export function decorate(block) {
+  // Get all content divs and find the one with actual content
+  const divs = block.querySelectorAll(':scope > div > div');
+  const content = Array.from(divs).find(div => div.textContent.trim());
+  if (!content) return;
 
   // Extract content from the block
-  const [saleText] = offerContent.querySelectorAll('h1');
-  const [mainOffer] = offerContent.querySelectorAll('h2');
-  const [subOffer] = offerContent.querySelectorAll('h3');
-  const timestamp = [...offerContent.querySelectorAll('p')].find(p => p.textContent.includes('PM') || p.textContent.includes('AM'));
-  const links = offerContent.querySelectorAll('p em a');
-  const [validityText] = [...offerContent.querySelectorAll('p')].filter(p => p.textContent.includes('valid'));
+  const title = content.querySelector('h1')?.textContent?.trim() || '';
+  const subtitle = content.querySelector('h2')?.textContent?.trim() || '';
+  const subheading = content.querySelector('h3')?.textContent?.trim() || '';
+  const description = content.querySelector('p:not(:last-child)')?.textContent?.trim() || '';
+  const date = content.querySelector('h5')?.textContent?.trim() || '';
+  
+  // Extract links, filtering out empty ones
+  const links = Array.from(content.querySelectorAll('p em a'))
+    .filter(a => a.textContent.trim())
+    .map(a => ({
+      text: a.textContent.trim(),
+      href: a.getAttribute('href') || '#'
+    }));
 
-  // Create the new block structure
-  block.innerHTML = `
-    <div class="sale-text">${saleText ? saleText.textContent : ''}</div>
-    <div class="main-offer">${mainOffer ? mainOffer.textContent : ''}</div>
-    <div class="sub-offer">${subOffer ? subOffer.textContent : ''}</div>
-    <div class="timestamp">${timestamp ? timestamp.textContent : ''}</div>
-    <div class="nav-buttons">
-      ${[...links].map(link => `<a href="${link.href}" class="nav-button">${link.textContent}</a>`).join('')}
-    </div>
-    <div class="validity">${validityText ? validityText.textContent : ''}</div>
+  const footer = content.querySelector('p:last-child')?.textContent?.trim() || '';
+
+  // Create new HTML structure with proper spacing
+  const newHtml = `
+    ${title ? `<h1 class="offer-title">${title}</h1>` : ''}
+    ${subtitle ? `<h2 class="offer-subtitle">${subtitle}</h2>` : ''}
+    ${subheading ? `<p class="offer-description">${subheading}</p>` : ''}
+    ${description ? `<p class="offer-description">${description}</p>` : ''}
+    ${date ? `<p class="offer-date">${date}</p>` : ''}
+    ${links.length ? `
+      <div class="offer-buttons">
+        ${links.map(link => `<a href="${link.href}" class="offer-button">${link.text}</a>`).join('')}
+      </div>
+    ` : ''}
+    ${footer ? `<p class="offer-description">${footer}</p>` : ''}
   `;
+
+  // Replace block content
+  block.innerHTML = newHtml;
 }
