@@ -1,45 +1,56 @@
-/**
- * Decorates the offer block
- * @param {Element} block The offer block element
- */
-export function decorate(block) {
-  // Get all content divs and find the one with actual content
-  const divs = block.querySelectorAll(':scope > div > div');
-  const content = Array.from(divs).find(div => div.textContent.trim());
-  if (!content) return;
-
-  // Extract content from the block
-  const title = content.querySelector('h1')?.textContent?.trim() || '';
-  const subtitle = content.querySelector('h2')?.textContent?.trim() || '';
-  const subheading = content.querySelector('h3')?.textContent?.trim() || '';
-  const description = content.querySelector('p:not(:last-child)')?.textContent?.trim() || '';
-  const date = content.querySelector('h5')?.textContent?.trim() || '';
+export default function decorate(block) {
+  // Get all paragraphs from the block
+  const paragraphs = block.querySelectorAll('p');
   
-  // Extract links, filtering out empty ones
-  const links = Array.from(content.querySelectorAll('p em a'))
-    .filter(a => a.textContent.trim())
-    .map(a => ({
-      text: a.textContent.trim(),
-      href: a.getAttribute('href') || '#'
-    }));
+  // Extract data from paragraphs
+  const offerData = {
+    title: '',
+    subtitle: '',
+    description: '',
+    placeholder: '',
+    timestamp: '',
+    validity: '',
+    categories: []
+  };
 
-  const footer = content.querySelector('p:last-child')?.textContent?.trim() || '';
+  // Process paragraphs to extract data
+  paragraphs.forEach((p, index) => {
+    const text = p.textContent.trim();
+    if (index === 0) {
+      offerData.description = text;
+    } else if (index === 1) {
+      offerData.placeholder = text;
+    } else if (index === 2) {
+      offerData.timestamp = text;
+    } else if (index === 3) {
+      offerData.validity = text;
+    }
+  });
 
-  // Create new HTML structure with proper spacing
-  const newHtml = `
-    ${title ? `<h1 class="offer-title">${title}</h1>` : ''}
-    ${subtitle ? `<h2 class="offer-subtitle">${subtitle}</h2>` : ''}
-    ${subheading ? `<p class="offer-description">${subheading}</p>` : ''}
-    ${description ? `<p class="offer-description">${description}</p>` : ''}
-    ${date ? `<p class="offer-date">${date}</p>` : ''}
-    ${links.length ? `
-      <div class="offer-buttons">
-        ${links.map(link => `<a href="${link.href}" class="offer-button">${link.text}</a>`).join('')}
-      </div>
-    ` : ''}
-    ${footer ? `<p class="offer-description">${footer}</p>` : ''}
+  // Get all links which will be our categories
+  const links = block.querySelectorAll('a');
+  links.forEach((link) => {
+    offerData.categories.push({
+      text: link.textContent.trim(),
+      href: link.getAttribute('href') || '#'
+    });
+  });
+
+  // Create the new HTML structure
+  const categoryLinks = offerData.categories.map(({href, text}) =>
+    `<a href="${href}" class="offer-nav-button">${text}</a>`
+  ).join('');
+
+  const html = `
+    <h1 class="offer-title">Last few days of sale 30%-70% off</h1>
+    <h2 class="offer-subtitle">Buy 2 get 1 free</h2>
+    <p class="offer-description">${offerData.description}</p>
+    <p>${offerData.placeholder}</p>
+    <p>${offerData.timestamp}</p>
+    <nav class="offer-nav" aria-label="Offer categories">${categoryLinks}</nav>
+    <p class="offer-validity">${offerData.validity}</p>
   `;
 
-  // Replace block content
-  block.innerHTML = newHtml;
+  // Update the block's content
+  block.innerHTML = html;
 }

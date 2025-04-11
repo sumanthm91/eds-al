@@ -527,22 +527,58 @@ async function fetchPlaceholders(prefix = 'default') {
  * @param {Element} main The container element
  */
 function updateSectionsStatus(main) {
-  const sections = [...main.querySelectorAll(':scope > div.section')];
-  for (let i = 0; i < sections.length; i += 1) {
-    const section = sections[i];
+  // Early exit if no main element
+  if (!main) return;
+
+  // Cache the loading block selector
+  const LOADING_BLOCK_SELECTOR = '.block[data-block-status="initialized"], .block[data-block-status="loading"]';
+  
+  // Get all sections in one query and convert to array for performance
+  const sections = Array.from(main.querySelectorAll(':scope > div.section'));
+  
+  // Early exit if no sections
+  if (sections.length === 0) return;
+
+  // Track if we found a loading section to avoid unnecessary iterations
+  let foundLoading = false;
+
+  // Use for...of for better performance with break
+  for (const section of sections) {
     const status = section.dataset.sectionStatus;
-    if (status !== 'loaded') {
-      const loadingBlock = section.querySelector(
-        '.block[data-block-status="initialized"], .block[data-block-status="loading"]',
-      );
-      if (loadingBlock) {
+    
+    // Skip if already loaded
+    if (status === 'loaded') continue;
+
+    // Check for loading blocks
+    const hasLoadingBlock = section.querySelector(LOADING_BLOCK_SELECTOR) !== null;
+
+    if (hasLoadingBlock) {
+      // Only update if status isn't already loading
+      if (status !== 'loading') {
         section.dataset.sectionStatus = 'loading';
-        break;
-      } else {
-        section.dataset.sectionStatus = 'loaded';
+      }
+      foundLoading = true;
+      break; // Exit early since we found a loading section
+    } else {
+      // Only update if not already loaded
+      section.dataset.sectionStatus = 'loaded';
+      // Only update style if currently hidden
+      if (section.style.display === 'none') {
         section.style.display = null;
       }
     }
+  }
+
+  // If no loading sections were found, ensure all unloaded sections are marked as loaded
+  if (!foundLoading) {
+    sections.forEach(section => {
+      if (section.dataset.sectionStatus !== 'loaded') {
+        section.dataset.sectionStatus = 'loaded';
+        if (section.style.display === 'none') {
+          section.style.display = null;
+        }
+      }
+    });
   }
 }
 
@@ -550,30 +586,48 @@ function updateSectionsStatus(main) {
  * Builds a block DOM Element from a two dimensional array, string, or object
  * @param {string} blockName name of the block
  * @param {*} content two dimensional array or string or object of content
+ * @returns {HTMLElement} The constructed block element
  */
 function buildBlock(blockName, content) {
-  const table = Array.isArray(content) ? content : [[content]];
+  // Create fragment for better performance when adding multiple elements
+  const fragment = document.createDocumentFragment();
   const blockEl = document.createElement('div');
-  // build image block nested div structure
-  blockEl.classList.add(blockName);
+  blockEl.className = blockName; // Faster than classList.add
+
+  // Convert content to array format if it's not already
+  const table = Array.isArray(content) ? content : [[content]];
+
+  // Use DocumentFragment for batch DOM updates
   table.forEach((row) => {
     const rowEl = document.createElement('div');
     row.forEach((col) => {
       const colEl = document.createElement('div');
-      const vals = col.elems ? col.elems : [col];
+
+      // Handle both object with elems property and direct values
+      const vals = col?.elems || [col];
+
       vals.forEach((val) => {
         if (val) {
           if (typeof val === 'string') {
+            // Use textContent when possible for better security and performance
+            if (val.includes('<')) {
             colEl.innerHTML += val;
           } else {
-            colEl.appendChild(val);
+              colEl.textContent += val;
           }
+          } else {
+            colEl.appendChild(val);
+}
         }
       });
+
       rowEl.appendChild(colEl);
     });
-    blockEl.appendChild(rowEl);
+
+    fragment.appendChild(rowEl);
   });
+
+  blockEl.appendChild(fragment);
   return blockEl;
 }
 

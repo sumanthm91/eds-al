@@ -1,60 +1,58 @@
-export default function decorate(block) {
-  // Extract header content
-  const headerDiv = block.children[0];
-  const headerContent = headerDiv?.querySelector('div');
-  const headerTitle = headerContent?.querySelector('h2')?.textContent.replace(/<\/?strong>/g, '') || 'Need help?';
-  const headerText = headerContent?.querySelector('p')?.firstChild?.textContent?.trim() || 'We\'re here to provide all the help you need.';
-  const headerLink = headerContent?.querySelector('a');
-  const headerLinkHref = headerLink?.getAttribute('href') || '#';
+export default async function decorate(block) {
+  // Get content from block
+  const title = block.querySelector('h2')?.textContent || '';
+  const description = block.querySelector('h2 + p')?.textContent || '';
+  
+  // Get all support items
+  const supportItems = Array.from(block.querySelectorAll('div > div > div:first-child')).slice(1);
+  
+  // Map support items to their respective icons
+  const iconMap = {
+    'Product registration': 'add',
+    'Product support': 'computer',
+    'Order support': 'support',
+    'Repair Request': 'repair',
+    'Live Chat': 'chat',
+    'Whats app': 'whatsapp',
+    'Email Us': 'email',
+    'Call Us': 'phone'
+  };
 
-  // Create support items array from remaining divs
-  const supportItems = [];
-  for (let i = 1; i < block.children.length; i++) {
-    const item = block.children[i];
-    const itemContent = item.querySelector('div');
-    
-    if (!itemContent) continue;
+  // Create support grid HTML
+  const supportGridHTML = supportItems.map(item => {
+    const itemTitle = item.querySelector('h3')?.textContent.replace('Order ', '') || '';
+    const itemDescription = item.querySelector('p')?.textContent || '';
+    const itemUrl = item.parentElement.querySelector('div:last-child a')?.href || '#';
+    const iconName = iconMap[itemTitle.trim()] || 'default';
+    const actionText = {
+      'Product registration': 'Register now',
+      'Product support': 'Get support',
+      'support': 'Get help',
+      'Repair Request': 'Request now',
+      'Live Chat': 'Chat now',
+      'Whats app': 'Chat on WhatsApp',
+      'Email Us': 'Email now',
+      'Call Us': 'Call now'
+    }[itemTitle.trim()] || 'Learn more';
 
-    const titleEl = itemContent.querySelector('h3');
-    const title = titleEl?.textContent.replace(/<\/?strong>/g, '').trim() || '';
-    const description = itemContent.querySelector('p')?.textContent.trim() || '';
-    const link = item.querySelector('a:last-child');
-    const linkHref = link?.getAttribute('href') || '#';
-    
-    // Extract link text from title, removing 'support' if present
-    let linkText = title.replace(/\s*support\s*$/i, '').trim();
-    
-    // If title is empty or just contained 'support', use a default
-    if (!linkText) {
-      linkText = description.split('.')[0].trim() || 'Learn More';
-    }
-
-    supportItems.push({
-      title,
-      description,
-      linkHref,
-      linkText
-    });
-  }
-
-  // Build new HTML structure
-  const newHtml = `
-    <div class="support-header">
-      <h2>${headerTitle}</h2>
-      <p>${headerText}</p>
-      <a href="${headerLinkHref}" class="support-cta">Get Support</a>
-    </div>
-    <div class="support-grid">
-      ${supportItems.map(item => `
-        <div class="support-item">
-          <h3>${item.title}</h3>
-          <p>${item.description}</p>
-          <a href="${item.linkHref}">${item.linkText}</a>
+    return `
+      <div class="support-card">
+        <div class="icon">
+          <img src="/icons/${iconName}.svg" alt="${itemTitle} icon">
         </div>
-      `).join('')}
+        <h2>${itemTitle}</h2>
+        <p>${itemDescription}</p>
+        <a href="${itemUrl}">${actionText} <span class="icon-arrow">→</span></a>
+      </div>
+    `;
+  }).join('');
+
+  // Create final HTML structure
+  block.innerHTML = `
+    <h1>${title}</h1>
+    <p>${description}</p>
+    <div class="support-grid">
+      ${supportGridHTML}
     </div>
   `;
-
-  // Replace block content
-  block.innerHTML = newHtml;
 }

@@ -1,57 +1,36 @@
 export default function decorate(block) {
-  // Create header section
-  const headerDiv = document.createElement('div');
-  headerDiv.className = 'download-cards-header';
-  
-  // Get header content from first div
-  const firstDiv = block.children[0];
-  if (firstDiv) {
-    const h2 = firstDiv.querySelector('h2');
-    const p = firstDiv.querySelector('p');
-    if (h2) headerDiv.appendChild(h2);
-    if (p) headerDiv.appendChild(p);
-  }
+  // Get header content
+  const header = block.children[0];
+  const title = header?.querySelector('h2')?.textContent || '';
+  const description = header?.querySelector('p')?.textContent || '';
 
-  // Create grid for download cards
-  const gridDiv = document.createElement('div');
-  gridDiv.className = 'download-cards-grid';
+  // Get card items (skip the first div which contains header)
+  const cardItems = Array.from(block.children).slice(1);
 
-  // Process remaining divs as download cards
-  Array.from(block.children).slice(1).forEach((div) => {
-    const cardDiv = document.createElement('div');
-    cardDiv.className = 'download-cards-item';
+  // Create cards HTML
+  const cardsHTML = cardItems.map(card => {
+    const picture = card.querySelector('picture');
+    const title = card.querySelector('p:not(:last-child)')?.textContent || '';
+    const downloadLink = card.querySelector('a')?.href || '#';
 
-    // Create image section
-    const imageDiv = document.createElement('div');
-    imageDiv.className = 'download-cards-image';
-    const picture = div.querySelector('picture');
-    if (picture) {
-      imageDiv.appendChild(picture);
-    }
-    cardDiv.appendChild(imageDiv);
+    return `
+      <div class="card">
+        ${picture ? picture.outerHTML : ''}
+        <h3>${title}</h3>
+        <p>${description}</p>
+        <a href="${downloadLink}" class="download-button">Download</a>
+      </div>
+    `;
+  }).join('');
 
-    // Create content section
-    const contentDiv = document.createElement('div');
-    contentDiv.className = 'download-cards-content';
-    const title = div.querySelector('p:not(:last-child)');
-    const downloadLink = div.querySelector('a');
-    if (title) {
-      const titleP = document.createElement('p');
-      titleP.textContent = title.textContent;
-      contentDiv.appendChild(titleP);
-    }
-    if (downloadLink) {
-      const linkP = document.createElement('p');
-      linkP.appendChild(downloadLink);
-      contentDiv.appendChild(linkP);
-    }
-    cardDiv.appendChild(contentDiv);
-
-    gridDiv.appendChild(cardDiv);
-  });
-
-  // Clear block and add new structure
-  block.textContent = '';
-  block.appendChild(headerDiv);
-  block.appendChild(gridDiv);
+  // Create new HTML structure
+  block.innerHTML = `
+    <div class="header">
+      <h2>${title}</h2>
+      <p>${description}</p>
+    </div>
+    <div class="cards-container">
+      ${cardsHTML}
+    </div>
+  `;
 }
