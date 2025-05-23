@@ -129,7 +129,7 @@ footer .footer > div > div > .columns-wrapper {
     display: flex;
     justify-content: center;
     font: var(--type-body-2-strong-font);
-    color:  var(--color-text-dark);
+    color:  black;
     gap: var(--space-space-2x);
     margin: 2.8rem 0;
 
@@ -166,7 +166,7 @@ footer .footer > div > div > .columns-wrapper {
   font-size: var(--font-size-2);
   line-height: 1.75rem;
   text-align: center;
-  color:  var(--color-text-dark);
+  color:  black;
   
   a {
     font-size: inherit;

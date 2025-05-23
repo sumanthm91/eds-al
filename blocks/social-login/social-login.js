@@ -102,18 +102,18 @@ export default async function decorate(block) {
 
   block.innerHTML = `
     <span class="mobile-onlytext">${registerOrLabel}</span>
-    <a href="#" class="login-facebook socialauth-button">
+    <a href="#" class="login-facebook socialauth-button" name="login-facebook">
       <span class="icon icon-facebook-login"></span>
       <span>${socialloginFacebook}</span>
     </a>
-    <a href="#" class="login-google socialauth-button">
+    <a href="#" class="login-google socialauth-button" name="login-google">
       <span class="icon icon-login-google"></span>
       <span>${socialloginGoogle}</span>
     </a>
     <span class="account-text">
       ${isSignUp ? alreadyAccountRegister : noAccount}
     </span>
-    <a href="${isSignUp ? `/${lang}/user/login` : `/${lang}/user/register`}" class="sign-up socialauth-button secondary button">
+    <a href="${isSignUp ? `/${lang}/user/login` : `/${lang}/user/register`}" class="sign-up socialauth-button secondary button" name="account-text">
       <span class="icon icon-user"></span>
       <span class="icon icon-user-hover hidden"></span>
       <span>${isSignUp ? signinHere : signuphere}</span>

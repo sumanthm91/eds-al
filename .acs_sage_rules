@@ -1,0 +1,9 @@
+# Project Guidelines
+
+## MCP Tool usage
+- **Always use EDS MCP Server** for creation of new EDS block and EDS Block variation.
+
+## Rule for get_figma_data MCP tool usage
+
+- Once design data is fetched from get_figma_data MCP tool, first analyse global styles under /styles directory and make any updates to global styles first.
+- Once updates are made to global styles make changes as per user requirement.

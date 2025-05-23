@@ -1,0 +1,70 @@
+.support {
+  padding: var(--space-space-4x);
+  max-width: var(--grid-col-8);
+  margin: 0 auto;
+}
+
+.support h1 {
+  font-size: var(--font-size-7);
+  margin-bottom: var(--space-space-4x);
+  color: var(--color-text-main);
+}
+
+.support .support-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-space-4x);
+}
+
+.support .support-card {
+  padding: var(--space-space-4x);
+  background: var(--color-neutral-50);
+  border-radius: var(--shape-border-radius-2);
+  box-shadow: var(--shape-shadow-1);
+}
+
+.support .support-card h2 {
+  font-size: var(--font-size-4);
+  margin-bottom: var(--space-space-2x);
+  color: var(--color-text-main);
+}
+
+.support .support-card p {
+  font-size: var(--font-size-3);
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+.support .support-card .icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: var(--space-space-3x);
+}
+
+.support .support-card a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-primary-100);
+  text-decoration: none;
+  margin-top: var(--space-space-3x);
+}
+
+.support .support-card a:hover {
+  color: var(--color-primary-50);
+}
+
+@media (width >= 768px) {
+  .support {
+    padding: var(--space-space-8x);
+  }
+
+  .support .support-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1024px) {
+  .support .support-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
